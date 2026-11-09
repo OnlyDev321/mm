@@ -1,0 +1,1406 @@
+{
+  "method": "fresh remote sha256sum vs local file SHA-256",
+  "items": [
+    {
+      "remote": "/workspace/train_E3_20261101/artifacts/full_20261101/checkpoint-188",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full",
+      "allocated_bytes": 134285312,
+      "confirmed": true,
+      "symlinks": [],
+      "files": [
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/full_20261101/checkpoint-188/trainer_state.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\trainer_state.json",
+          "remote_sha256": "0b2f01c3d74415002282b1fd1ac70bca8187bf4d26d6efba48b699446a3089b2",
+          "local_sha256": "0b2f01c3d74415002282b1fd1ac70bca8187bf4d26d6efba48b699446a3089b2",
+          "match": true
+        },
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/full_20261101/checkpoint-188/args.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\args.json",
+          "remote_sha256": "8367ba47a71f8663f3fe7a403b0a48b0f2f61e5a3630f596602e75234784c2b7",
+          "local_sha256": "8367ba47a71f8663f3fe7a403b0a48b0f2f61e5a3630f596602e75234784c2b7",
+          "match": true
+        },
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/full_20261101/checkpoint-188/training_args.bin",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\training_args.bin",
+          "remote_sha256": "98285c2d478a1fe68582707367328b0f08d1add7e0514b57a5f7cda58e5f4078",
+          "local_sha256": "98285c2d478a1fe68582707367328b0f08d1add7e0514b57a5f7cda58e5f4078",
+          "match": true
+        },
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/full_20261101/checkpoint-188/additional_config.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\additional_config.json",
+          "remote_sha256": "c7799462ebedae6557ffad31566029e2d2f958b7b40e46e972cf901bcaf45733",
+          "local_sha256": "c7799462ebedae6557ffad31566029e2d2f958b7b40e46e972cf901bcaf45733",
+          "match": true
+        },
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/full_20261101/checkpoint-188/adapter_config.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\adapter_config.json",
+          "remote_sha256": "fe8ddf9b08ec8dab42a42a55072360d9dbe9a944b10d2a76a3441f34e7a32d58",
+          "local_sha256": "fe8ddf9b08ec8dab42a42a55072360d9dbe9a944b10d2a76a3441f34e7a32d58",
+          "match": true
+        },
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/full_20261101/checkpoint-188/adapter_model.safetensors",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\adapter_model.safetensors",
+          "remote_sha256": "0ad919a715da0ea1843d26aaa77b929dec018d7c3d1ee5135fcc6e9f3ff41374",
+          "local_sha256": "0ad919a715da0ea1843d26aaa77b929dec018d7c3d1ee5135fcc6e9f3ff41374",
+          "match": true
+        },
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/full_20261101/checkpoint-188/README.md",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\README.md",
+          "remote_sha256": "8c402a3f7663ebe1edb087b529c66b29c71f5d740fec9d6b0b4f3db099c467f4",
+          "local_sha256": "8c402a3f7663ebe1edb087b529c66b29c71f5d740fec9d6b0b4f3db099c467f4",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/train_E3_20261101/artifacts/pilot_20261101/checkpoint-20",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\pilot_checkpoint-20",
+      "allocated_bytes": 134247936,
+      "confirmed": true,
+      "symlinks": [],
+      "files": [
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/pilot_20261101/checkpoint-20/trainer_state.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\pilot_checkpoint-20\\trainer_state.json",
+          "remote_sha256": "2e4435138c4d2621d0818e63f95610de8db7ef4938e05a25c9446b889c7d48cd",
+          "local_sha256": "2e4435138c4d2621d0818e63f95610de8db7ef4938e05a25c9446b889c7d48cd",
+          "match": true
+        },
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/pilot_20261101/checkpoint-20/args.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\pilot_checkpoint-20\\args.json",
+          "remote_sha256": "9146470e97b9bdb262627c16cc0ebf2189d796a1e369c6252dd7d2c251e26e9e",
+          "local_sha256": "9146470e97b9bdb262627c16cc0ebf2189d796a1e369c6252dd7d2c251e26e9e",
+          "match": true
+        },
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/pilot_20261101/checkpoint-20/training_args.bin",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\pilot_checkpoint-20\\training_args.bin",
+          "remote_sha256": "771a2176a5302d7e0277909d03885162c9d5f22eea343145454e7c57b8759811",
+          "local_sha256": "771a2176a5302d7e0277909d03885162c9d5f22eea343145454e7c57b8759811",
+          "match": true
+        },
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/pilot_20261101/checkpoint-20/additional_config.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\pilot_checkpoint-20\\additional_config.json",
+          "remote_sha256": "c7799462ebedae6557ffad31566029e2d2f958b7b40e46e972cf901bcaf45733",
+          "local_sha256": "c7799462ebedae6557ffad31566029e2d2f958b7b40e46e972cf901bcaf45733",
+          "match": true
+        },
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/pilot_20261101/checkpoint-20/adapter_config.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\pilot_checkpoint-20\\adapter_config.json",
+          "remote_sha256": "fe8ddf9b08ec8dab42a42a55072360d9dbe9a944b10d2a76a3441f34e7a32d58",
+          "local_sha256": "fe8ddf9b08ec8dab42a42a55072360d9dbe9a944b10d2a76a3441f34e7a32d58",
+          "match": true
+        },
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/pilot_20261101/checkpoint-20/adapter_model.safetensors",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\pilot_checkpoint-20\\adapter_model.safetensors",
+          "remote_sha256": "dda3cea30d61b72561815de61d5706ed362e1cc14fc8b5cf4ec762855a9fb445",
+          "local_sha256": "dda3cea30d61b72561815de61d5706ed362e1cc14fc8b5cf4ec762855a9fb445",
+          "match": true
+        },
+        {
+          "remote": "/workspace/train_E3_20261101/artifacts/pilot_20261101/checkpoint-20/README.md",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\pilot_checkpoint-20\\README.md",
+          "remote_sha256": "8c402a3f7663ebe1edb087b529c66b29c71f5d740fec9d6b0b4f3db099c467f4",
+          "local_sha256": "8c402a3f7663ebe1edb087b529c66b29c71f5d740fec9d6b0b4f3db099c467f4",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/eval_E3_20261101/adapter/full",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full",
+      "allocated_bytes": 138306560,
+      "confirmed": true,
+      "symlinks": [],
+      "files": [
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/SHA256SUMS.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\SHA256SUMS.json",
+          "remote_sha256": "38b9c800751a789808e9ad5607ae124992386571c393f7c04841e0d4384f1869",
+          "local_sha256": "38b9c800751a789808e9ad5607ae124992386571c393f7c04841e0d4384f1869",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/training_code/code/requirements.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\training_code\\code\\requirements.txt",
+          "remote_sha256": "aaa4a506bd9eee759173902cd758d218b6b1cba47158650c57063ad0ceb373b7",
+          "local_sha256": "aaa4a506bd9eee759173902cd758d218b6b1cba47158650c57063ad0ceb373b7",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/training_code/code/vllm_engine.py",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\training_code\\code\\vllm_engine.py",
+          "remote_sha256": "979e99079c7a8d31dc969fef16530e3cc8bc47588e1c38447edee92c2b759301",
+          "local_sha256": "979e99079c7a8d31dc969fef16530e3cc8bc47588e1c38447edee92c2b759301",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/training_code/code/config.yaml",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\training_code\\code\\config.yaml",
+          "remote_sha256": "3946c9a93cd5ab1cc5a8010fc00473e8a71f1c589e0a5f664edb70a3097234dc",
+          "local_sha256": "3946c9a93cd5ab1cc5a8010fc00473e8a71f1c589e0a5f664edb70a3097234dc",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/training_code/requirements-eval-lock.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\training_code\\requirements-eval-lock.txt",
+          "remote_sha256": "3840bec5681d63fda05a6b8c687540d8a370ce2c4d3b42246f5241066a0e45f3",
+          "local_sha256": "3840bec5681d63fda05a6b8c687540d8a370ce2c4d3b42246f5241066a0e45f3",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/training_code/requirements-train-lock.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\training_code\\requirements-train-lock.txt",
+          "remote_sha256": "b23792472c15e0882de633a47021460b2b0bfdc8103aa2e030bcd4b009643e2c",
+          "local_sha256": "b23792472c15e0882de633a47021460b2b0bfdc8103aa2e030bcd4b009643e2c",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/training_code/check_vllm.py",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\training_code\\check_vllm.py",
+          "remote_sha256": "df032cc5ac31595217a1fed34b5bebf18e22aa805d5815b575c73496dd058f1a",
+          "local_sha256": "df032cc5ac31595217a1fed34b5bebf18e22aa805d5815b575c73496dd058f1a",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/training_code/merge.py",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\training_code\\merge.py",
+          "remote_sha256": "01ad69abe4a84c207910e77ffe17357d6ec0ba304da90c2f8a3962c9c6944018",
+          "local_sha256": "01ad69abe4a84c207910e77ffe17357d6ec0ba304da90c2f8a3962c9c6944018",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/training_code/full.py",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\training_code\\full.py",
+          "remote_sha256": "5a4c3cf68541d46b8ec09a6712e842c51df47e4e94b3913bf1e9049be7681c1a",
+          "local_sha256": "5a4c3cf68541d46b8ec09a6712e842c51df47e4e94b3913bf1e9049be7681c1a",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/training_code/pilot.py",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\training_code\\pilot.py",
+          "remote_sha256": "a2a95938d085103b70d417ff34f2de1071f51a79299485e52de04119c438358e",
+          "local_sha256": "a2a95938d085103b70d417ff34f2de1071f51a79299485e52de04119c438358e",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/training_code/train_config.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\training_code\\train_config.json",
+          "remote_sha256": "1d87c9a1a016a32173beda08b4fea09b0fdf74f5d401540a33fec5b0b1d191a1",
+          "local_sha256": "1d87c9a1a016a32173beda08b4fea09b0fdf74f5d401540a33fec5b0b1d191a1",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/training_code/train.py",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\training_code\\train.py",
+          "remote_sha256": "5377fd4a3a73cafc99ebd814ff94730d1df98e2962522d4d5bdfb6e057cf0ce3",
+          "local_sha256": "5377fd4a3a73cafc99ebd814ff94730d1df98e2962522d4d5bdfb6e057cf0ce3",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/run_training_observations.jsonl",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\run_training_observations.jsonl",
+          "remote_sha256": "5af94f0bf579ce8108c6c232ce2aa7127cdddf29df61e10bb007bf0e4c6326e5",
+          "local_sha256": "5af94f0bf579ce8108c6c232ce2aa7127cdddf29df61e10bb007bf0e4c6326e5",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/run_logging.jsonl",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\run_logging.jsonl",
+          "remote_sha256": "39fdbc65d9b49eff5e6838f8de0904376020701723ee8ef700a17730149a5021",
+          "local_sha256": "39fdbc65d9b49eff5e6838f8de0904376020701723ee8ef700a17730149a5021",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/run_args.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\run_args.json",
+          "remote_sha256": "8367ba47a71f8663f3fe7a403b0a48b0f2f61e5a3630f596602e75234784c2b7",
+          "local_sha256": "8367ba47a71f8663f3fe7a403b0a48b0f2f61e5a3630f596602e75234784c2b7",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/vllm.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\vllm.log",
+          "remote_sha256": "a77b548f84ceb4c1f15de0cabb50e8f75ef8ae8a283eaef8fb3db6f827742acb",
+          "local_sha256": "a77b548f84ceb4c1f15de0cabb50e8f75ef8ae8a283eaef8fb3db6f827742acb",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/vllm.exit",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\vllm.exit",
+          "remote_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "local_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/validation.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\validation.log",
+          "remote_sha256": "95fb59ba42b7c27f175a37aa2998b2abed8ecc64a92b40e95cc4a40a9ee11250",
+          "local_sha256": "95fb59ba42b7c27f175a37aa2998b2abed8ecc64a92b40e95cc4a40a9ee11250",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/training_summary.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\training_summary.json",
+          "remote_sha256": "e05f02141d9ecdbf0d62129aedbbfc12f21f51f5758c90145b4fca1aa973434a",
+          "local_sha256": "e05f02141d9ecdbf0d62129aedbbfc12f21f51f5758c90145b4fca1aa973434a",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/train_started_utc.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\train_started_utc.txt",
+          "remote_sha256": "b5f9ea60fbb62981bd6ef4cbc762b79243a0677d6a427a715f393914d1c74d14",
+          "local_sha256": "b5f9ea60fbb62981bd6ef4cbc762b79243a0677d6a427a715f393914d1c74d14",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/train_pip_check.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\train_pip_check.txt",
+          "remote_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "local_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/train_ended_utc.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\train_ended_utc.txt",
+          "remote_sha256": "1941fa986a3778a308a69ba236a3342dadaf7345febd85a936b6c7a0f61aaacb",
+          "local_sha256": "1941fa986a3778a308a69ba236a3342dadaf7345febd85a936b6c7a0f61aaacb",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/train.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\train.log",
+          "remote_sha256": "bbfceaadcd94960b8ea32ead1e4cedf18523042dde89a7dfdff9ef5a07114cae",
+          "local_sha256": "bbfceaadcd94960b8ea32ead1e4cedf18523042dde89a7dfdff9ef5a07114cae",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/train.exit",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\train.exit",
+          "remote_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "local_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/stage4.exit",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\stage4.exit",
+          "remote_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "local_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/preflight.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\preflight.log",
+          "remote_sha256": "0ecdacb08fa0475087c90df2a76f5c12510f68a17b3febccf7eb76c3bd0c9652",
+          "local_sha256": "0ecdacb08fa0475087c90df2a76f5c12510f68a17b3febccf7eb76c3bd0c9652",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/preflight.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\preflight.json",
+          "remote_sha256": "f150d6b918cf47461b945c61291224761db3b10b2e216d3ae8a0e08be5d011d8",
+          "local_sha256": "f150d6b918cf47461b945c61291224761db3b10b2e216d3ae8a0e08be5d011d8",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/preflight.exit",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\preflight.exit",
+          "remote_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "local_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/packages_train.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\packages_train.txt",
+          "remote_sha256": "fe098d5c8610e9c43545c02871a4fb22aad30986fd1a378c9ce53f350178c607",
+          "local_sha256": "fe098d5c8610e9c43545c02871a4fb22aad30986fd1a378c9ce53f350178c607",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/packages_eval.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\packages_eval.txt",
+          "remote_sha256": "0b767ebc18f2c2565080341d5471f9d17237d0774684b7b234f8ddab402a9096",
+          "local_sha256": "0b767ebc18f2c2565080341d5471f9d17237d0774684b7b234f8ddab402a9096",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/nvidia_smi.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\nvidia_smi.txt",
+          "remote_sha256": "cfdc3dd676939e8b53f3bfee2b71134416f2b8818d48aa80e5a8c7710e3d900b",
+          "local_sha256": "cfdc3dd676939e8b53f3bfee2b71134416f2b8818d48aa80e5a8c7710e3d900b",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/merge_validation.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\merge_validation.log",
+          "remote_sha256": "feb70eee8c77dac5bdad957ae242fa0488874564ce470d7be9eb96390fed1278",
+          "local_sha256": "feb70eee8c77dac5bdad957ae242fa0488874564ce470d7be9eb96390fed1278",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/merge_validation.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\merge_validation.json",
+          "remote_sha256": "e173d94ce52e284693ff25084d3ea4be93d8d320cfad942feeca7d72827d54fa",
+          "local_sha256": "e173d94ce52e284693ff25084d3ea4be93d8d320cfad942feeca7d72827d54fa",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/merge_launcher.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\merge_launcher.log",
+          "remote_sha256": "42969ca05c1eb2debeb0098239e32662aa8f86dd63f1c6546a799053b95ddc59",
+          "local_sha256": "42969ca05c1eb2debeb0098239e32662aa8f86dd63f1c6546a799053b95ddc59",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/merge.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\merge.log",
+          "remote_sha256": "366338c2f53b91cbe23667ab5fdc9948a04ecfe1e736b6f9d96cdd72414a6ab8",
+          "local_sha256": "366338c2f53b91cbe23667ab5fdc9948a04ecfe1e736b6f9d96cdd72414a6ab8",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/merge.exit",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\merge.exit",
+          "remote_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "local_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/launcher_wall_seconds.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\launcher_wall_seconds.txt",
+          "remote_sha256": "9013b4cb4e42a36108f9995d928487fa3663e3dc674785c9455f849837517c32",
+          "local_sha256": "9013b4cb4e42a36108f9995d928487fa3663e3dc674785c9455f849837517c32",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/gpu_memory.csv",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\gpu_memory.csv",
+          "remote_sha256": "9ad501467bfbb82c986b4eb33498f9e77272e51739f6080785081550ce1fc189",
+          "local_sha256": "9ad501467bfbb82c986b4eb33498f9e77272e51739f6080785081550ce1fc189",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/executed_args_subset.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\executed_args_subset.json",
+          "remote_sha256": "d538a42da6c89c494732d987b998e5748af14cdb9a03fbac26c80b095bfc6f7d",
+          "local_sha256": "d538a42da6c89c494732d987b998e5748af14cdb9a03fbac26c80b095bfc6f7d",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/eval_pip_check.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\eval_pip_check.txt",
+          "remote_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "local_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/logs/download_info.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\logs\\download_info.json",
+          "remote_sha256": "967f4b31835c022ffb53d1bffe99adcefa9bc31c798833a33aa6c084b158932d",
+          "local_sha256": "967f4b31835c022ffb53d1bffe99adcefa9bc31c798833a33aa6c084b158932d",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/training_args.bin",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\training_args.bin",
+          "remote_sha256": "98285c2d478a1fe68582707367328b0f08d1add7e0514b57a5f7cda58e5f4078",
+          "local_sha256": "98285c2d478a1fe68582707367328b0f08d1add7e0514b57a5f7cda58e5f4078",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/trainer_state.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\trainer_state.json",
+          "remote_sha256": "0b2f01c3d74415002282b1fd1ac70bca8187bf4d26d6efba48b699446a3089b2",
+          "local_sha256": "0b2f01c3d74415002282b1fd1ac70bca8187bf4d26d6efba48b699446a3089b2",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/args.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\args.json",
+          "remote_sha256": "8367ba47a71f8663f3fe7a403b0a48b0f2f61e5a3630f596602e75234784c2b7",
+          "local_sha256": "8367ba47a71f8663f3fe7a403b0a48b0f2f61e5a3630f596602e75234784c2b7",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/additional_config.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\additional_config.json",
+          "remote_sha256": "c7799462ebedae6557ffad31566029e2d2f958b7b40e46e972cf901bcaf45733",
+          "local_sha256": "c7799462ebedae6557ffad31566029e2d2f958b7b40e46e972cf901bcaf45733",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/adapter_model.safetensors",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\adapter_model.safetensors",
+          "remote_sha256": "0ad919a715da0ea1843d26aaa77b929dec018d7c3d1ee5135fcc6e9f3ff41374",
+          "local_sha256": "0ad919a715da0ea1843d26aaa77b929dec018d7c3d1ee5135fcc6e9f3ff41374",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/adapter_config.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\adapter_config.json",
+          "remote_sha256": "fe8ddf9b08ec8dab42a42a55072360d9dbe9a944b10d2a76a3441f34e7a32d58",
+          "local_sha256": "fe8ddf9b08ec8dab42a42a55072360d9dbe9a944b10d2a76a3441f34e7a32d58",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/adapter/full/README.md",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\adapter\\full\\README.md",
+          "remote_sha256": "8c402a3f7663ebe1edb087b529c66b29c71f5d740fec9d6b0b4f3db099c467f4",
+          "local_sha256": "8c402a3f7663ebe1edb087b529c66b29c71f5d740fec9d6b0b4f3db099c467f4",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/eval_E3_20261101/runs",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs",
+      "allocated_bytes": 34840064,
+      "confirmed": true,
+      "symlinks": [],
+      "files": [
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/run.exit",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\run.exit",
+          "remote_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "local_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/source_verification.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\source_verification.txt",
+          "remote_sha256": "70fc6bf4d0230f924107d9ada0d455f38ba7f2398c7534f16194fa084fec5daa",
+          "local_sha256": "70fc6bf4d0230f924107d9ada0d455f38ba7f2398c7534f16194fa084fec5daa",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/pip_check.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\pip_check.txt",
+          "remote_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "local_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/torch_after_generation.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\torch_after_generation.txt",
+          "remote_sha256": "8124f6c51ef2c253407dac65b4a75ffdae1e5a47b8baf71a94b7085441a513eb",
+          "local_sha256": "8124f6c51ef2c253407dac65b4a75ffdae1e5a47b8baf71a94b7085441a513eb",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/generation_summary.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\generation_summary.json",
+          "remote_sha256": "8f83b9309379e87a1791df4def08ed21baf8f9c709ba2dc923201673988faa18",
+          "local_sha256": "8f83b9309379e87a1791df4def08ed21baf8f9c709ba2dc923201673988faa18",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/summary.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\summary.log",
+          "remote_sha256": "0c05161584078c21dec6a6e4a90f24205e8d89a342c921988a920855647f7817",
+          "local_sha256": "0c05161584078c21dec6a6e4a90f24205e8d89a342c921988a920855647f7817",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/raw_validation.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\raw_validation.log",
+          "remote_sha256": "9ff626073b64e91522f9cf4a580b79493381b3702a34483c8d03d22be09639e8",
+          "local_sha256": "9ff626073b64e91522f9cf4a580b79493381b3702a34483c8d03d22be09639e8",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/finished_utc.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\finished_utc.txt",
+          "remote_sha256": "29736f9e4228ed78893812dc86a7cc1efc716012958fc068f05dbf468375f312",
+          "local_sha256": "29736f9e4228ed78893812dc86a7cc1efc716012958fc068f05dbf468375f312",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/generation/run_metadata.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\generation\\run_metadata.json",
+          "remote_sha256": "89d2eaab4371634c3420675cb3e857d889df8fef75b7412d7f75e6f2730465ee",
+          "local_sha256": "89d2eaab4371634c3420675cb3e857d889df8fef75b7412d7f75e6f2730465ee",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/generation/env.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\generation\\env.json",
+          "remote_sha256": "5d4e5283ccd6b73726d57de1b0c978a4cbba10a68a04903567dcd48637c1d5d8",
+          "local_sha256": "5d4e5283ccd6b73726d57de1b0c978a4cbba10a68a04903567dcd48637c1d5d8",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/generation/raw.jsonl",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\generation\\raw.jsonl",
+          "remote_sha256": "cf0aba5b6941d46620244e3a57653c944aed0e1eb5b47a54136a7a4c39376722",
+          "local_sha256": "cf0aba5b6941d46620244e3a57653c944aed0e1eb5b47a54136a7a4c39376722",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/generation/env_check.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\generation\\env_check.json",
+          "remote_sha256": "fe9a80cb207ea3f786f402b8ac85707ba4e9545ede2031bed0228c2b9e89a86a",
+          "local_sha256": "fe9a80cb207ea3f786f402b8ac85707ba4e9545ede2031bed0228c2b9e89a86a",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/generation/logs/04_validate_raw.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\generation\\logs\\04_validate_raw.log",
+          "remote_sha256": "226000e71598492dc482e7cd0452f2a42b590b937e9b716577750df9620be0df",
+          "local_sha256": "226000e71598492dc482e7cd0452f2a42b590b937e9b716577750df9620be0df",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/generation/logs/03_generate.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\generation\\logs\\03_generate.log",
+          "remote_sha256": "19cfb0b8a80e9ce5be76bee1659dd74c4b90a458cd5e3b8c4fa732c880a0d92f",
+          "local_sha256": "19cfb0b8a80e9ce5be76bee1659dd74c4b90a458cd5e3b8c4fa732c880a0d92f",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/generation/logs/02_env_check.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\generation\\logs\\02_env_check.log",
+          "remote_sha256": "8a63e43b85efc98c5938db48c67dc1da7cd1f5dbe200a4c11caf70e8f26e92a7",
+          "local_sha256": "8a63e43b85efc98c5938db48c67dc1da7cd1f5dbe200a4c11caf70e8f26e92a7",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/generation/logs/pip_freeze.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\generation\\logs\\pip_freeze.txt",
+          "remote_sha256": "31eaa3af4989e2bafb04c02d9a9ae5bda80c5c16676a2fce5cc4e77cc2d76877",
+          "local_sha256": "31eaa3af4989e2bafb04c02d9a9ae5bda80c5c16676a2fce5cc4e77cc2d76877",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/generation/logs/01_install.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\generation\\logs\\01_install.log",
+          "remote_sha256": "ad05a3c1efb07015170243380ea7ae1aea81977bf81ee6b53fd9822d813a7a06",
+          "local_sha256": "ad05a3c1efb07015170243380ea7ae1aea81977bf81ee6b53fd9822d813a7a06",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/generation/logs/00_system.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\generation\\logs\\00_system.log",
+          "remote_sha256": "c0fd89723aae0054de2441065fb03aab35e9a5f4b42c8e33e28fd687c889b83b",
+          "local_sha256": "c0fd89723aae0054de2441065fb03aab35e9a5f4b42c8e33e28fd687c889b83b",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/generate.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\generate.log",
+          "remote_sha256": "b773c04d9c80f54870fff1cda52a191a8e4ab612e4cb61561afe7c1db135d0f6",
+          "local_sha256": "b773c04d9c80f54870fff1cda52a191a8e4ab612e4cb61561afe7c1db135d0f6",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/E3/started_utc.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\E3\\started_utc.txt",
+          "remote_sha256": "ed211b2bfcccf6282548ed98e091a660753810f42bfbf8fa4875efa7a938f524",
+          "local_sha256": "ed211b2bfcccf6282548ed98e091a660753810f42bfbf8fa4875efa7a938f524",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/run.exit",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\run.exit",
+          "remote_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "local_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/source_verification.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\source_verification.txt",
+          "remote_sha256": "70fc6bf4d0230f924107d9ada0d455f38ba7f2398c7534f16194fa084fec5daa",
+          "local_sha256": "70fc6bf4d0230f924107d9ada0d455f38ba7f2398c7534f16194fa084fec5daa",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/pip_check.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\pip_check.txt",
+          "remote_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "local_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/torch_after_generation.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\torch_after_generation.txt",
+          "remote_sha256": "8124f6c51ef2c253407dac65b4a75ffdae1e5a47b8baf71a94b7085441a513eb",
+          "local_sha256": "8124f6c51ef2c253407dac65b4a75ffdae1e5a47b8baf71a94b7085441a513eb",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/generation_summary.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\generation_summary.json",
+          "remote_sha256": "559d2991005d30c1d35b30de00e32c16af9a4fc5bbe8599975c2ec1bf10696a7",
+          "local_sha256": "559d2991005d30c1d35b30de00e32c16af9a4fc5bbe8599975c2ec1bf10696a7",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/summary.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\summary.log",
+          "remote_sha256": "a3a4d64af3a9ff522dcdd0a2a4a14590067d5dbd582a742291d07e3ec612e5fc",
+          "local_sha256": "a3a4d64af3a9ff522dcdd0a2a4a14590067d5dbd582a742291d07e3ec612e5fc",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/raw_validation.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\raw_validation.log",
+          "remote_sha256": "250b595bfef29a69fba32aee4689127d7cda4cc7af89e62372745abddae65b61",
+          "local_sha256": "250b595bfef29a69fba32aee4689127d7cda4cc7af89e62372745abddae65b61",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/finished_utc.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\finished_utc.txt",
+          "remote_sha256": "850c7f80cf1958bd1cb65d79f53f500cce56a56aa8fcaed60260bcf3a14feed0",
+          "local_sha256": "850c7f80cf1958bd1cb65d79f53f500cce56a56aa8fcaed60260bcf3a14feed0",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/generation/run_metadata.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\generation\\run_metadata.json",
+          "remote_sha256": "0d14c155bb7a7824644de54869df4550bdd10959bb9cdae60698434f0ddfd5ca",
+          "local_sha256": "0d14c155bb7a7824644de54869df4550bdd10959bb9cdae60698434f0ddfd5ca",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/generation/env.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\generation\\env.json",
+          "remote_sha256": "8898b5082e10f66c15b326bc9cd362936711bd7cd3c52857b949ee49876ea5fc",
+          "local_sha256": "8898b5082e10f66c15b326bc9cd362936711bd7cd3c52857b949ee49876ea5fc",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/generation/raw.jsonl",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\generation\\raw.jsonl",
+          "remote_sha256": "ec058297177b8c793f1999f9df17392514ce0234135e20475756b3725fa5d92e",
+          "local_sha256": "ec058297177b8c793f1999f9df17392514ce0234135e20475756b3725fa5d92e",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/generation/env_check.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\generation\\env_check.json",
+          "remote_sha256": "9330ea490678eee78fa6c48078ea245cdd3124d5229556f087e3a9d3c66d694b",
+          "local_sha256": "9330ea490678eee78fa6c48078ea245cdd3124d5229556f087e3a9d3c66d694b",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/generation/logs/04_validate_raw.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\generation\\logs\\04_validate_raw.log",
+          "remote_sha256": "04e6e30dbb04c4edfa54a054979eda525e2f97008b8a691161083d879a130d48",
+          "local_sha256": "04e6e30dbb04c4edfa54a054979eda525e2f97008b8a691161083d879a130d48",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/generation/logs/03_generate.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\generation\\logs\\03_generate.log",
+          "remote_sha256": "7f7702350cf64f69a1608a7a173ccd289b405b3bc2c5c9aa58a2aa33c5660204",
+          "local_sha256": "7f7702350cf64f69a1608a7a173ccd289b405b3bc2c5c9aa58a2aa33c5660204",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/generation/logs/02_env_check.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\generation\\logs\\02_env_check.log",
+          "remote_sha256": "dcb828cc30dba9c55499fdbcd1a1092e9e9ec962886bb3b759391fdedf4d705b",
+          "local_sha256": "dcb828cc30dba9c55499fdbcd1a1092e9e9ec962886bb3b759391fdedf4d705b",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/generation/logs/pip_freeze.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\generation\\logs\\pip_freeze.txt",
+          "remote_sha256": "31eaa3af4989e2bafb04c02d9a9ae5bda80c5c16676a2fce5cc4e77cc2d76877",
+          "local_sha256": "31eaa3af4989e2bafb04c02d9a9ae5bda80c5c16676a2fce5cc4e77cc2d76877",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/generation/logs/01_install.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\generation\\logs\\01_install.log",
+          "remote_sha256": "ad05a3c1efb07015170243380ea7ae1aea81977bf81ee6b53fd9822d813a7a06",
+          "local_sha256": "ad05a3c1efb07015170243380ea7ae1aea81977bf81ee6b53fd9822d813a7a06",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/generation/logs/00_system.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\generation\\logs\\00_system.log",
+          "remote_sha256": "586562d71ae840f785304efe53fa2b51eadec529fd163acf5c4160198dbc14dc",
+          "local_sha256": "586562d71ae840f785304efe53fa2b51eadec529fd163acf5c4160198dbc14dc",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/generate.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\generate.log",
+          "remote_sha256": "8db1536385c552c500c3ca3a236021bc0d98f14559c47e97a95a2c054fdfd19e",
+          "local_sha256": "8db1536385c552c500c3ca3a236021bc0d98f14559c47e97a95a2c054fdfd19e",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/runs/smoke/started_utc.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\runs\\smoke\\started_utc.txt",
+          "remote_sha256": "c1c1c911fd72b4bc224c63ea61bd47d41f81ac9e5a86e4d5b2108ec2b3b99910",
+          "local_sha256": "c1c1c911fd72b4bc224c63ea61bd47d41f81ac9e5a86e4d5b2108ec2b3b99910",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/eval_E3_20261101/records",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records",
+      "allocated_bytes": 6004224,
+      "confirmed": true,
+      "symlinks": [],
+      "files": [
+        {
+          "remote": "/workspace/eval_E3_20261101/records/result_files_sha256.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\result_files_sha256.json",
+          "remote_sha256": "9a289f6c64a6994d49d863bfed44e4217d80b1bfbe998c58aa2dc4da42f34d9b",
+          "local_sha256": "9a289f6c64a6994d49d863bfed44e4217d80b1bfbe998c58aa2dc4da42f34d9b",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/executed_scripts_sha256.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\executed_scripts_sha256.json",
+          "remote_sha256": "4d8e2e35f32d6f70fb3c0324d0832ef2bf30cafa9c74245fd372b60ba5eb3fa9",
+          "local_sha256": "4d8e2e35f32d6f70fb3c0324d0832ef2bf30cafa9c74245fd372b60ba5eb3fa9",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/evaluation_source_sha256.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\evaluation_source_sha256.json",
+          "remote_sha256": "4cc98282f1b01cde99af595a8a1302a5875390e22841e8a3f19dc2ad2fdfbabe",
+          "local_sha256": "4cc98282f1b01cde99af595a8a1302a5875390e22841e8a3f19dc2ad2fdfbabe",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/copied_source_receipt.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\copied_source_receipt.json",
+          "remote_sha256": "633ff6a0d0307ca3a83ffa5be6b197c10d5064b66d80f24d2f9909cbd328cec3",
+          "local_sha256": "633ff6a0d0307ca3a83ffa5be6b197c10d5064b66d80f24d2f9909cbd328cec3",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/pipeline_ended_utc.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\pipeline_ended_utc.txt",
+          "remote_sha256": "fdfe139f43fe976955086309e392fc68b20d989f5226e5fbd0969d71c2b6b2b6",
+          "local_sha256": "fdfe139f43fe976955086309e392fc68b20d989f5226e5fbd0969d71c2b6b2b6",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/pipeline.exit",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\pipeline.exit",
+          "remote_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "local_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/preflight/preflight.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\preflight\\preflight.json",
+          "remote_sha256": "7384000a05a0fbe249c3152464aac0b2542e7a51ee9673b34ddaf2d8a7c72be8",
+          "local_sha256": "7384000a05a0fbe249c3152464aac0b2542e7a51ee9673b34ddaf2d8a7c72be8",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/preflight.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\preflight.log",
+          "remote_sha256": "996f01d41c1e79ddeefde6c9b55537fb82075d07116859542c829f1a3aab3855",
+          "local_sha256": "996f01d41c1e79ddeefde6c9b55537fb82075d07116859542c829f1a3aab3855",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/gate_result.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\gate_result.txt",
+          "remote_sha256": "7c0a202f084ab1c728f53ef3311de539515ce5362ac1d4b340f5552bbf92cb3b",
+          "local_sha256": "7c0a202f084ab1c728f53ef3311de539515ce5362ac1d4b340f5552bbf92cb3b",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/gates/env_check.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\gates\\env_check.json",
+          "remote_sha256": "75717571543790f53c1cd9cc7e4e385531b1cfa215c7b4a72f920efa258d7678",
+          "local_sha256": "75717571543790f53c1cd9cc7e4e385531b1cfa215c7b4a72f920efa258d7678",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/env_gate.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\env_gate.log",
+          "remote_sha256": "7e67e76cf5911aa04b728d57f8d257171cbff35f59cded448e2ce58ab80fabf3",
+          "local_sha256": "7e67e76cf5911aa04b728d57f8d257171cbff35f59cded448e2ce58ab80fabf3",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/merge.exit",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\merge.exit",
+          "remote_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "local_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/model_receipt.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\model_receipt.json",
+          "remote_sha256": "ebde4a4efffba0a3293a7baf9c8b3156c5c6c55044a4f24fa66c2f4344f8d740",
+          "local_sha256": "ebde4a4efffba0a3293a7baf9c8b3156c5c6c55044a4f24fa66c2f4344f8d740",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/merge.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\merge.log",
+          "remote_sha256": "f0f2a123c74b23f266542b82c53e71844037ee54908aaa97d83f01c406fd158d",
+          "local_sha256": "f0f2a123c74b23f266542b82c53e71844037ee54908aaa97d83f01c406fd158d",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/setup.exit",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\setup.exit",
+          "remote_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "local_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/packages_merge.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\packages_merge.txt",
+          "remote_sha256": "aa726fcd7cb837d9f436af0e6844675a474de83ab0ba7e53ab1a383601a4187e",
+          "local_sha256": "aa726fcd7cb837d9f436af0e6844675a474de83ab0ba7e53ab1a383601a4187e",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/pip_check_merge.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\pip_check_merge.txt",
+          "remote_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "local_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/install_merge.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\install_merge.log",
+          "remote_sha256": "4154ef036c4b7ce95a38f28ab527887f5643608f2792f2435abbe15d066b4d0b",
+          "local_sha256": "4154ef036c4b7ce95a38f28ab527887f5643608f2792f2435abbe15d066b4d0b",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/packages_generation.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\packages_generation.txt",
+          "remote_sha256": "31eaa3af4989e2bafb04c02d9a9ae5bda80c5c16676a2fce5cc4e77cc2d76877",
+          "local_sha256": "31eaa3af4989e2bafb04c02d9a9ae5bda80c5c16676a2fce5cc4e77cc2d76877",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/pip_check_generation.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\pip_check_generation.txt",
+          "remote_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "local_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/torch_after_install.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\torch_after_install.txt",
+          "remote_sha256": "8124f6c51ef2c253407dac65b4a75ffdae1e5a47b8baf71a94b7085441a513eb",
+          "local_sha256": "8124f6c51ef2c253407dac65b4a75ffdae1e5a47b8baf71a94b7085441a513eb",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/install_block_receipt.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\install_block_receipt.json",
+          "remote_sha256": "9dde7353d15504d229f2d01e0dba060ae8f4e60d5b911ac00a36521689cc31fd",
+          "local_sha256": "9dde7353d15504d229f2d01e0dba060ae8f4e60d5b911ac00a36521689cc31fd",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/install_block.sh",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\install_block.sh",
+          "remote_sha256": "bc4976537c83e00749cee44d75e97b26e732287a5c49b0dfaf0eeb66b4eaf4f1",
+          "local_sha256": "bc4976537c83e00749cee44d75e97b26e732287a5c49b0dfaf0eeb66b4eaf4f1",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/base_install/logs/01_install.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\base_install\\logs\\01_install.log",
+          "remote_sha256": "7b5c52f4d57479182e710924450724126d613f89e4dfa53a437abc76191c8884",
+          "local_sha256": "7b5c52f4d57479182e710924450724126d613f89e4dfa53a437abc76191c8884",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/input_verification.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\input_verification.json",
+          "remote_sha256": "e2c6a3bcf4ccfe808aa8c9482ade297781d45174fb44826f2e96959501c5553a",
+          "local_sha256": "e2c6a3bcf4ccfe808aa8c9482ade297781d45174fb44826f2e96959501c5553a",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/setup.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\setup.log",
+          "remote_sha256": "67fbbdb537a8d4db83c0bac8f01d9628f3efef9a4fd413e975c76643a3fc1fa0",
+          "local_sha256": "67fbbdb537a8d4db83c0bac8f01d9628f3efef9a4fd413e975c76643a3fc1fa0",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/pipeline.stage",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\pipeline.stage",
+          "remote_sha256": "37a40f08d8548dba289b9b0bb35bcf63b359f6d37ee86044ebc6b6da080b9ec1",
+          "local_sha256": "37a40f08d8548dba289b9b0bb35bcf63b359f6d37ee86044ebc6b6da080b9ec1",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/pipeline_started_utc.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\pipeline_started_utc.txt",
+          "remote_sha256": "ce724417c66024b1c32681ac3e06c909f112cad833956084b2e14326b088da9c",
+          "local_sha256": "ce724417c66024b1c32681ac3e06c909f112cad833956084b2e14326b088da9c",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/pipeline_launcher.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\pipeline_launcher.log",
+          "remote_sha256": "a19e3e0bcf58425b6970c6ed16687b7420645fbf693bbb727abc7b65e5258d90",
+          "local_sha256": "a19e3e0bcf58425b6970c6ed16687b7420645fbf693bbb727abc7b65e5258d90",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/pipeline.pid",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\pipeline.pid",
+          "remote_sha256": "81648ca9fc259570270d372dc503656aea57fb7494f293fa0c0a2fae9dcf4fd3",
+          "local_sha256": "81648ca9fc259570270d372dc503656aea57fb7494f293fa0c0a2fae9dcf4fd3",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/nvidia-smi.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\nvidia-smi.txt",
+          "remote_sha256": "e821c4605d8d959d25afb7c8183b73a20e2eecec263c8fd1c9005d77c997e7c2",
+          "local_sha256": "e821c4605d8d959d25afb7c8183b73a20e2eecec263c8fd1c9005d77c997e7c2",
+          "match": true
+        },
+        {
+          "remote": "/workspace/eval_E3_20261101/records/torch_before_install.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\records\\torch_before_install.txt",
+          "remote_sha256": "83b8700b72fbf547896f756cc260db857c52df61347439af774c19ce1a4a1176",
+          "local_sha256": "83b8700b72fbf547896f756cc260db857c52df61347439af774c19ce1a4a1176",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/hypB_eval_20261101_baseline/E1/generation",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E1\\generation",
+      "allocated_bytes": 11385856,
+      "confirmed": true,
+      "symlinks": [],
+      "files": [
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E1/generation/run_metadata.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E1\\generation\\run_metadata.json",
+          "remote_sha256": "818da12a77b485102db776a46feff4143ffb60b896aa75b99ce7e582d2c1255a",
+          "local_sha256": "818da12a77b485102db776a46feff4143ffb60b896aa75b99ce7e582d2c1255a",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E1/generation/env.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E1\\generation\\env.json",
+          "remote_sha256": "bbe8f3748ab51bab1faf8455d183ea93fde022c02b95731c365db344c9d76cb8",
+          "local_sha256": "bbe8f3748ab51bab1faf8455d183ea93fde022c02b95731c365db344c9d76cb8",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E1/generation/raw.jsonl",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E1\\generation\\raw.jsonl",
+          "remote_sha256": "a6e307b88a0c8ab6afd4a76d6706004736ec4b8319a94a014e54fe0faa43e317",
+          "local_sha256": "a6e307b88a0c8ab6afd4a76d6706004736ec4b8319a94a014e54fe0faa43e317",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E1/generation/env_check.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E1\\generation\\env_check.json",
+          "remote_sha256": "49c63e8b097eeb53997409b6d5688a3dee6a156f1b1c989af4edbdac65aba3e0",
+          "local_sha256": "49c63e8b097eeb53997409b6d5688a3dee6a156f1b1c989af4edbdac65aba3e0",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E1/generation/logs/04_validate_raw.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E1\\generation\\logs\\04_validate_raw.log",
+          "remote_sha256": "4c5c0a8fd75ee2839d6e10fa31983f27395e58b89ad6673313a28b6efbf99061",
+          "local_sha256": "4c5c0a8fd75ee2839d6e10fa31983f27395e58b89ad6673313a28b6efbf99061",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E1/generation/logs/03_generate.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E1\\generation\\logs\\03_generate.log",
+          "remote_sha256": "20edf61f5ecb6e4ec3754cd2180d4a542f8dd3aba8d6a265402ac9f4e22cef02",
+          "local_sha256": "20edf61f5ecb6e4ec3754cd2180d4a542f8dd3aba8d6a265402ac9f4e22cef02",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E1/generation/logs/02_env_check.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E1\\generation\\logs\\02_env_check.log",
+          "remote_sha256": "da6e6b7ca02adcaa05bbc01eca03d94671f8028f92428fb102f02a98f3820dae",
+          "local_sha256": "da6e6b7ca02adcaa05bbc01eca03d94671f8028f92428fb102f02a98f3820dae",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E1/generation/logs/pip_freeze.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E1\\generation\\logs\\pip_freeze.txt",
+          "remote_sha256": "622383b6e0252fb57217c0fb0a55edae2fa9c9da1a8c6f478322877f8a7e8cbf",
+          "local_sha256": "622383b6e0252fb57217c0fb0a55edae2fa9c9da1a8c6f478322877f8a7e8cbf",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E1/generation/logs/01_install.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E1\\generation\\logs\\01_install.log",
+          "remote_sha256": "7eaeeb79697c491979a6a764a631800f5ac3a7d1818b0f5f065292bf7a556dc2",
+          "local_sha256": "7eaeeb79697c491979a6a764a631800f5ac3a7d1818b0f5f065292bf7a556dc2",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E1/generation/logs/00_system.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E1\\generation\\logs\\00_system.log",
+          "remote_sha256": "3621f417c844d1a940ebae8842c57ef43e1012960e9047b77be37fd987ea0d94",
+          "local_sha256": "3621f417c844d1a940ebae8842c57ef43e1012960e9047b77be37fd987ea0d94",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/hypB_eval_20261101_baseline/E2/generation",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E2\\generation",
+      "allocated_bytes": 4113408,
+      "confirmed": true,
+      "symlinks": [],
+      "files": [
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E2/generation/run_metadata.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E2\\generation\\run_metadata.json",
+          "remote_sha256": "b0e99c493cd66266e8ccc201e4cd22f8ea7c946553e87b138aac106506148b25",
+          "local_sha256": "b0e99c493cd66266e8ccc201e4cd22f8ea7c946553e87b138aac106506148b25",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E2/generation/env.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E2\\generation\\env.json",
+          "remote_sha256": "f7d41c62767120e3c0519d5d917ea9a3e6e69a430b6e86c4768c09300f03491a",
+          "local_sha256": "f7d41c62767120e3c0519d5d917ea9a3e6e69a430b6e86c4768c09300f03491a",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E2/generation/raw.jsonl",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E2\\generation\\raw.jsonl",
+          "remote_sha256": "0026e5e6437f8c0ece78ca7c627847eff120783cc737e44faead4d41b8d92d1a",
+          "local_sha256": "0026e5e6437f8c0ece78ca7c627847eff120783cc737e44faead4d41b8d92d1a",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E2/generation/env_check.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E2\\generation\\env_check.json",
+          "remote_sha256": "6de4ee8bf4e6da52774bfcfc8a8964e56e21de10eb8d6c584ee148cc8363b848",
+          "local_sha256": "6de4ee8bf4e6da52774bfcfc8a8964e56e21de10eb8d6c584ee148cc8363b848",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E2/generation/logs/04_validate_raw.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E2\\generation\\logs\\04_validate_raw.log",
+          "remote_sha256": "a6d7376e3127c47dd53b076735e2c26fb878d6dd43f6f74c973ad75d77d3438f",
+          "local_sha256": "a6d7376e3127c47dd53b076735e2c26fb878d6dd43f6f74c973ad75d77d3438f",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E2/generation/logs/03_generate.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E2\\generation\\logs\\03_generate.log",
+          "remote_sha256": "9df5db9d8368b980428c128822b997e1b982aacc1944be9e2cd4ff85c7be1b8d",
+          "local_sha256": "9df5db9d8368b980428c128822b997e1b982aacc1944be9e2cd4ff85c7be1b8d",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E2/generation/logs/02_env_check.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E2\\generation\\logs\\02_env_check.log",
+          "remote_sha256": "ebe6daff89b514bf894316f6d0b9687d3b424a4d10c831d0ffa1fae745d0525e",
+          "local_sha256": "ebe6daff89b514bf894316f6d0b9687d3b424a4d10c831d0ffa1fae745d0525e",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E2/generation/logs/pip_freeze.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E2\\generation\\logs\\pip_freeze.txt",
+          "remote_sha256": "622383b6e0252fb57217c0fb0a55edae2fa9c9da1a8c6f478322877f8a7e8cbf",
+          "local_sha256": "622383b6e0252fb57217c0fb0a55edae2fa9c9da1a8c6f478322877f8a7e8cbf",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E2/generation/logs/01_install.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E2\\generation\\logs\\01_install.log",
+          "remote_sha256": "7eaeeb79697c491979a6a764a631800f5ac3a7d1818b0f5f065292bf7a556dc2",
+          "local_sha256": "7eaeeb79697c491979a6a764a631800f5ac3a7d1818b0f5f065292bf7a556dc2",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E2/generation/logs/00_system.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E2\\generation\\logs\\00_system.log",
+          "remote_sha256": "a9c7a348a6cbcd7c39c92f6b8adb810ce64cd0080f984a67500ea06a29e2bd62",
+          "local_sha256": "a9c7a348a6cbcd7c39c92f6b8adb810ce64cd0080f984a67500ea06a29e2bd62",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/hypB_eval_20261101_baseline/smoke_E1/generation",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\smoke_E1\\generation",
+      "allocated_bytes": 2136064,
+      "confirmed": true,
+      "symlinks": [],
+      "files": [
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/smoke_E1/generation/run_metadata.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\smoke_E1\\generation\\run_metadata.json",
+          "remote_sha256": "6795a1bc92695a048f408ec53d65ff820f131fc032a87ba8641c07a2ef957813",
+          "local_sha256": "6795a1bc92695a048f408ec53d65ff820f131fc032a87ba8641c07a2ef957813",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/smoke_E1/generation/env.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\smoke_E1\\generation\\env.json",
+          "remote_sha256": "995b7a25b5c3c0508e3f5771ef77e42d982ca6f112cea30f806650b1ae0c5678",
+          "local_sha256": "995b7a25b5c3c0508e3f5771ef77e42d982ca6f112cea30f806650b1ae0c5678",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/smoke_E1/generation/raw.jsonl",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\smoke_E1\\generation\\raw.jsonl",
+          "remote_sha256": "571b4697dc34baa3f1b35397c9f2c782ba14ac8d124f9d8430b8d11cd028d2f4",
+          "local_sha256": "571b4697dc34baa3f1b35397c9f2c782ba14ac8d124f9d8430b8d11cd028d2f4",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/smoke_E1/generation/env_check.json",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\smoke_E1\\generation\\env_check.json",
+          "remote_sha256": "2d6af542aaf019c8df7fda5293c7aa522da9168bb566250876192cc3ae5f4a24",
+          "local_sha256": "2d6af542aaf019c8df7fda5293c7aa522da9168bb566250876192cc3ae5f4a24",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/smoke_E1/generation/logs/04_validate_raw.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\smoke_E1\\generation\\logs\\04_validate_raw.log",
+          "remote_sha256": "d96ee24811c854d8e224c1cd54ecd678c9f940e24e372be4d0de57d871c03c27",
+          "local_sha256": "d96ee24811c854d8e224c1cd54ecd678c9f940e24e372be4d0de57d871c03c27",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/smoke_E1/generation/logs/03_generate.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\smoke_E1\\generation\\logs\\03_generate.log",
+          "remote_sha256": "79918639bfa06bc9a443593c873b7548ce12cbfda1f816240508a56a02d042ed",
+          "local_sha256": "79918639bfa06bc9a443593c873b7548ce12cbfda1f816240508a56a02d042ed",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/smoke_E1/generation/logs/02_env_check.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\smoke_E1\\generation\\logs\\02_env_check.log",
+          "remote_sha256": "deb9e44eb82f74fa4fcea49f3c1e9a69cba635faf9f1c356f892ea6e8d6eee0b",
+          "local_sha256": "deb9e44eb82f74fa4fcea49f3c1e9a69cba635faf9f1c356f892ea6e8d6eee0b",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/smoke_E1/generation/logs/pip_freeze.txt",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\smoke_E1\\generation\\logs\\pip_freeze.txt",
+          "remote_sha256": "622383b6e0252fb57217c0fb0a55edae2fa9c9da1a8c6f478322877f8a7e8cbf",
+          "local_sha256": "622383b6e0252fb57217c0fb0a55edae2fa9c9da1a8c6f478322877f8a7e8cbf",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/smoke_E1/generation/logs/01_install.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\smoke_E1\\generation\\logs\\01_install.log",
+          "remote_sha256": "7eaeeb79697c491979a6a764a631800f5ac3a7d1818b0f5f065292bf7a556dc2",
+          "local_sha256": "7eaeeb79697c491979a6a764a631800f5ac3a7d1818b0f5f065292bf7a556dc2",
+          "match": true
+        },
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/smoke_E1/generation/logs/00_system.log",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\smoke_E1\\generation\\logs\\00_system.log",
+          "remote_sha256": "8728573be72d9c6788a4330ff472a700b12f8a62d7dde3b27be23dee2e571cc4",
+          "local_sha256": "8728573be72d9c6788a4330ff472a700b12f8a62d7dde3b27be23dee2e571cc4",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/train_E3_20261101/full_results.tar.gz",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\reports\\stage4\\full_results.tar.gz",
+      "allocated_bytes": 122869760,
+      "confirmed": true,
+      "files": [
+        {
+          "remote": "/workspace/train_E3_20261101/full_results.tar.gz",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\reports\\stage4\\full_results.tar.gz",
+          "remote_sha256": "223ed9c4936f76e165108c3c1e71c2d9324519ce8dba543c99e7aff7a48d6cf0",
+          "local_sha256": "223ed9c4936f76e165108c3c1e71c2d9324519ce8dba543c99e7aff7a48d6cf0",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/train_E3_20261101/stage3_pilot_results.tar.gz",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\reports\\pod_stage3\\stage3_pilot_results.tar.gz",
+      "allocated_bytes": 123076608,
+      "confirmed": true,
+      "files": [
+        {
+          "remote": "/workspace/train_E3_20261101/stage3_pilot_results.tar.gz",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\reports\\pod_stage3\\stage3_pilot_results.tar.gz",
+          "remote_sha256": "44f598aebc000f72ed170e702537d4d58fee1a544a8c0acae265659005d0cd1c",
+          "local_sha256": "44f598aebc000f72ed170e702537d4d58fee1a544a8c0acae265659005d0cd1c",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/train_E3_20261101/stage3_stopped_reports.tar.gz",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\reports\\pod_stage3\\stage3_stopped_reports.tar.gz",
+      "allocated_bytes": 6656,
+      "confirmed": true,
+      "files": [
+        {
+          "remote": "/workspace/train_E3_20261101/stage3_stopped_reports.tar.gz",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\reports\\pod_stage3\\stage3_stopped_reports.tar.gz",
+          "remote_sha256": "6b4c0ea9755986255a84d09c2ff09742423233e651ab027bb1e5943fbe920dc4",
+          "local_sha256": "6b4c0ea9755986255a84d09c2ff09742423233e651ab027bb1e5943fbe920dc4",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/train_E3_20261101/stage3_transfer.tar.gz",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\stage3_transfer.tar.gz",
+      "allocated_bytes": 7958016,
+      "confirmed": true,
+      "files": [
+        {
+          "remote": "/workspace/train_E3_20261101/stage3_transfer.tar.gz",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\train_E3_20261101\\stage3_transfer.tar.gz",
+          "remote_sha256": "79332841023e6dd642cdee485da26a8da66dafebd86682992cb90a738610cfe3",
+          "local_sha256": "79332841023e6dd642cdee485da26a8da66dafebd86682992cb90a738610cfe3",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/eval_E3_20261101/generation_results.tar.gz",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\reports\\transfer\\generation_results.tar.gz",
+      "allocated_bytes": 7327232,
+      "confirmed": true,
+      "files": [
+        {
+          "remote": "/workspace/eval_E3_20261101/generation_results.tar.gz",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\reports\\transfer\\generation_results.tar.gz",
+          "remote_sha256": "95febc0a45f60f53a40ef63577c68d8436d86a01e8eb55c201fa954d031ed7c2",
+          "local_sha256": "95febc0a45f60f53a40ef63577c68d8436d86a01e8eb55c201fa954d031ed7c2",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/eval_E3_20261101/input/E3_adapter_full.tar.gz",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\input\\E3_adapter_full.tar.gz",
+      "allocated_bytes": 122869760,
+      "confirmed": true,
+      "files": [
+        {
+          "remote": "/workspace/eval_E3_20261101/input/E3_adapter_full.tar.gz",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\input\\E3_adapter_full.tar.gz",
+          "remote_sha256": "223ed9c4936f76e165108c3c1e71c2d9324519ce8dba543c99e7aff7a48d6cf0",
+          "local_sha256": "223ed9c4936f76e165108c3c1e71c2d9324519ce8dba543c99e7aff7a48d6cf0",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/eval_E3_20261101/input/source_bundle.tar.gz",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\input\\source_bundle.tar.gz",
+      "allocated_bytes": 152064,
+      "confirmed": true,
+      "files": [
+        {
+          "remote": "/workspace/eval_E3_20261101/input/source_bundle.tar.gz",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_E3_20261101\\input\\source_bundle.tar.gz",
+          "remote_sha256": "f82e35829818953c7b2cb5084831720f62062bb0bad94898835b366d5939ae46",
+          "local_sha256": "f82e35829818953c7b2cb5084831720f62062bb0bad94898835b366d5939ae46",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/hypB_eval_20261101_baseline/common_records_20261101.tar.gz",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\baseline_environment_20261101\\common_records_20261101.tar.gz",
+      "allocated_bytes": 14848,
+      "confirmed": true,
+      "files": [
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/common_records_20261101.tar.gz",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\baseline_environment_20261101\\common_records_20261101.tar.gz",
+          "remote_sha256": "f9a3e2d8a029b11eec79d6c986424f8a5f2d7b08f602e5efa9175c67896c85f7",
+          "local_sha256": "f9a3e2d8a029b11eec79d6c986424f8a5f2d7b08f602e5efa9175c67896c85f7",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/hypB_eval_20261101_baseline/smoke_records_20261101.tar.gz",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\smoke_E1\\smoke_records_20261101.tar.gz",
+      "allocated_bytes": 70656,
+      "confirmed": true,
+      "files": [
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/smoke_records_20261101.tar.gz",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\smoke_E1\\smoke_records_20261101.tar.gz",
+          "remote_sha256": "e28945a35b0e67dc81f830efa8f80ac15e2767d83e9b59adb93c064ca0e7d573",
+          "local_sha256": "e28945a35b0e67dc81f830efa8f80ac15e2767d83e9b59adb93c064ca0e7d573",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/hypB_eval_20261101/setup_records_20261101.tar.gz",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\setup_20261101\\setup_records_20261101.tar.gz",
+      "allocated_bytes": 16384,
+      "confirmed": true,
+      "files": [
+        {
+          "remote": "/workspace/hypB_eval_20261101/setup_records_20261101.tar.gz",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\setup_20261101\\setup_records_20261101.tar.gz",
+          "remote_sha256": "9a8dd49020755df6197dfe1d392cfc0d8befb4a2fd7589c0bcb5446c380be594",
+          "local_sha256": "9a8dd49020755df6197dfe1d392cfc0d8befb4a2fd7589c0bcb5446c380be594",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/hypB_eval_20261101_baseline/E1_records_20261101.tar.gz",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E1\\E1_records_20261101.tar.gz",
+      "allocated_bytes": 2187776,
+      "confirmed": true,
+      "files": [
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E1_records_20261101.tar.gz",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E1\\E1_records_20261101.tar.gz",
+          "remote_sha256": "acac4223dd765ca803c8d41300803d5548204fa57b7dd07bb88db1e768f19a27",
+          "local_sha256": "acac4223dd765ca803c8d41300803d5548204fa57b7dd07bb88db1e768f19a27",
+          "match": true
+        }
+      ]
+    },
+    {
+      "remote": "/workspace/hypB_eval_20261101_baseline/E2_records_20261101.tar.gz",
+      "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E2\\E2_records_20261101.tar.gz",
+      "allocated_bytes": 221696,
+      "confirmed": true,
+      "files": [
+        {
+          "remote": "/workspace/hypB_eval_20261101_baseline/E2_records_20261101.tar.gz",
+          "local": "C:\\Users\\brain\\Documents\\ChatGPT\\MMDL\\work\\eval_B_20261101\\runs\\E2\\E2_records_20261101.tar.gz",
+          "remote_sha256": "275ebb133eb2a3a2dde36d655ceee72a47c35645ea7dc667bc988c0462edb7d1",
+          "local_sha256": "275ebb133eb2a3a2dde36d655ceee72a47c35645ea7dc667bc988c0462edb7d1",
+          "match": true
+        }
+      ]
+    }
+  ],
+  "confirmed_allocated_bytes": 852090880
+}

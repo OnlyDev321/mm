@@ -1,0 +1,1307 @@
+{
+  "config_sha256": "3946c9a93cd5ab1cc5a8010fc00473e8a71f1c589e0a5f664edb70a3097234dc",
+  "pool_sha256": "81b0485c14e9859df3e78dd69bf123ae80e187b7a61b117aa2d3359a6a757c96",
+  "model_loaded": false,
+  "rows": [
+    {
+      "row": "577055",
+      "origin": "A",
+      "discipline": "Art & Design",
+      "prompt_tokens": 1098,
+      "resized_image_sizes": [
+        [
+          1184,
+          896
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "940096",
+      "origin": "A",
+      "discipline": "Humanities & Social Science",
+      "prompt_tokens": 1100,
+      "resized_image_sizes": [
+        [
+          1568,
+          672
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1639138",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1372,
+      "resized_image_sizes": [
+        [
+          1024,
+          1312
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "768447",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1184,
+      "resized_image_sizes": [
+        [
+          1248,
+          832
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1589281",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1191,
+      "resized_image_sizes": [
+        [
+          1984,
+          544
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1606522",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1142,
+      "resized_image_sizes": [
+        [
+          1472,
+          704
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1721870",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1132,
+      "resized_image_sizes": [
+        [
+          2080,
+          512
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "763905",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1222,
+      "resized_image_sizes": [
+        [
+          2080,
+          512
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1054292",
+      "origin": "A",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1249,
+      "resized_image_sizes": [
+        [
+          1152,
+          896
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "10900",
+      "origin": "B",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1147,
+      "resized_image_sizes": [
+        [
+          864,
+          1184
+        ]
+      ],
+      "method": "independent tokenizer IDs and vision grid expansion"
+    },
+    {
+      "row": "684295",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1086,
+      "resized_image_sizes": [
+        [
+          1120,
+          928
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "160799",
+      "origin": "A",
+      "discipline": "Humanities & Social Science",
+      "prompt_tokens": 1092,
+      "resized_image_sizes": [
+        [
+          992,
+          1024
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1213301",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1225,
+      "resized_image_sizes": [
+        [
+          1472,
+          704
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "33892",
+      "origin": "B",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1063,
+      "resized_image_sizes": [
+        [
+          608,
+          1664
+        ]
+      ],
+      "method": "independent tokenizer IDs and vision grid expansion"
+    },
+    {
+      "row": "769105",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1138,
+      "resized_image_sizes": [
+        [
+          1216,
+          864
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "608806",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1230,
+      "resized_image_sizes": [
+        [
+          2080,
+          512
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1012609",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1101,
+      "resized_image_sizes": [
+        [
+          2048,
+          512
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "497692",
+      "origin": "A",
+      "discipline": "Humanities & Social Science",
+      "prompt_tokens": 1154,
+      "resized_image_sizes": [
+        [
+          928,
+          1120
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "80834",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1167,
+      "resized_image_sizes": [
+        [
+          1344,
+          768
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "522395",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1190,
+      "resized_image_sizes": [
+        [
+          960,
+          1088
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1580114",
+      "origin": "A",
+      "discipline": "Humanities & Social Science",
+      "prompt_tokens": 1111,
+      "resized_image_sizes": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "57041",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1139,
+      "resized_image_sizes": [
+        [
+          2016,
+          512
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1597410",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1118,
+      "resized_image_sizes": [
+        [
+          1344,
+          768
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "288752",
+      "origin": "A",
+      "discipline": "Art & Design",
+      "prompt_tokens": 1083,
+      "resized_image_sizes": [
+        [
+          1248,
+          832
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "869601",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1243,
+      "resized_image_sizes": [
+        [
+          1216,
+          864
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "150552",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1092,
+      "resized_image_sizes": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "909594",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1126,
+      "resized_image_sizes": [
+        [
+          1440,
+          736
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1532848",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1210,
+      "resized_image_sizes": [
+        [
+          1536,
+          672
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "481458",
+      "origin": "A",
+      "discipline": "Humanities & Social Science",
+      "prompt_tokens": 1130,
+      "resized_image_sizes": [
+        [
+          704,
+          1472
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1182614",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1098,
+      "resized_image_sizes": [
+        [
+          1504,
+          672
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "102164",
+      "origin": "A",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1106,
+      "resized_image_sizes": [
+        [
+          864,
+          1216
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1417741",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1119,
+      "resized_image_sizes": [
+        [
+          1152,
+          896
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "72",
+      "origin": "B",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1083,
+      "resized_image_sizes": [
+        [
+          960,
+          1088
+        ]
+      ],
+      "method": "independent tokenizer IDs and vision grid expansion"
+    },
+    {
+      "row": "443010",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1126,
+      "resized_image_sizes": [
+        [
+          1152,
+          896
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "344397",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1097,
+      "resized_image_sizes": [
+        [
+          1056,
+          992
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "742575",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1220,
+      "resized_image_sizes": [
+        [
+          1344,
+          768
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "65614",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1165,
+      "resized_image_sizes": [
+        [
+          1952,
+          544
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "473628",
+      "origin": "A",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1086,
+      "resized_image_sizes": [
+        [
+          960,
+          1088
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "360248",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1253,
+      "resized_image_sizes": [
+        [
+          1056,
+          992
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "57570",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1208,
+      "resized_image_sizes": [
+        [
+          1280,
+          800
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "41052",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1158,
+      "resized_image_sizes": [
+        [
+          1504,
+          704
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "67810",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1149,
+      "resized_image_sizes": [
+        [
+          1312,
+          800
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "78559",
+      "origin": "A",
+      "discipline": "Humanities & Social Science",
+      "prompt_tokens": 1143,
+      "resized_image_sizes": [
+        [
+          1760,
+          576
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "426465",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1113,
+      "resized_image_sizes": [
+        [
+          1312,
+          800
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "629323",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1145,
+      "resized_image_sizes": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "475657",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1106,
+      "resized_image_sizes": [
+        [
+          1152,
+          896
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "774997",
+      "origin": "A",
+      "discipline": "Humanities & Social Science",
+      "prompt_tokens": 1133,
+      "resized_image_sizes": [
+        [
+          1344,
+          768
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "856852",
+      "origin": "A",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1086,
+      "resized_image_sizes": [
+        [
+          832,
+          1216
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "502992",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1149,
+      "resized_image_sizes": [
+        [
+          1056,
+          992
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "232801",
+      "origin": "A",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1094,
+      "resized_image_sizes": [
+        [
+          736,
+          1408
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "144512",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1186,
+      "resized_image_sizes": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "44289",
+      "origin": "A",
+      "discipline": "Humanities & Social Science",
+      "prompt_tokens": 1198,
+      "resized_image_sizes": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "11247",
+      "origin": "B",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1155,
+      "resized_image_sizes": [
+        [
+          672,
+          1536
+        ]
+      ],
+      "method": "independent tokenizer IDs and vision grid expansion"
+    },
+    {
+      "row": "1145992",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1190,
+      "resized_image_sizes": [
+        [
+          1376,
+          768
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "823720",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1190,
+      "resized_image_sizes": [
+        [
+          1632,
+          640
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "345525",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1186,
+      "resized_image_sizes": [
+        [
+          1440,
+          736
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "72742",
+      "origin": "A",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1102,
+      "resized_image_sizes": [
+        [
+          736,
+          1440
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1364550",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1071,
+      "resized_image_sizes": [
+        [
+          736,
+          1408
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "34486",
+      "origin": "B",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1090,
+      "resized_image_sizes": [
+        [
+          672,
+          1504
+        ]
+      ],
+      "method": "independent tokenizer IDs and vision grid expansion"
+    },
+    {
+      "row": "839453",
+      "origin": "A",
+      "discipline": "Humanities & Social Science",
+      "prompt_tokens": 1156,
+      "resized_image_sizes": [
+        [
+          1632,
+          640
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "659720",
+      "origin": "A",
+      "discipline": "Art & Design",
+      "prompt_tokens": 1113,
+      "resized_image_sizes": [
+        [
+          896,
+          1120
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1043321",
+      "origin": "A",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1122,
+      "resized_image_sizes": [
+        [
+          768,
+          1344
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "12267",
+      "origin": "B",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1138,
+      "resized_image_sizes": [
+        [
+          736,
+          1408
+        ]
+      ],
+      "method": "independent tokenizer IDs and vision grid expansion"
+    },
+    {
+      "row": "16106",
+      "origin": "B",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1092,
+      "resized_image_sizes": [
+        [
+          928,
+          1120
+        ]
+      ],
+      "method": "independent tokenizer IDs and vision grid expansion"
+    },
+    {
+      "row": "417333",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1143,
+      "resized_image_sizes": [
+        [
+          928,
+          1120
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1718702",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1156,
+      "resized_image_sizes": [
+        [
+          1120,
+          928
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1387799",
+      "origin": "A",
+      "discipline": "Humanities & Social Science",
+      "prompt_tokens": 1128,
+      "resized_image_sizes": [
+        [
+          1344,
+          768
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "401081",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1099,
+      "resized_image_sizes": [
+        [
+          864,
+          1184
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "43568",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1192,
+      "resized_image_sizes": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "294586",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1153,
+      "resized_image_sizes": [
+        [
+          1344,
+          768
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "556415",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1058,
+      "resized_image_sizes": [
+        [
+          1024,
+          992
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "484440",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1138,
+      "resized_image_sizes": [
+        [
+          1152,
+          896
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1379570",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1318,
+      "resized_image_sizes": [
+        [
+          1088,
+          1088
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "485655",
+      "origin": "A",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1129,
+      "resized_image_sizes": [
+        [
+          768,
+          1344
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "801661",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1231,
+      "resized_image_sizes": [
+        [
+          1376,
+          768
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "18469",
+      "origin": "B",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1099,
+      "resized_image_sizes": [
+        [
+          768,
+          1376
+        ]
+      ],
+      "method": "independent tokenizer IDs and vision grid expansion"
+    },
+    {
+      "row": "16602",
+      "origin": "B",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1098,
+      "resized_image_sizes": [
+        [
+          960,
+          1088
+        ]
+      ],
+      "method": "independent tokenizer IDs and vision grid expansion"
+    },
+    {
+      "row": "197926",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1118,
+      "resized_image_sizes": [
+        [
+          1248,
+          832
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1648474",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1182,
+      "resized_image_sizes": [
+        [
+          1248,
+          832
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1700762",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1169,
+      "resized_image_sizes": [
+        [
+          2240,
+          480
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "376944",
+      "origin": "A",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1116,
+      "resized_image_sizes": [
+        [
+          992,
+          1056
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "398695",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1173,
+      "resized_image_sizes": [
+        [
+          1248,
+          832
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1584288",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1220,
+      "resized_image_sizes": [
+        [
+          1280,
+          800
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "616081",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1432,
+      "resized_image_sizes": [
+        [
+          2144,
+          480
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "129734",
+      "origin": "A",
+      "discipline": "Art & Design",
+      "prompt_tokens": 1108,
+      "resized_image_sizes": [
+        [
+          1888,
+          544
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1667385",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1219,
+      "resized_image_sizes": [
+        [
+          1248,
+          832
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "955732",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1118,
+      "resized_image_sizes": [
+        [
+          992,
+          1056
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "7687",
+      "origin": "B",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1077,
+      "resized_image_sizes": [
+        [
+          768,
+          1344
+        ]
+      ],
+      "method": "independent tokenizer IDs and vision grid expansion"
+    },
+    {
+      "row": "27370",
+      "origin": "B",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1085,
+      "resized_image_sizes": [
+        [
+          896,
+          1152
+        ]
+      ],
+      "method": "independent tokenizer IDs and vision grid expansion"
+    },
+    {
+      "row": "666776",
+      "origin": "A",
+      "discipline": "Humanities & Social Science",
+      "prompt_tokens": 1157,
+      "resized_image_sizes": [
+        [
+          1888,
+          544
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "32710",
+      "origin": "B",
+      "discipline": "Tech & Engineering",
+      "prompt_tokens": 1293,
+      "resized_image_sizes": [
+        [
+          704,
+          1504
+        ]
+      ],
+      "method": "independent tokenizer IDs and vision grid expansion"
+    },
+    {
+      "row": "1511334",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1111,
+      "resized_image_sizes": [
+        [
+          1472,
+          704
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "140407",
+      "origin": "A",
+      "discipline": "Business",
+      "prompt_tokens": 1089,
+      "resized_image_sizes": [
+        [
+          1280,
+          800
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1775294",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1137,
+      "resized_image_sizes": [
+        [
+          1440,
+          736
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "182814",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1084,
+      "resized_image_sizes": [
+        [
+          768,
+          1344
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1311317",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1080,
+      "resized_image_sizes": [
+        [
+          1024,
+          992
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1602307",
+      "origin": "A",
+      "discipline": "Health & Medicine",
+      "prompt_tokens": 1082,
+      "resized_image_sizes": [
+        [
+          896,
+          1152
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "1349827",
+      "origin": "A",
+      "discipline": "Humanities & Social Science",
+      "prompt_tokens": 1120,
+      "resized_image_sizes": [
+        [
+          1472,
+          704
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "119907",
+      "origin": "A",
+      "discipline": "Humanities & Social Science",
+      "prompt_tokens": 1084,
+      "resized_image_sizes": [
+        [
+          2304,
+          448
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    },
+    {
+      "row": "143434",
+      "origin": "A",
+      "discipline": "Science",
+      "prompt_tokens": 1148,
+      "resized_image_sizes": [
+        [
+          1184,
+          864
+        ]
+      ],
+      "method": "E1 Swift user/images and frozen token reference"
+    }
+  ]
+}

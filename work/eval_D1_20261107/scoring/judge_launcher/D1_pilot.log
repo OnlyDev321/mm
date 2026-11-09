@@ -1,0 +1,8 @@
+
+--- 2026-11-06T18:14:10.699351+00:00 D1_pilot ---
+received 1/316; pending 315
+received 2/316; pending 314
+received 3/316; pending 313
+received 4/316; pending 312
+received 5/316; pending 311
+{"overall": {"total": 900, "complete": 589, "pending": 311, "correct": 424, "incorrect": 165, "extraction_failures": 2, "accuracy": null}, "automatic_count": 584, "judge_count": 316, "response_count": 5, "estimated_recorded_response_cost_usd": 0.0110796}

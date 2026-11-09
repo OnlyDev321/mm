@@ -1,0 +1,137 @@
+model:
+  repo_id: Qwen/Qwen3-VL-4B-Instruct
+  revision: ebb281ec70b05090aa6165b016eac8ec08e71b17
+  dtype: bfloat16
+dataset:
+  repo_id: MMMU/MMMU
+  revision: 98e6ac0cb9b7b2cd2c991b85a50762edc4aedc68
+  split: validation
+  expected_rows_per_subject: 30
+  expected_total_rows: 900
+  subjects:
+    - Accounting
+    - Agriculture
+    - Architecture_and_Engineering
+    - Art
+    - Art_Theory
+    - Basic_Medical_Science
+    - Biology
+    - Chemistry
+    - Clinical_Medicine
+    - Computer_Science
+    - Design
+    - Diagnostics_and_Laboratory_Medicine
+    - Economics
+    - Electronics
+    - Energy_and_Power
+    - Finance
+    - Geography
+    - History
+    - Literature
+    - Manage
+    - Marketing
+    - Materials
+    - Math
+    - Mechanical_Engineering
+    - Music
+    - Pharmacy
+    - Physics
+    - Psychology
+    - Public_Health
+    - Sociology
+environment:
+  expected_packages:
+    python: "3.12.3"
+    torch: "2.8.0+cu128"
+    vllm: "0.11.0"
+    transformers: "4.57.1"
+    tokenizers: "0.22.2"
+  min_driver_major: 570 # RunPod RTX 4090 파드(드라이버 570.211.01)에서 torch 2.8.0+cu128의 cuda.is_available()이 True였음; 환경 게이트 값이며 출력 조건이 아님
+  env_vars:
+    VLLM_ENABLE_V1_MULTIPROCESSING: "0"
+    VLLM_WORKER_MULTIPROC_METHOD: "spawn"
+    TOKENIZERS_PARALLELISM: "false"
+    VLLM_USE_FLASHINFER_SAMPLER: "0"
+prompt:
+  verified: true
+  source:
+    repo: https://github.com/QwenLM/Qwen3-VL
+    path: evaluation/mmmu/run_mmmu.py
+    commit: f8dca99056bb6352cf6ab36d4ea1848a09c54b5b
+    license: Apache-2.0
+sampling:
+  do_sample: true
+  temperature: 0.7
+  top_p: 0.8
+  top_k: 20
+  repetition_penalty: 1.0
+  presence_penalty: 1.5
+  seed: 3407 # SamplingParams seed: team addition; not specified in the README
+  engine_seed: 3407 # LLM seed: follows README Instruct evaluation seed
+  skip_special_tokens: true
+  stop_token_ids: [] # Pass to SamplingParams in Step 3; script and README vLLM example use [].
+  # Pinned model card (VL): https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct/blob/ebb281ec70b05090aa6165b016eac8ec08e71b17/README.md
+  # GitHub README (Instruct): https://github.com/QwenLM/Qwen3-VL/blob/main/README.md
+  # MMMU script: https://github.com/QwenLM/Qwen3-VL/blob/f8dca99056bb6352cf6ab36d4ea1848a09c54b5b/evaluation/mmmu/run_mmmu.py
+  # GitHub README Evaluation Reproduction > Generation Hyperparameters > Instruct models:
+  # seed=3407 and out_seq_length=32768. The script fixes LLM seed to 42 and has no SamplingParams seed.
+  # Pinned model card recommends VL out_seq_length=16384; script default is 32768.
+budget:
+  max_model_len: 16384
+  max_new_tokens: 8192 # Team choice: target <= $2 for one RunPod RTX 4090 run.
+  # Length references: pinned model card 16384; GitHub README and script 32768.
+  prompt_safety_margin: 128
+image:
+  min_pixels: 1003520
+  max_pixels: 4014080
+  image_patch_size: 16
+  spatial_merge_size: 2 # Pinned vision_config; combined image grid factor is 32.
+engine:
+  gpu_memory_utilization: 0.9
+  limit_mm_per_prompt: { image: 10, video: 0 }
+  trust_remote_code: true
+  max_num_batched_tokens: 8192
+  max_num_seqs: 256
+  mm_processor_kwargs: null
+run:
+  first_chunk_size: 16
+  chunk_size: 150
+  vram_sample_interval_seconds: 1
+  min_free_disk_gb: 20 # Resource gate threshold; not an output/reporting condition.
+  abort_error_fraction: 0.1 # 중단 기준이며 출력 조건이 아님.
+  raw_filename: raw.jsonl
+  env_filename: env.json
+  metadata_filename: run_metadata.json
+schema:
+  version: "0"
+reproducibility_note: >
+  seed를 고정해도 vLLM의 배치 구성, GPU, 라이브러리 버전에 따라 출력이 bit 단위로 재현되지는 않는다.
+  chunk_size, first_chunk_size, max_num_seqs, gpu_memory_utilization은 배치 구성을 바꿔 출력에 영향을 줄 수 있으므로 config 해시에 포함된다.
+
+# Experiment-team evaluator settings; existing inference settings above are unchanged.
+# This snapshot describes scoring, not the historical generation config of each raw.
+scoring:
+  policy: hybrid100_mc_qwen_ab_open_no_length_gate_v2
+  judge:
+    model: gpt-4.1-mini-2025-04-14
+    temperature: 0
+    top_p: 1
+    seed: 3407
+    max_tokens: 8
+  # USD per million tokens, recorded 2026-09-21; estimates, not invoice totals.
+  # https://developers.openai.com/api/docs/models/gpt-4.1-mini
+  # https://developers.openai.com/api/docs/models/gpt-3.5-turbo
+  # https://developers.openai.com/api/docs/models/gpt-4o-mini
+  prices_usd_per_million:
+    gpt-4.1-mini-2025-04-14:
+      input: 0.4
+      cached_input: 0.1
+      output: 1.6
+    gpt-3.5-turbo-0125:
+      input: 0.5
+      cached_input: 0.5
+      output: 1.5
+    gpt-4o-mini-2024-07-18:
+      input: 0.15
+      cached_input: 0.075
+      output: 0.6

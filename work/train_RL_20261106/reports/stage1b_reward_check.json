@@ -1,0 +1,110 @@
+[
+  {
+    "row": "21467",
+    "origin": "B",
+    "reason": "correct",
+    "reward": 1
+  },
+  {
+    "row": "21467",
+    "origin": "B",
+    "reason": "wrong",
+    "reward": 0
+  },
+  {
+    "row": "21467",
+    "origin": "B",
+    "reason": "truncated",
+    "reward": 0
+  },
+  {
+    "row": "21885",
+    "origin": "B",
+    "reason": "correct",
+    "reward": 1
+  },
+  {
+    "row": "21885",
+    "origin": "B",
+    "reason": "wrong",
+    "reward": 0
+  },
+  {
+    "row": "21885",
+    "origin": "B",
+    "reason": "truncated",
+    "reward": 0
+  },
+  {
+    "row": "1463",
+    "origin": "B",
+    "reason": "correct",
+    "reward": 1
+  },
+  {
+    "row": "1463",
+    "origin": "B",
+    "reason": "wrong",
+    "reward": 0
+  },
+  {
+    "row": "1463",
+    "origin": "B",
+    "reason": "truncated",
+    "reward": 0
+  },
+  {
+    "row": "32248",
+    "origin": "B",
+    "reason": "correct",
+    "reward": 1
+  },
+  {
+    "row": "32248",
+    "origin": "B",
+    "reason": "wrong",
+    "reward": 0
+  },
+  {
+    "row": "32248",
+    "origin": "B",
+    "reason": "truncated",
+    "reward": 0
+  },
+  {
+    "row": "27405",
+    "origin": "B",
+    "reason": "correct",
+    "reward": 1
+  },
+  {
+    "row": "27405",
+    "origin": "B",
+    "reason": "wrong",
+    "reward": 0
+  },
+  {
+    "row": "27405",
+    "origin": "B",
+    "reason": "truncated",
+    "reward": 0
+  },
+  {
+    "row": "435237",
+    "origin": "C",
+    "reason": "correct",
+    "reward": 1
+  },
+  {
+    "row": "435237",
+    "origin": "C",
+    "reason": "wrong",
+    "reward": 0
+  },
+  {
+    "row": "435237",
+    "origin": "C",
+    "reason": "truncated",
+    "reward": 0
+  }
+]

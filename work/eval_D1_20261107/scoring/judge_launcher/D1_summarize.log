@@ -1,0 +1,3 @@
+
+--- 2026-11-06T18:22:34.328225+00:00 D1_summarize ---
+{"overall": {"total": 900, "complete": 900, "pending": 0, "correct": 602, "incorrect": 298, "extraction_failures": 40, "accuracy": 0.6688888888888889}, "automatic_count": 584, "judge_count": 316, "response_count": 316, "estimated_recorded_response_cost_usd": 0.4182548}

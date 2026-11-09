@@ -1,0 +1,7 @@
+scripts/d1_full.py: OK
+scripts/d1_full_artifacts.py: OK
+scripts/run_d1_full.sh: OK
+scripts/dpo_train.py: OK
+scripts/dpo_config.json: OK
+scripts/d1_pilot.py: OK
+scripts/d1_pilot_artifacts.py: OK

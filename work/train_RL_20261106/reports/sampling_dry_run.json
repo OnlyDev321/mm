@@ -1,0 +1,1908 @@
+{
+  "config_sha256": "3946c9a93cd5ab1cc5a8010fc00473e8a71f1c589e0a5f664edb70a3097234dc",
+  "swift_reference_sha256": "04f4b186f7943b82596b7587cd950c75e7373ee847ed045beaa1ab2e6fcedae4",
+  "k_example": 4,
+  "model_loaded": false,
+  "rows": [
+    {
+      "row": "88434",
+      "swift_index": 0,
+      "format": "mc_value",
+      "prompt_tokens": 1081,
+      "e1_reference_tokens": 1081,
+      "resized_image_sizes": [
+        [
+          896,
+          1152
+        ]
+      ],
+      "request_seeds": [
+        3407,
+        3408,
+        3409,
+        3410
+      ]
+    },
+    {
+      "row": "313014",
+      "swift_index": 1,
+      "format": "mc_letter",
+      "prompt_tokens": 1200,
+      "e1_reference_tokens": 1200,
+      "resized_image_sizes": [
+        [
+          1280,
+          800
+        ]
+      ],
+      "request_seeds": [
+        68943,
+        68944,
+        68945,
+        68946
+      ]
+    },
+    {
+      "row": "909322",
+      "swift_index": 2,
+      "format": "mc_letter",
+      "prompt_tokens": 1140,
+      "e1_reference_tokens": 1140,
+      "resized_image_sizes": [
+        [
+          1888,
+          544
+        ]
+      ],
+      "request_seeds": [
+        134479,
+        134480,
+        134481,
+        134482
+      ]
+    },
+    {
+      "row": "154285",
+      "swift_index": 3,
+      "format": "numeric",
+      "prompt_tokens": 1105,
+      "e1_reference_tokens": 1105,
+      "resized_image_sizes": [
+        [
+          1184,
+          896
+        ]
+      ],
+      "request_seeds": [
+        200015,
+        200016,
+        200017,
+        200018
+      ]
+    },
+    {
+      "row": "236342",
+      "swift_index": 4,
+      "format": "mc_letter",
+      "prompt_tokens": 1108,
+      "e1_reference_tokens": 1108,
+      "resized_image_sizes": [
+        [
+          608,
+          1696
+        ]
+      ],
+      "request_seeds": [
+        265551,
+        265552,
+        265553,
+        265554
+      ]
+    },
+    {
+      "row": "145874",
+      "swift_index": 7,
+      "format": "numeric",
+      "prompt_tokens": 1071,
+      "e1_reference_tokens": 1071,
+      "resized_image_sizes": [
+        [
+          640,
+          1632
+        ]
+      ],
+      "request_seeds": [
+        462159,
+        462160,
+        462161,
+        462162
+      ]
+    },
+    {
+      "row": "740065",
+      "swift_index": 8,
+      "format": "mc_letter",
+      "prompt_tokens": 1094,
+      "e1_reference_tokens": 1094,
+      "resized_image_sizes": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "request_seeds": [
+        527695,
+        527696,
+        527697,
+        527698
+      ]
+    },
+    {
+      "row": "1481618",
+      "swift_index": 10,
+      "format": "mc_value",
+      "prompt_tokens": 1069,
+      "e1_reference_tokens": 1069,
+      "resized_image_sizes": [
+        [
+          1984,
+          512
+        ]
+      ],
+      "request_seeds": [
+        658767,
+        658768,
+        658769,
+        658770
+      ]
+    },
+    {
+      "row": "129734",
+      "swift_index": 11,
+      "format": "mc_letter",
+      "prompt_tokens": 1108,
+      "e1_reference_tokens": 1108,
+      "resized_image_sizes": [
+        [
+          1888,
+          544
+        ]
+      ],
+      "request_seeds": [
+        724303,
+        724304,
+        724305,
+        724306
+      ]
+    },
+    {
+      "row": "1109357",
+      "swift_index": 12,
+      "format": "mc_letter",
+      "prompt_tokens": 1140,
+      "e1_reference_tokens": 1140,
+      "resized_image_sizes": [
+        [
+          768,
+          1344
+        ]
+      ],
+      "request_seeds": [
+        789839,
+        789840,
+        789841,
+        789842
+      ]
+    },
+    {
+      "row": "376944",
+      "swift_index": 13,
+      "format": "mc_letter",
+      "prompt_tokens": 1116,
+      "e1_reference_tokens": 1116,
+      "resized_image_sizes": [
+        [
+          992,
+          1056
+        ]
+      ],
+      "request_seeds": [
+        855375,
+        855376,
+        855377,
+        855378
+      ]
+    },
+    {
+      "row": "516442",
+      "swift_index": 14,
+      "format": "mc_letter",
+      "prompt_tokens": 1211,
+      "e1_reference_tokens": 1211,
+      "resized_image_sizes": [
+        [
+          1504,
+          704
+        ]
+      ],
+      "request_seeds": [
+        920911,
+        920912,
+        920913,
+        920914
+      ]
+    },
+    {
+      "row": "1244849",
+      "swift_index": 15,
+      "format": "mc_letter",
+      "prompt_tokens": 1157,
+      "e1_reference_tokens": 1157,
+      "resized_image_sizes": [
+        [
+          2848,
+          384
+        ]
+      ],
+      "request_seeds": [
+        986447,
+        986448,
+        986449,
+        986450
+      ]
+    },
+    {
+      "row": "1019726",
+      "swift_index": 17,
+      "format": "mc_value",
+      "prompt_tokens": 1071,
+      "e1_reference_tokens": 1071,
+      "resized_image_sizes": [
+        [
+          2240,
+          448
+        ]
+      ],
+      "request_seeds": [
+        1117519,
+        1117520,
+        1117521,
+        1117522
+      ]
+    },
+    {
+      "row": "64145",
+      "swift_index": 18,
+      "format": "numeric",
+      "prompt_tokens": 1063,
+      "e1_reference_tokens": 1063,
+      "resized_image_sizes": [
+        [
+          832,
+          1248
+        ]
+      ],
+      "request_seeds": [
+        1183055,
+        1183056,
+        1183057,
+        1183058
+      ]
+    },
+    {
+      "row": "194249",
+      "swift_index": 19,
+      "format": "mc_letter",
+      "prompt_tokens": 1144,
+      "e1_reference_tokens": 1144,
+      "resized_image_sizes": [
+        [
+          768,
+          1344
+        ]
+      ],
+      "request_seeds": [
+        1248591,
+        1248592,
+        1248593,
+        1248594
+      ]
+    },
+    {
+      "row": "1775294",
+      "swift_index": 21,
+      "format": "mc_value",
+      "prompt_tokens": 1137,
+      "e1_reference_tokens": 1137,
+      "resized_image_sizes": [
+        [
+          1440,
+          736
+        ]
+      ],
+      "request_seeds": [
+        1379663,
+        1379664,
+        1379665,
+        1379666
+      ]
+    },
+    {
+      "row": "1504357",
+      "swift_index": 23,
+      "format": "numeric",
+      "prompt_tokens": 1061,
+      "e1_reference_tokens": 1061,
+      "resized_image_sizes": [
+        [
+          864,
+          1216
+        ]
+      ],
+      "request_seeds": [
+        1510735,
+        1510736,
+        1510737,
+        1510738
+      ]
+    },
+    {
+      "row": "1364828",
+      "swift_index": 24,
+      "format": "mc_value",
+      "prompt_tokens": 1218,
+      "e1_reference_tokens": 1218,
+      "resized_image_sizes": [
+        [
+          1280,
+          800
+        ]
+      ],
+      "request_seeds": [
+        1576271,
+        1576272,
+        1576273,
+        1576274
+      ]
+    },
+    {
+      "row": "1142414",
+      "swift_index": 25,
+      "format": "numeric",
+      "prompt_tokens": 1071,
+      "e1_reference_tokens": 1071,
+      "resized_image_sizes": [
+        [
+          864,
+          1216
+        ]
+      ],
+      "request_seeds": [
+        1641807,
+        1641808,
+        1641809,
+        1641810
+      ]
+    },
+    {
+      "row": "103493",
+      "swift_index": 26,
+      "format": "short_rule",
+      "prompt_tokens": 1024,
+      "e1_reference_tokens": 1024,
+      "resized_image_sizes": [
+        [
+          1184,
+          864
+        ]
+      ],
+      "request_seeds": [
+        1707343,
+        1707344,
+        1707345,
+        1707346
+      ]
+    },
+    {
+      "row": "119160",
+      "swift_index": 27,
+      "format": "numeric",
+      "prompt_tokens": 1103,
+      "e1_reference_tokens": 1103,
+      "resized_image_sizes": [
+        [
+          1408,
+          736
+        ]
+      ],
+      "request_seeds": [
+        1772879,
+        1772880,
+        1772881,
+        1772882
+      ]
+    },
+    {
+      "row": "283487",
+      "swift_index": 28,
+      "format": "mc_letter",
+      "prompt_tokens": 1119,
+      "e1_reference_tokens": 1119,
+      "resized_image_sizes": [
+        [
+          1312,
+          768
+        ]
+      ],
+      "request_seeds": [
+        1838415,
+        1838416,
+        1838417,
+        1838418
+      ]
+    },
+    {
+      "row": "862823",
+      "swift_index": 29,
+      "format": "numeric",
+      "prompt_tokens": 1105,
+      "e1_reference_tokens": 1105,
+      "resized_image_sizes": [
+        [
+          1312,
+          800
+        ]
+      ],
+      "request_seeds": [
+        1903951,
+        1903952,
+        1903953,
+        1903954
+      ]
+    },
+    {
+      "row": "967957",
+      "swift_index": 30,
+      "format": "numeric",
+      "prompt_tokens": 1076,
+      "e1_reference_tokens": 1076,
+      "resized_image_sizes": [
+        [
+          1440,
+          704
+        ]
+      ],
+      "request_seeds": [
+        1969487,
+        1969488,
+        1969489,
+        1969490
+      ]
+    },
+    {
+      "row": "769732",
+      "swift_index": 32,
+      "format": "numeric",
+      "prompt_tokens": 1056,
+      "e1_reference_tokens": 1056,
+      "resized_image_sizes": [
+        [
+          640,
+          1632
+        ]
+      ],
+      "request_seeds": [
+        2100559,
+        2100560,
+        2100561,
+        2100562
+      ]
+    },
+    {
+      "row": "660520",
+      "swift_index": 33,
+      "format": "numeric",
+      "prompt_tokens": 1150,
+      "e1_reference_tokens": 1150,
+      "resized_image_sizes": [
+        [
+          864,
+          1216
+        ]
+      ],
+      "request_seeds": [
+        2166095,
+        2166096,
+        2166097,
+        2166098
+      ]
+    },
+    {
+      "row": "1308159",
+      "swift_index": 36,
+      "format": "numeric",
+      "prompt_tokens": 1191,
+      "e1_reference_tokens": 1191,
+      "resized_image_sizes": [
+        [
+          1248,
+          832
+        ]
+      ],
+      "request_seeds": [
+        2362703,
+        2362704,
+        2362705,
+        2362706
+      ]
+    },
+    {
+      "row": "872139",
+      "swift_index": 37,
+      "format": "numeric",
+      "prompt_tokens": 1044,
+      "e1_reference_tokens": 1044,
+      "resized_image_sizes": [
+        [
+          1024,
+          992
+        ]
+      ],
+      "request_seeds": [
+        2428239,
+        2428240,
+        2428241,
+        2428242
+      ]
+    },
+    {
+      "row": "1082462",
+      "swift_index": 38,
+      "format": "mc_letter",
+      "prompt_tokens": 1163,
+      "e1_reference_tokens": 1163,
+      "resized_image_sizes": [
+        [
+          832,
+          1280
+        ]
+      ],
+      "request_seeds": [
+        2493775,
+        2493776,
+        2493777,
+        2493778
+      ]
+    },
+    {
+      "row": "1096756",
+      "swift_index": 39,
+      "format": "mc_letter",
+      "prompt_tokens": 1170,
+      "e1_reference_tokens": 1170,
+      "resized_image_sizes": [
+        [
+          768,
+          1344
+        ]
+      ],
+      "request_seeds": [
+        2559311,
+        2559312,
+        2559313,
+        2559314
+      ]
+    },
+    {
+      "row": "960900",
+      "swift_index": 40,
+      "format": "mc_letter",
+      "prompt_tokens": 1082,
+      "e1_reference_tokens": 1082,
+      "resized_image_sizes": [
+        [
+          1408,
+          736
+        ]
+      ],
+      "request_seeds": [
+        2624847,
+        2624848,
+        2624849,
+        2624850
+      ]
+    },
+    {
+      "row": "1418013",
+      "swift_index": 41,
+      "format": "mc_letter",
+      "prompt_tokens": 1128,
+      "e1_reference_tokens": 1128,
+      "resized_image_sizes": [
+        [
+          928,
+          1120
+        ]
+      ],
+      "request_seeds": [
+        2690383,
+        2690384,
+        2690385,
+        2690386
+      ]
+    },
+    {
+      "row": "858647",
+      "swift_index": 42,
+      "format": "mc_letter",
+      "prompt_tokens": 1145,
+      "e1_reference_tokens": 1145,
+      "resized_image_sizes": [
+        [
+          1440,
+          736
+        ]
+      ],
+      "request_seeds": [
+        2755919,
+        2755920,
+        2755921,
+        2755922
+      ]
+    },
+    {
+      "row": "52279",
+      "swift_index": 46,
+      "format": "short_rule",
+      "prompt_tokens": 1065,
+      "e1_reference_tokens": 1065,
+      "resized_image_sizes": [
+        [
+          1120,
+          928
+        ]
+      ],
+      "request_seeds": [
+        3018063,
+        3018064,
+        3018065,
+        3018066
+      ]
+    },
+    {
+      "row": "620855",
+      "swift_index": 47,
+      "format": "mc_letter",
+      "prompt_tokens": 1143,
+      "e1_reference_tokens": 1143,
+      "resized_image_sizes": [
+        [
+          1376,
+          768
+        ]
+      ],
+      "request_seeds": [
+        3083599,
+        3083600,
+        3083601,
+        3083602
+      ]
+    },
+    {
+      "row": "84915",
+      "swift_index": 48,
+      "format": "mc_letter",
+      "prompt_tokens": 1287,
+      "e1_reference_tokens": 1287,
+      "resized_image_sizes": [
+        [
+          1152,
+          896
+        ]
+      ],
+      "request_seeds": [
+        3149135,
+        3149136,
+        3149137,
+        3149138
+      ]
+    },
+    {
+      "row": "885192",
+      "swift_index": 49,
+      "format": "mc_letter",
+      "prompt_tokens": 1139,
+      "e1_reference_tokens": 1139,
+      "resized_image_sizes": [
+        [
+          2304,
+          448
+        ]
+      ],
+      "request_seeds": [
+        3214671,
+        3214672,
+        3214673,
+        3214674
+      ]
+    },
+    {
+      "row": "1374271",
+      "swift_index": 50,
+      "format": "numeric",
+      "prompt_tokens": 1060,
+      "e1_reference_tokens": 1060,
+      "resized_image_sizes": [
+        [
+          1312,
+          800
+        ]
+      ],
+      "request_seeds": [
+        3280207,
+        3280208,
+        3280209,
+        3280210
+      ]
+    },
+    {
+      "row": "1450439",
+      "swift_index": 51,
+      "format": "short_rule",
+      "prompt_tokens": 1020,
+      "e1_reference_tokens": 1020,
+      "resized_image_sizes": [
+        [
+          960,
+          1056
+        ]
+      ],
+      "request_seeds": [
+        3345743,
+        3345744,
+        3345745,
+        3345746
+      ]
+    },
+    {
+      "row": "1134435",
+      "swift_index": 52,
+      "format": "numeric",
+      "prompt_tokens": 1032,
+      "e1_reference_tokens": 1032,
+      "resized_image_sizes": [
+        [
+          928,
+          1088
+        ]
+      ],
+      "request_seeds": [
+        3411279,
+        3411280,
+        3411281,
+        3411282
+      ]
+    },
+    {
+      "row": "113771",
+      "swift_index": 53,
+      "format": "mc_letter",
+      "prompt_tokens": 1123,
+      "e1_reference_tokens": 1123,
+      "resized_image_sizes": [
+        [
+          1376,
+          768
+        ]
+      ],
+      "request_seeds": [
+        3476815,
+        3476816,
+        3476817,
+        3476818
+      ]
+    },
+    {
+      "row": "566449",
+      "swift_index": 54,
+      "format": "mc_value",
+      "prompt_tokens": 1177,
+      "e1_reference_tokens": 1177,
+      "resized_image_sizes": [
+        [
+          2848,
+          384
+        ]
+      ],
+      "request_seeds": [
+        3542351,
+        3542352,
+        3542353,
+        3542354
+      ]
+    },
+    {
+      "row": "190197",
+      "swift_index": 55,
+      "format": "mc_letter",
+      "prompt_tokens": 1167,
+      "e1_reference_tokens": 1167,
+      "resized_image_sizes": [
+        [
+          1088,
+          960
+        ]
+      ],
+      "request_seeds": [
+        3607887,
+        3607888,
+        3607889,
+        3607890
+      ]
+    },
+    {
+      "row": "113785",
+      "swift_index": 57,
+      "format": "numeric",
+      "prompt_tokens": 1027,
+      "e1_reference_tokens": 1027,
+      "resized_image_sizes": [
+        [
+          928,
+          1088
+        ]
+      ],
+      "request_seeds": [
+        3738959,
+        3738960,
+        3738961,
+        3738962
+      ]
+    },
+    {
+      "row": "105866",
+      "swift_index": 58,
+      "format": "numeric",
+      "prompt_tokens": 1028,
+      "e1_reference_tokens": 1028,
+      "resized_image_sizes": [
+        [
+          832,
+          1216
+        ]
+      ],
+      "request_seeds": [
+        3804495,
+        3804496,
+        3804497,
+        3804498
+      ]
+    },
+    {
+      "row": "789877",
+      "swift_index": 59,
+      "format": "mc_letter",
+      "prompt_tokens": 1118,
+      "e1_reference_tokens": 1118,
+      "resized_image_sizes": [
+        [
+          2048,
+          512
+        ]
+      ],
+      "request_seeds": [
+        3870031,
+        3870032,
+        3870033,
+        3870034
+      ]
+    },
+    {
+      "row": "642711",
+      "swift_index": 60,
+      "format": "mc_letter",
+      "prompt_tokens": 1152,
+      "e1_reference_tokens": 1152,
+      "resized_image_sizes": [
+        [
+          896,
+          1184
+        ]
+      ],
+      "request_seeds": [
+        3935567,
+        3935568,
+        3935569,
+        3935570
+      ]
+    },
+    {
+      "row": "1037814",
+      "swift_index": 61,
+      "format": "numeric",
+      "prompt_tokens": 1028,
+      "e1_reference_tokens": 1028,
+      "resized_image_sizes": [
+        [
+          960,
+          1056
+        ]
+      ],
+      "request_seeds": [
+        4001103,
+        4001104,
+        4001105,
+        4001106
+      ]
+    },
+    {
+      "row": "1330471",
+      "swift_index": 62,
+      "format": "short_rule",
+      "prompt_tokens": 1058,
+      "e1_reference_tokens": 1058,
+      "resized_image_sizes": [
+        [
+          1152,
+          896
+        ]
+      ],
+      "request_seeds": [
+        4066639,
+        4066640,
+        4066641,
+        4066642
+      ]
+    },
+    {
+      "row": "337337",
+      "swift_index": 63,
+      "format": "mc_letter",
+      "prompt_tokens": 1128,
+      "e1_reference_tokens": 1128,
+      "resized_image_sizes": [
+        [
+          1696,
+          608
+        ]
+      ],
+      "request_seeds": [
+        4132175,
+        4132176,
+        4132177,
+        4132178
+      ]
+    },
+    {
+      "row": "879945",
+      "swift_index": 64,
+      "format": "mc_letter",
+      "prompt_tokens": 1071,
+      "e1_reference_tokens": 1071,
+      "resized_image_sizes": [
+        [
+          1248,
+          832
+        ]
+      ],
+      "request_seeds": [
+        4197711,
+        4197712,
+        4197713,
+        4197714
+      ]
+    },
+    {
+      "row": "383310",
+      "swift_index": 65,
+      "format": "mc_letter",
+      "prompt_tokens": 1098,
+      "e1_reference_tokens": 1098,
+      "resized_image_sizes": [
+        [
+          1056,
+          960
+        ]
+      ],
+      "request_seeds": [
+        4263247,
+        4263248,
+        4263249,
+        4263250
+      ]
+    },
+    {
+      "row": "51417",
+      "swift_index": 66,
+      "format": "mc_letter",
+      "prompt_tokens": 1127,
+      "e1_reference_tokens": 1127,
+      "resized_image_sizes": [
+        [
+          832,
+          1248
+        ]
+      ],
+      "request_seeds": [
+        4328783,
+        4328784,
+        4328785,
+        4328786
+      ]
+    },
+    {
+      "row": "1039879",
+      "swift_index": 67,
+      "format": "mc_letter",
+      "prompt_tokens": 1084,
+      "e1_reference_tokens": 1084,
+      "resized_image_sizes": [
+        [
+          832,
+          1216
+        ]
+      ],
+      "request_seeds": [
+        4394319,
+        4394320,
+        4394321,
+        4394322
+      ]
+    },
+    {
+      "row": "199341",
+      "swift_index": 68,
+      "format": "short_rule",
+      "prompt_tokens": 1054,
+      "e1_reference_tokens": 1054,
+      "resized_image_sizes": [
+        [
+          1248,
+          832
+        ]
+      ],
+      "request_seeds": [
+        4459855,
+        4459856,
+        4459857,
+        4459858
+      ]
+    },
+    {
+      "row": "98833",
+      "swift_index": 69,
+      "format": "mc_value",
+      "prompt_tokens": 1248,
+      "e1_reference_tokens": 1248,
+      "resized_image_sizes": [
+        [
+          1440,
+          736
+        ]
+      ],
+      "request_seeds": [
+        4525391,
+        4525392,
+        4525393,
+        4525394
+      ]
+    },
+    {
+      "row": "355478",
+      "swift_index": 70,
+      "format": "mc_value",
+      "prompt_tokens": 1108,
+      "e1_reference_tokens": 1108,
+      "resized_image_sizes": [
+        [
+          1056,
+          992
+        ]
+      ],
+      "request_seeds": [
+        4590927,
+        4590928,
+        4590929,
+        4590930
+      ]
+    },
+    {
+      "row": "771043",
+      "swift_index": 72,
+      "format": "mc_letter",
+      "prompt_tokens": 1097,
+      "e1_reference_tokens": 1097,
+      "resized_image_sizes": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "request_seeds": [
+        4721999,
+        4722000,
+        4722001,
+        4722002
+      ]
+    },
+    {
+      "row": "1000411",
+      "swift_index": 73,
+      "format": "numeric",
+      "prompt_tokens": 1151,
+      "e1_reference_tokens": 1151,
+      "resized_image_sizes": [
+        [
+          1472,
+          704
+        ]
+      ],
+      "request_seeds": [
+        4787535,
+        4787536,
+        4787537,
+        4787538
+      ]
+    },
+    {
+      "row": "1746183",
+      "swift_index": 74,
+      "format": "mc_value",
+      "prompt_tokens": 1122,
+      "e1_reference_tokens": 1122,
+      "resized_image_sizes": [
+        [
+          1280,
+          800
+        ]
+      ],
+      "request_seeds": [
+        4853071,
+        4853072,
+        4853073,
+        4853074
+      ]
+    },
+    {
+      "row": "1040910",
+      "swift_index": 76,
+      "format": "mc_letter",
+      "prompt_tokens": 1060,
+      "e1_reference_tokens": 1060,
+      "resized_image_sizes": [
+        [
+          1056,
+          960
+        ]
+      ],
+      "request_seeds": [
+        4984143,
+        4984144,
+        4984145,
+        4984146
+      ]
+    },
+    {
+      "row": "1026648",
+      "swift_index": 77,
+      "format": "mc_letter",
+      "prompt_tokens": 1224,
+      "e1_reference_tokens": 1224,
+      "resized_image_sizes": [
+        [
+          2080,
+          512
+        ]
+      ],
+      "request_seeds": [
+        5049679,
+        5049680,
+        5049681,
+        5049682
+      ]
+    },
+    {
+      "row": "1640070",
+      "swift_index": 80,
+      "format": "mc_letter",
+      "prompt_tokens": 1115,
+      "e1_reference_tokens": 1115,
+      "resized_image_sizes": [
+        [
+          896,
+          1152
+        ]
+      ],
+      "request_seeds": [
+        5246287,
+        5246288,
+        5246289,
+        5246290
+      ]
+    },
+    {
+      "row": "596232",
+      "swift_index": 82,
+      "format": "mc_letter",
+      "prompt_tokens": 1226,
+      "e1_reference_tokens": 1226,
+      "resized_image_sizes": [
+        [
+          2080,
+          512
+        ]
+      ],
+      "request_seeds": [
+        5377359,
+        5377360,
+        5377361,
+        5377362
+      ]
+    },
+    {
+      "row": "1088809",
+      "swift_index": 83,
+      "format": "mc_value",
+      "prompt_tokens": 1074,
+      "e1_reference_tokens": 1074,
+      "resized_image_sizes": [
+        [
+          2240,
+          448
+        ]
+      ],
+      "request_seeds": [
+        5442895,
+        5442896,
+        5442897,
+        5442898
+      ]
+    },
+    {
+      "row": "1185029",
+      "swift_index": 85,
+      "format": "short_rule",
+      "prompt_tokens": 1069,
+      "e1_reference_tokens": 1069,
+      "resized_image_sizes": [
+        [
+          1184,
+          896
+        ]
+      ],
+      "request_seeds": [
+        5573967,
+        5573968,
+        5573969,
+        5573970
+      ]
+    },
+    {
+      "row": "50026",
+      "swift_index": 86,
+      "format": "mc_value",
+      "prompt_tokens": 1089,
+      "e1_reference_tokens": 1089,
+      "resized_image_sizes": [
+        [
+          1056,
+          992
+        ]
+      ],
+      "request_seeds": [
+        5639503,
+        5639504,
+        5639505,
+        5639506
+      ]
+    },
+    {
+      "row": "170462",
+      "swift_index": 87,
+      "format": "mc_letter",
+      "prompt_tokens": 1161,
+      "e1_reference_tokens": 1161,
+      "resized_image_sizes": [
+        [
+          1184,
+          864
+        ]
+      ],
+      "request_seeds": [
+        5705039,
+        5705040,
+        5705041,
+        5705042
+      ]
+    },
+    {
+      "row": "951729",
+      "swift_index": 89,
+      "format": "mc_letter",
+      "prompt_tokens": 1142,
+      "e1_reference_tokens": 1142,
+      "resized_image_sizes": [
+        [
+          768,
+          1344
+        ]
+      ],
+      "request_seeds": [
+        5836111,
+        5836112,
+        5836113,
+        5836114
+      ]
+    },
+    {
+      "row": "1326690",
+      "swift_index": 90,
+      "format": "mc_letter",
+      "prompt_tokens": 1093,
+      "e1_reference_tokens": 1093,
+      "resized_image_sizes": [
+        [
+          832,
+          1248
+        ]
+      ],
+      "request_seeds": [
+        5901647,
+        5901648,
+        5901649,
+        5901650
+      ]
+    },
+    {
+      "row": "704590",
+      "swift_index": 91,
+      "format": "mc_letter",
+      "prompt_tokens": 1063,
+      "e1_reference_tokens": 1063,
+      "resized_image_sizes": [
+        [
+          1536,
+          672
+        ]
+      ],
+      "request_seeds": [
+        5967183,
+        5967184,
+        5967185,
+        5967186
+      ]
+    },
+    {
+      "row": "473628",
+      "swift_index": 92,
+      "format": "mc_letter",
+      "prompt_tokens": 1086,
+      "e1_reference_tokens": 1086,
+      "resized_image_sizes": [
+        [
+          960,
+          1088
+        ]
+      ],
+      "request_seeds": [
+        6032719,
+        6032720,
+        6032721,
+        6032722
+      ]
+    },
+    {
+      "row": "414819",
+      "swift_index": 93,
+      "format": "mc_letter",
+      "prompt_tokens": 1135,
+      "e1_reference_tokens": 1135,
+      "resized_image_sizes": [
+        [
+          1184,
+          864
+        ]
+      ],
+      "request_seeds": [
+        6098255,
+        6098256,
+        6098257,
+        6098258
+      ]
+    },
+    {
+      "row": "535300",
+      "swift_index": 94,
+      "format": "mc_letter",
+      "prompt_tokens": 1168,
+      "e1_reference_tokens": 1168,
+      "resized_image_sizes": [
+        [
+          1152,
+          896
+        ]
+      ],
+      "request_seeds": [
+        6163791,
+        6163792,
+        6163793,
+        6163794
+      ]
+    },
+    {
+      "row": "180581",
+      "swift_index": 95,
+      "format": "mc_letter",
+      "prompt_tokens": 1076,
+      "e1_reference_tokens": 1076,
+      "resized_image_sizes": [
+        [
+          1024,
+          992
+        ]
+      ],
+      "request_seeds": [
+        6229327,
+        6229328,
+        6229329,
+        6229330
+      ]
+    },
+    {
+      "row": "312530",
+      "swift_index": 96,
+      "format": "short_rule",
+      "prompt_tokens": 1066,
+      "e1_reference_tokens": 1066,
+      "resized_image_sizes": [
+        [
+          896,
+          1184
+        ]
+      ],
+      "request_seeds": [
+        6294863,
+        6294864,
+        6294865,
+        6294866
+      ]
+    },
+    {
+      "row": "90655",
+      "swift_index": 98,
+      "format": "mc_letter",
+      "prompt_tokens": 1149,
+      "e1_reference_tokens": 1149,
+      "resized_image_sizes": [
+        [
+          2080,
+          512
+        ]
+      ],
+      "request_seeds": [
+        6425935,
+        6425936,
+        6425937,
+        6425938
+      ]
+    },
+    {
+      "row": "1111792",
+      "swift_index": 99,
+      "format": "mc_value",
+      "prompt_tokens": 1317,
+      "e1_reference_tokens": 1317,
+      "resized_image_sizes": [
+        [
+          1056,
+          992
+        ]
+      ],
+      "request_seeds": [
+        6491471,
+        6491472,
+        6491473,
+        6491474
+      ]
+    },
+    {
+      "row": "981878",
+      "swift_index": 100,
+      "format": "numeric",
+      "prompt_tokens": 1128,
+      "e1_reference_tokens": 1128,
+      "resized_image_sizes": [
+        [
+          1056,
+          960
+        ]
+      ],
+      "request_seeds": [
+        6557007,
+        6557008,
+        6557009,
+        6557010
+      ]
+    },
+    {
+      "row": "511522",
+      "swift_index": 101,
+      "format": "mc_letter",
+      "prompt_tokens": 1067,
+      "e1_reference_tokens": 1067,
+      "resized_image_sizes": [
+        [
+          1184,
+          864
+        ]
+      ],
+      "request_seeds": [
+        6622543,
+        6622544,
+        6622545,
+        6622546
+      ]
+    },
+    {
+      "row": "1225473",
+      "swift_index": 102,
+      "format": "numeric",
+      "prompt_tokens": 1041,
+      "e1_reference_tokens": 1041,
+      "resized_image_sizes": [
+        [
+          896,
+          1152
+        ]
+      ],
+      "request_seeds": [
+        6688079,
+        6688080,
+        6688081,
+        6688082
+      ]
+    },
+    {
+      "row": "1653098",
+      "swift_index": 103,
+      "format": "short_rule",
+      "prompt_tokens": 1053,
+      "e1_reference_tokens": 1053,
+      "resized_image_sizes": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "request_seeds": [
+        6753615,
+        6753616,
+        6753617,
+        6753618
+      ]
+    },
+    {
+      "row": "791766",
+      "swift_index": 104,
+      "format": "mc_value",
+      "prompt_tokens": 1093,
+      "e1_reference_tokens": 1093,
+      "resized_image_sizes": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "request_seeds": [
+        6819151,
+        6819152,
+        6819153,
+        6819154
+      ]
+    },
+    {
+      "row": "1500215",
+      "swift_index": 105,
+      "format": "mc_letter",
+      "prompt_tokens": 1099,
+      "e1_reference_tokens": 1099,
+      "resized_image_sizes": [
+        [
+          1376,
+          736
+        ]
+      ],
+      "request_seeds": [
+        6884687,
+        6884688,
+        6884689,
+        6884690
+      ]
+    },
+    {
+      "row": "548414",
+      "swift_index": 107,
+      "format": "mc_letter",
+      "prompt_tokens": 1114,
+      "e1_reference_tokens": 1114,
+      "resized_image_sizes": [
+        [
+          736,
+          1408
+        ]
+      ],
+      "request_seeds": [
+        7015759,
+        7015760,
+        7015761,
+        7015762
+      ]
+    },
+    {
+      "row": "257022",
+      "swift_index": 108,
+      "format": "mc_value",
+      "prompt_tokens": 1064,
+      "e1_reference_tokens": 1064,
+      "resized_image_sizes": [
+        [
+          1088,
+          928
+        ]
+      ],
+      "request_seeds": [
+        7081295,
+        7081296,
+        7081297,
+        7081298
+      ]
+    },
+    {
+      "row": "902935",
+      "swift_index": 109,
+      "format": "numeric",
+      "prompt_tokens": 1185,
+      "e1_reference_tokens": 1185,
+      "resized_image_sizes": [
+        [
+          1248,
+          832
+        ]
+      ],
+      "request_seeds": [
+        7146831,
+        7146832,
+        7146833,
+        7146834
+      ]
+    },
+    {
+      "row": "512701",
+      "swift_index": 110,
+      "format": "mc_letter",
+      "prompt_tokens": 1096,
+      "e1_reference_tokens": 1096,
+      "resized_image_sizes": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "request_seeds": [
+        7212367,
+        7212368,
+        7212369,
+        7212370
+      ]
+    },
+    {
+      "row": "426465",
+      "swift_index": 113,
+      "format": "mc_value",
+      "prompt_tokens": 1113,
+      "e1_reference_tokens": 1113,
+      "resized_image_sizes": [
+        [
+          1312,
+          800
+        ]
+      ],
+      "request_seeds": [
+        7408975,
+        7408976,
+        7408977,
+        7408978
+      ]
+    },
+    {
+      "row": "117952",
+      "swift_index": 114,
+      "format": "mc_value",
+      "prompt_tokens": 1109,
+      "e1_reference_tokens": 1109,
+      "resized_image_sizes": [
+        [
+          864,
+          1216
+        ]
+      ],
+      "request_seeds": [
+        7474511,
+        7474512,
+        7474513,
+        7474514
+      ]
+    },
+    {
+      "row": "1540167",
+      "swift_index": 115,
+      "format": "numeric",
+      "prompt_tokens": 1182,
+      "e1_reference_tokens": 1182,
+      "resized_image_sizes": [
+        [
+          1248,
+          832
+        ]
+      ],
+      "request_seeds": [
+        7540047,
+        7540048,
+        7540049,
+        7540050
+      ]
+    },
+    {
+      "row": "43114",
+      "swift_index": 117,
+      "format": "numeric",
+      "prompt_tokens": 1066,
+      "e1_reference_tokens": 1066,
+      "resized_image_sizes": [
+        [
+          800,
+          1312
+        ]
+      ],
+      "request_seeds": [
+        7671119,
+        7671120,
+        7671121,
+        7671122
+      ]
+    },
+    {
+      "row": "91349",
+      "swift_index": 118,
+      "format": "mc_letter",
+      "prompt_tokens": 1111,
+      "e1_reference_tokens": 1111,
+      "resized_image_sizes": [
+        [
+          1152,
+          896
+        ]
+      ],
+      "request_seeds": [
+        7736655,
+        7736656,
+        7736657,
+        7736658
+      ]
+    },
+    {
+      "row": "47680",
+      "swift_index": 119,
+      "format": "mc_letter",
+      "prompt_tokens": 1077,
+      "e1_reference_tokens": 1077,
+      "resized_image_sizes": [
+        [
+          1024,
+          992
+        ]
+      ],
+      "request_seeds": [
+        7802191,
+        7802192,
+        7802193,
+        7802194
+      ]
+    },
+    {
+      "row": "1232174",
+      "swift_index": 120,
+      "format": "numeric",
+      "prompt_tokens": 1213,
+      "e1_reference_tokens": 1213,
+      "resized_image_sizes": [
+        [
+          1184,
+          864
+        ]
+      ],
+      "request_seeds": [
+        7867727,
+        7867728,
+        7867729,
+        7867730
+      ]
+    },
+    {
+      "row": "1220258",
+      "swift_index": 122,
+      "format": "mc_letter",
+      "prompt_tokens": 1079,
+      "e1_reference_tokens": 1079,
+      "resized_image_sizes": [
+        [
+          1376,
+          736
+        ]
+      ],
+      "request_seeds": [
+        7998799,
+        7998800,
+        7998801,
+        7998802
+      ]
+    },
+    {
+      "row": "563898",
+      "swift_index": 124,
+      "format": "numeric",
+      "prompt_tokens": 1061,
+      "e1_reference_tokens": 1061,
+      "resized_image_sizes": [
+        [
+          832,
+          1248
+        ]
+      ],
+      "request_seeds": [
+        8129871,
+        8129872,
+        8129873,
+        8129874
+      ]
+    },
+    {
+      "row": "506062",
+      "swift_index": 125,
+      "format": "mc_letter",
+      "prompt_tokens": 1187,
+      "e1_reference_tokens": 1187,
+      "resized_image_sizes": [
+        [
+          960,
+          1088
+        ]
+      ],
+      "request_seeds": [
+        8195407,
+        8195408,
+        8195409,
+        8195410
+      ]
+    },
+    {
+      "row": "1018803",
+      "swift_index": 127,
+      "format": "mc_letter",
+      "prompt_tokens": 1092,
+      "e1_reference_tokens": 1092,
+      "resized_image_sizes": [
+        [
+          1408,
+          736
+        ]
+      ],
+      "request_seeds": [
+        8326479,
+        8326480,
+        8326481,
+        8326482
+      ]
+    }
+  ]
+}

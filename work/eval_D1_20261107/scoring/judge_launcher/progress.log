@@ -1,0 +1,6 @@
+2026-11-06T18:13:58.386714+00:00 waiting_for_key key_entry
+2026-11-06T18:14:10.698351+00:00 running D1_pilot
+2026-11-06T18:14:25.688048+00:00 pilot_passed D1_pilot
+2026-11-06T18:14:25.689552+00:00 running D1_full
+2026-11-06T18:22:34.327218+00:00 running D1_summarize
+2026-11-06T18:22:35.306845+00:00 complete finished

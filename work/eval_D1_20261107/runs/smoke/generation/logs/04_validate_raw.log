@@ -1,0 +1,10 @@
+metadata check: OK (run_metadata.json)
+status: {'ok': 3}
+invariant violations: 0
+prompt token mismatches: 0
+skip: 0 error: 0
+69593e78f8278a2f35233f10a767b8dba9bada63d4c6a011de08dfea2a3e5499  /workspace/eval_D1_20261107/runs/smoke/generation/raw.jsonl
+bytes=60472
+started_utc=2026-11-06T17:12:27Z
+finished_utc=2026-11-06T17:16:04Z
+54e19d6ece42ced4d42500687c4ffcbd9e203e498c463faba4b13c734d0971bb  /workspace/eval_D1_20261107/runs/smoke/generation/run_metadata.json

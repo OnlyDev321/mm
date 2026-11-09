@@ -1,0 +1,204 @@
+{
+  "raw_sha256": "ef23f0c49d9b1ae6c62b9625fbd52cce474a0c035c1a644cfa737e0967daa313",
+  "code_sha256": {
+    "evaluate.py": "0ed761277d1c947cf16ab71aba8cdb74629f208a81f96e47d63c688fca8481e7",
+    "frozen/parsers.py": "df41e5e5c99eabeda4d0a1cb1ce557e2f3f9c13416fd9481aaba0388b0a303bc",
+    "frozen/vendor/mmmu_eval.py": "4ab1574dec79f0ba4835c03a255d8e2b860377d1ea8f795b53a8d1869f69e0f4",
+    "frozen/vendor/qwen_eval_utils.py": "9967335315d0f5905b4f1da7052e0cabdb6f2abd94c166d3a5b2533ac46cad2d",
+    "frozen/vendor/vlmevalkit_matching.py": "025cce503c644b51793c3118551d32d1ea67673365cf04164afbef3ceff012a7"
+  },
+  "auto": {
+    "total": 555,
+    "extracted_match": 555,
+    "ungated_correctness_match": 555,
+    "reward_correctness_match": 543,
+    "stop_total": 537,
+    "stop_correctness_match": 537,
+    "length_total": 18
+  },
+  "judge": {
+    "judge_rule_failure": {
+      "extract_fail": 231,
+      "truncated": 110
+    },
+    "all": {
+      "extract_fail": 235,
+      "truncated": 110
+    },
+    "ungated": {
+      "extract_fail": 345
+    },
+    "judge_conflict": {
+      "extract_fail": 4
+    }
+  },
+  "auto_disagreements": [
+    {
+      "id": "validation_Architecture_and_Engineering_17",
+      "type": "multiple-choice",
+      "finish": "length",
+      "v2_auto_answer": "D",
+      "r1_answer": "D",
+      "v2_correct": true,
+      "reward": 0,
+      "reason": "length_gate"
+    },
+    {
+      "id": "validation_Art_Theory_19",
+      "type": "multiple-choice",
+      "finish": "length",
+      "v2_auto_answer": "B",
+      "r1_answer": "B",
+      "v2_correct": true,
+      "reward": 0,
+      "reason": "length_gate"
+    },
+    {
+      "id": "validation_Basic_Medical_Science_10",
+      "type": "open",
+      "finish": "length",
+      "v2_auto_answer": "A",
+      "r1_answer": "A",
+      "v2_correct": true,
+      "reward": 0,
+      "reason": "length_gate"
+    },
+    {
+      "id": "validation_Chemistry_24",
+      "type": "multiple-choice",
+      "finish": "length",
+      "v2_auto_answer": "D",
+      "r1_answer": "D",
+      "v2_correct": true,
+      "reward": 0,
+      "reason": "length_gate"
+    },
+    {
+      "id": "validation_Electronics_16",
+      "type": "open",
+      "finish": "length",
+      "v2_auto_answer": "A",
+      "r1_answer": "A",
+      "v2_correct": true,
+      "reward": 0,
+      "reason": "length_gate"
+    },
+    {
+      "id": "validation_Energy_and_Power_3",
+      "type": "multiple-choice",
+      "finish": "length",
+      "v2_auto_answer": "C",
+      "r1_answer": "C",
+      "v2_correct": true,
+      "reward": 0,
+      "reason": "length_gate"
+    },
+    {
+      "id": "validation_Energy_and_Power_25",
+      "type": "multiple-choice",
+      "finish": "length",
+      "v2_auto_answer": "C",
+      "r1_answer": "C",
+      "v2_correct": true,
+      "reward": 0,
+      "reason": "length_gate"
+    },
+    {
+      "id": "validation_Materials_3",
+      "type": "multiple-choice",
+      "finish": "length",
+      "v2_auto_answer": "D",
+      "r1_answer": "D",
+      "v2_correct": true,
+      "reward": 0,
+      "reason": "length_gate"
+    },
+    {
+      "id": "validation_Materials_11",
+      "type": "multiple-choice",
+      "finish": "length",
+      "v2_auto_answer": "D",
+      "r1_answer": "D",
+      "v2_correct": true,
+      "reward": 0,
+      "reason": "length_gate"
+    },
+    {
+      "id": "validation_Materials_27",
+      "type": "multiple-choice",
+      "finish": "length",
+      "v2_auto_answer": "D",
+      "r1_answer": "D",
+      "v2_correct": true,
+      "reward": 0,
+      "reason": "length_gate"
+    },
+    {
+      "id": "validation_Math_2",
+      "type": "multiple-choice",
+      "finish": "length",
+      "v2_auto_answer": "B",
+      "r1_answer": "B",
+      "v2_correct": true,
+      "reward": 0,
+      "reason": "length_gate"
+    },
+    {
+      "id": "validation_Pharmacy_19",
+      "type": "open",
+      "finish": "length",
+      "v2_auto_answer": "A",
+      "r1_answer": "A",
+      "v2_correct": true,
+      "reward": 0,
+      "reason": "length_gate"
+    }
+  ],
+  "synthetic": [
+    {
+      "format": "mc_letter",
+      "row": "313014",
+      "passed": 6
+    },
+    {
+      "format": "mc_value",
+      "row": "88434",
+      "passed": 6
+    },
+    {
+      "format": "numeric",
+      "row": "154285",
+      "passed": 6
+    },
+    {
+      "format": "short_rule",
+      "row": "772790",
+      "passed": 6
+    },
+    {
+      "format": "excluded",
+      "row": "90167",
+      "passed": 5
+    }
+  ],
+  "provisional_open_behavior": [
+    {
+      "format": "numeric",
+      "gold": "31",
+      "response": "Final Answer: 131",
+      "observed": [
+        1,
+        "correct"
+      ]
+    },
+    {
+      "format": "short_rule",
+      "gold": "yes",
+      "response": "The tentative answer was yes. Final Answer: no.",
+      "observed": [
+        1,
+        "correct"
+      ]
+    }
+  ]
+}

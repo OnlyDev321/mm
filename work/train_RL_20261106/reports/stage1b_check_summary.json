@@ -1,0 +1,11 @@
+{
+  "references": {
+    "MMMU/MMMU_Pro": 1730,
+    "MMMU/MMMU": 11550
+  },
+  "pairs": 4,
+  "methods": {
+    "phash": 4
+  },
+  "max_5gram_jaccard": 0.10526315789473684
+}

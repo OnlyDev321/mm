@@ -1,0 +1,9 @@
+Report: /workspace/eval_D1_20261107/runs/smoke/generation/env_check.json
+system: PASS=4, INFO=1
+packages: PASS=7, INFO=2
+vllm_import: PASS=1
+gpu: PASS=1, INFO=3
+qwen_vl_utils: PASS=1
+model: PASS=1, INFO=4
+Total: PASS=15, INFO=10
+Environment gate passed

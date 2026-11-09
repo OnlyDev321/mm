@@ -1,0 +1,11 @@
+/usr/local/lib/python3.12/dist-packages/PIL/Image.py:1047: UserWarning: Palette images with Transparency expressed in bytes should be converted to RGBA images
+  warnings.warn(
+processed: 900/900; partial: False
+total_tokens: {'min': 1015, 'median': 1122.0, 'p90': 1558, 'p99': 4170, 'max': 5627}
+by_image_count: {'1': {'count': 857, 'mean_total_tokens': 1232.4399066511085}, '2': {'count': 24, 'mean_total_tokens': 2405.5833333333335}, '3': {'count': 5, 'mean_total_tokens': 3138.2}, '4': {'count': 8, 'mean_total_tokens': 4148.25}, '5': {'count': 6, 'mean_total_tokens': 5140.666666666667}}
+exceeds: 0
+max_model_len_for_zero_skips: 13947
+skips_by_max_model_len: {'12288': 23, '16384': 0, '20480': 0, '24576': 0, '32768': 0}
+skips_by_max_new_tokens: {'4096': 0, '8192': 0, '16384': 900}
+video_kwargs_observed: [{'do_sample_frames': False}]
+validation_failures: 0

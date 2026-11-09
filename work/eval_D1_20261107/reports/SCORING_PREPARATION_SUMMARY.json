@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "source_sha256": "60ee87670752b663edacf7a42f24320f97c33198741a6b1465594939361ba23e",
+  "policy_id": "hybrid100_mc_qwen_ab_open_no_length_gate_v2",
+  "judge_settings": {
+    "model": "gpt-4.1-mini-2025-04-14",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 3407,
+    "max_tokens": 8
+  },
+  "groups": {
+    "all": {
+      "total": 900,
+      "automatic": 584,
+      "judge_total": 316,
+      "rule_extraction_failure": 314,
+      "conflict": 2
+    },
+    "stop": {
+      "total": 799,
+      "automatic": 569,
+      "judge_total": 230,
+      "rule_extraction_failure": 228,
+      "conflict": 2
+    },
+    "length": {
+      "total": 101,
+      "automatic": 15,
+      "judge_total": 86,
+      "rule_extraction_failure": 86,
+      "conflict": 0
+    },
+    "length_think_closed": {
+      "total": 0,
+      "automatic": 0,
+      "judge_total": 0,
+      "rule_extraction_failure": 0,
+      "conflict": 0
+    },
+    "length_think_unclosed": {
+      "total": 0,
+      "automatic": 0,
+      "judge_total": 0,
+      "rule_extraction_failure": 0,
+      "conflict": 0
+    },
+    "length_no_think_marker": {
+      "total": 101,
+      "automatic": 15,
+      "judge_total": 86,
+      "rule_extraction_failure": 86,
+      "conflict": 0
+    }
+  },
+  "api_calls": 0,
+  "pending": 316,
+  "accuracy": null,
+  "final_judge_extraction_failures": null,
+  "closure_rule": "literal </think> present (same as E3), <think> without closing tag, or neither marker",
+  "budget": {
+    "expected_calls": 316,
+    "request_json_utf8_bytes": 3671811,
+    "input_tokens_conservative_bound": 3712259,
+    "output_tokens_max": 2528,
+    "price_per_million_usd": {
+      "input": 0.4,
+      "cached_input": 0.1,
+      "output": 1.6
+    },
+    "conservative_cost_usd": "1.4889484",
+    "method": "same as HypB: canonical request JSON UTF-8 bytes + 128 input tokens/request; no cached-input discount; max output 8/request",
+    "pricing_source": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "pricing_checked_date_kst": "2026-11-07"
+  },
+  "artifact_sha256": {
+    "manifest.json": "44b024f6583f245bebac290da58ee7292a39dd94df929181e099fed4512f13a5",
+    "items.jsonl": "e159e943245af9bc5e5263b09f68f06659e8ccb63e94a50cd23686ba9992042d",
+    "requests.jsonl": "3902c99917ce68b3683c47a8829719836f675ee81c46ebbf9ddf1b0daa4464aa",
+    "summary.json": "5ed2059c47f65d420ddad7bce033b5b0f7c6bb5117f568824d61d9962a9a0dfd"
+  }
+}

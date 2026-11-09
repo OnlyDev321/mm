@@ -1,0 +1,46 @@
+[
+  {
+    "row": "7918",
+    "reference": {
+      "repo": "MMMU/MMMU_Pro",
+      "path": "standard (10 options)/test-00001-of-00002.parquet",
+      "id": "validation_Design_1"
+    },
+    "method": "phash",
+    "reference_image": "image_1",
+    "distance": 10
+  },
+  {
+    "row": "17956",
+    "reference": {
+      "repo": "MMMU/MMMU",
+      "path": "Architecture_and_Engineering/test-00000-of-00001.parquet",
+      "id": "test_Architecture_and_Engineering_466"
+    },
+    "method": "phash",
+    "reference_image": "image_1",
+    "distance": 10
+  },
+  {
+    "row": "17468",
+    "reference": {
+      "repo": "MMMU/MMMU",
+      "path": "Chemistry/test-00000-of-00001.parquet",
+      "id": "test_Chemistry_19"
+    },
+    "method": "phash",
+    "reference_image": "image_3",
+    "distance": 10
+  },
+  {
+    "row": "7918",
+    "reference": {
+      "repo": "MMMU/MMMU",
+      "path": "Design/validation-00000-of-00001.parquet",
+      "id": "validation_Design_1"
+    },
+    "method": "phash",
+    "reference_image": "image_1",
+    "distance": 10
+  }
+]

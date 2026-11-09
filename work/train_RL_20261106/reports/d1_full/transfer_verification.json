@@ -1,0 +1,31 @@
+{
+  "archive_sha256": "152e64cf048eaabbd7693cb1f3c83d2becb241a974d861e8e66593a6cdcf4ca1",
+  "files": {
+    "reports/vllm_load.json": "cc27a348776124ea27873d0798a21a0cbcfb1baac19908e88507178093b02f12",
+    "reports/vllm_load.log": "6566c281d426053e1959b94bf761ff1dd52e39cedcef3a656cdbfe19d53b442a",
+    "reports/merge.json": "5176e953b94903bd0a2cdc12661cad08ff07fa820812cf6624f119f0e846b329",
+    "reports/merge.log": "dbe89fbbd265d40384b1cb6cc278b4fbc7de7a6d870ea173e71a78650f572efa",
+    "reports/train.log": "6d4d28ad90bef38ff5b2a6096336b0eb482d4f7ca15588836ab5129309a81b45",
+    "reports/timing.log": "b7172cad3b83cc01e2f702a39d79f02869422161026da9fba964950b7078d952",
+    "reports/gpu_memory.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/gpu_memory.csv": "ddce86d131c4675dc9c6a5aece051de0ba77a004d360da1175c7aeacdc75321b",
+    "reports/nvidia_smi.txt": "16865cc990c7fecc7a1705dedb278bb0517bbec31086d197d91dd37581a957a2",
+    "reports/input_verification.json": "7099636896466e5be71f9d6a0f462e35e430b7339026d2acbdc848fcdcc17eec",
+    "reports/input.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/scripts_verification.log": "a09e75d1a29381a813f175c40229b7af40a308e59790f04529e19bcdb3862735",
+    "reports/console.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/pid": "1e016a064cc8c05d415e2e005f3b629a1561cace5c816944a152ceffde859cd9",
+    "reports/new_scripts.sha256": "bb5f8e338d794bf8bb89e61c82f2045e9bf54a1506ef0b3fc585eb4649954986",
+    "reports/args.json": "32dd7fafd51017902913e43108b36686f142d66258c300e511830afcc72a1ea2",
+    "reports/logging.jsonl": "8504e2fcffc8c6e1dd6f6b8b8d7e5828e509a1b33a69104bdebf43148daf6efc",
+    "reports/full_observations.jsonl": "f6352af63cc200fa3d9cff0c731b65ffd0ec392da1507546475185232395dc21",
+    "adapter/trainer_state.json": "625a0260c77ca114cc2d5b773cbc6b2178abe1bd2606d1289cae9a8fe05360e9",
+    "adapter/args.json": "32dd7fafd51017902913e43108b36686f142d66258c300e511830afcc72a1ea2",
+    "adapter/training_args.bin": "7a66698f9c213acc925625de34c92556c645ee4f193c3f66d6ad76d8b12ec1a1",
+    "adapter/additional_config.json": "c7799462ebedae6557ffad31566029e2d2f958b7b40e46e972cf901bcaf45733",
+    "adapter/adapter_config.json": "fe8ddf9b08ec8dab42a42a55072360d9dbe9a944b10d2a76a3441f34e7a32d58",
+    "adapter/adapter_model.safetensors": "2d4bcce4972b36b6ef49b0b73d46c9d72a3803f43632b6847ae6f4d65e0132e8",
+    "adapter/README.md": "8c402a3f7663ebe1edb087b529c66b29c71f5d740fec9d6b0b4f3db099c467f4"
+  },
+  "status": "PASS"
+}

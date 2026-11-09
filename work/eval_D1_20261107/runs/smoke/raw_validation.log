@@ -1,0 +1,5 @@
+metadata check: OK (run_metadata.json)
+status: {'ok': 3}
+invariant violations: 0
+prompt token mismatches: 0
+skip: 0 error: 0

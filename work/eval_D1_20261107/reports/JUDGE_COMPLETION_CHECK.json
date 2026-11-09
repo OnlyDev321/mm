@@ -1,0 +1,18 @@
+{
+  "api_attempts": 316,
+  "http_200": 316,
+  "pending": 0,
+  "failures": {},
+  "recorded_usage_cost_usd": "0.4182548",
+  "usage": {
+    "input": 1044289,
+    "cached_input": 0,
+    "output": 337
+  },
+  "finish_reasons": {
+    "stop": 313,
+    "length": 3
+  },
+  "summary_sha256": "5bd23aac6f5204aaf0958dd3693755995adc5ed1facb8265939fdca99d1b0bf0",
+  "scores_sha256": "847a151aa4eeff50fd5a655113010ee976cea0bbd2231f731499a5d292ce4144"
+}

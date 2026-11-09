@@ -1,0 +1,22 @@
+# Inference
+vllm==0.11.0
+
+# Hugging Face stack
+transformers==4.57.1
+tokenizers==0.22.2
+huggingface-hub==0.35.3
+hf-transfer==0.1.9
+openai==3.14.1
+accelerate==1.11.0
+safetensors==0.6.2
+
+# Dataset
+datasets==4.0.0
+
+# Qwen image preprocessing
+qwen-vl-utils==0.0.14
+av==15.1.0
+Pillow==11.3.0
+
+# Numerical runtime
+numpy==2.2.6

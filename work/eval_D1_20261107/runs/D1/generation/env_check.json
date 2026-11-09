@@ -1,0 +1,326 @@
+{
+  "sections": {
+    "system": [
+      {
+        "status": "INFO",
+        "name": "system_info",
+        "python": "3.12.3",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+        "os_pretty_name": "Ubuntu 24.04.5 LTS",
+        "env_vars": {
+          "CUDA_VISIBLE_DEVICES": "unset",
+          "HF_HOME": "/workspace/hf_cache",
+          "HF_HUB_CACHE": "unset",
+          "TOKENIZERS_PARALLELISM": "false",
+          "VLLM_ENABLE_V1_MULTIPROCESSING": "0",
+          "VLLM_USE_FLASHINFER_SAMPLER": "0",
+          "VLLM_WORKER_MULTIPROC_METHOD": "spawn"
+        }
+      },
+      {
+        "status": "PASS",
+        "name": "env_var",
+        "key": "VLLM_ENABLE_V1_MULTIPROCESSING",
+        "expected": "0",
+        "actual": "0"
+      },
+      {
+        "status": "PASS",
+        "name": "env_var",
+        "key": "VLLM_WORKER_MULTIPROC_METHOD",
+        "expected": "spawn",
+        "actual": "spawn"
+      },
+      {
+        "status": "PASS",
+        "name": "env_var",
+        "key": "TOKENIZERS_PARALLELISM",
+        "expected": "false",
+        "actual": "false"
+      },
+      {
+        "status": "PASS",
+        "name": "env_var",
+        "key": "VLLM_USE_FLASHINFER_SAMPLER",
+        "expected": "0",
+        "actual": "0"
+      }
+    ],
+    "packages": [
+      {
+        "status": "PASS",
+        "name": "expected_version",
+        "package": "python",
+        "expected": "3.12.3",
+        "actual": "3.12.3"
+      },
+      {
+        "status": "PASS",
+        "name": "expected_version",
+        "package": "torch",
+        "expected": "2.8.0+cu128",
+        "actual": "2.8.0+cu128"
+      },
+      {
+        "status": "PASS",
+        "name": "expected_version",
+        "package": "vllm",
+        "expected": "0.11.0",
+        "actual": "0.11.0"
+      },
+      {
+        "status": "PASS",
+        "name": "expected_version",
+        "package": "transformers",
+        "expected": "4.57.1",
+        "actual": "4.57.1"
+      },
+      {
+        "status": "PASS",
+        "name": "expected_version",
+        "package": "tokenizers",
+        "expected": "0.22.2",
+        "actual": "0.22.2"
+      },
+      {
+        "status": "PASS",
+        "name": "requirements_pins",
+        "checked": 13,
+        "mismatches": []
+      },
+      {
+        "status": "INFO",
+        "name": "installed_versions",
+        "versions": {
+          "vllm": "0.11.0",
+          "torch": "2.8.0+cu128",
+          "transformers": "4.57.1",
+          "tokenizers": "0.22.2",
+          "openai": "3.14.1",
+          "qwen-vl-utils": "0.0.14",
+          "datasets": "4.0.0",
+          "huggingface_hub": "0.35.3",
+          "pillow": "11.3.0",
+          "pyyaml": "6.0.3",
+          "numpy": "2.2.6",
+          "flashinfer": "unknown",
+          "xformers": "0.0.32.post1"
+        }
+      },
+      {
+        "status": "INFO",
+        "name": "vllm_dependency_specifiers",
+        "dependencies": [
+          {
+            "raw": "transformers>=4.55.2",
+            "installed": "4.57.1",
+            "applicable": true,
+            "satisfied": true
+          },
+          {
+            "raw": "tokenizers>=0.21.1",
+            "installed": "0.22.2",
+            "applicable": true,
+            "satisfied": true
+          },
+          {
+            "raw": "openai>=1.99.1",
+            "installed": "3.14.1",
+            "applicable": true,
+            "satisfied": true
+          },
+          {
+            "raw": "torch==2.8.0",
+            "installed": "2.8.0+cu128",
+            "applicable": true,
+            "satisfied": true
+          }
+        ]
+      },
+      {
+        "status": "PASS",
+        "name": "pip_check",
+        "returncode": 0,
+        "elapsed_seconds": 0.283,
+        "stdout": "No broken requirements found.\n",
+        "stderr": ""
+      }
+    ],
+    "vllm_import": [
+      {
+        "status": "PASS",
+        "name": "vllm_import",
+        "returncode": 0,
+        "elapsed_seconds": 4.431,
+        "stdout": "INFO 11-06 17:16:11 [__init__.py:216] Automatically detected platform cuda.\n",
+        "stderr_tail": ""
+      }
+    ],
+    "gpu": [
+      {
+        "status": "INFO",
+        "name": "nvidia_smi_query",
+        "returncode": 0,
+        "elapsed_seconds": 0.019,
+        "stdout": "NVIDIA GeForce RTX 4090, 24564 MiB, 1 MiB, 595.91.07\n",
+        "stderr": ""
+      },
+      {
+        "status": "INFO",
+        "name": "nvidia_smi_cuda",
+        "version": "13.2"
+      },
+      {
+        "status": "PASS",
+        "name": "gpu_driver",
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "memory_total": "24564 MiB",
+        "memory_used": "1 MiB",
+        "driver_version": "595.91.07",
+        "min_driver_major": 570
+      },
+      {
+        "status": "INFO",
+        "name": "torch_cuda",
+        "available": true,
+        "device_name": "NVIDIA GeForce RTX 4090",
+        "cuda_version": "12.8",
+        "bf16_supported": true
+      }
+    ],
+    "qwen_vl_utils": [
+      {
+        "status": "PASS",
+        "name": "qwen_vl_utils",
+        "process_vision_info": "(conversations: Union[List[Dict[str, Any]], List[List[Dict[str, Any]]]], return_video_kwargs: bool = False, return_video_metadata: bool = False, image_patch_size: int = 14) -> Tuple[Optional[List[PIL.Image.Image]], Optional[List[Union[torch.Tensor, List[PIL.Image.Image]]]], Optional[Dict[str, Any]]]",
+        "smart_resize": "(height: int, width: int, factor: int, min_pixels: Optional[int] = None, max_pixels: Optional[int] = None) -> Tuple[int, int]",
+        "constants": {
+          "MAX_RATIO": 200,
+          "SPATIAL_MERGE_SIZE": 2,
+          "IMAGE_MIN_TOKEN_NUM": 4,
+          "IMAGE_MAX_TOKEN_NUM": 16384,
+          "VIDEO_MIN_TOKEN_NUM": 128,
+          "VIDEO_MAX_TOKEN_NUM": 768,
+          "FRAME_FACTOR": 2
+        }
+      }
+    ],
+    "model": [
+      {
+        "status": "PASS",
+        "name": "model_config",
+        "dtype": "bfloat16",
+        "dtype_source": "dtype",
+        "max_position_embeddings": 262144,
+        "vision": {
+          "patch_size": 16,
+          "spatial_merge_size": 2,
+          "temporal_patch_size": 2
+        }
+      },
+      {
+        "status": "INFO",
+        "name": "generation_config.json",
+        "content": {
+          "bos_token_id": 151643,
+          "pad_token_id": 151643,
+          "do_sample": true,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "top_k": 20,
+          "top_p": 0.8,
+          "repetition_penalty": 1.0,
+          "temperature": 0.7,
+          "transformers_version": "4.56.0"
+        }
+      },
+      {
+        "status": "INFO",
+        "name": "preprocessor_config.json",
+        "content": {
+          "size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "patch_size": 16,
+          "temporal_patch_size": 2,
+          "merge_size": 2,
+          "image_mean": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "image_std": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "processor_class": "Qwen3VLProcessor",
+          "image_processor_type": "Qwen2VLImageProcessorFast"
+        }
+      },
+      {
+        "status": "INFO",
+        "name": "video_preprocessor_config.json",
+        "keys": [
+          "size",
+          "patch_size",
+          "temporal_patch_size",
+          "merge_size",
+          "image_mean",
+          "image_std",
+          "processor_class",
+          "video_processor_type"
+        ]
+      },
+      {
+        "status": "INFO",
+        "name": "chat_template",
+        "tokenizer_config": true,
+        "chat_template_json": true,
+        "chat_template_jinja": false
+      }
+    ]
+  },
+  "counts": {
+    "INFO": 10,
+    "PASS": 15
+  },
+  "config": "/workspace/eval_D1_20261107/source/code/config.yaml",
+  "model_path": "/workspace/eval_D1_20261107/models/D1",
+  "revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+  "selected_subjects": [
+    "Accounting",
+    "Agriculture",
+    "Architecture_and_Engineering",
+    "Art",
+    "Art_Theory",
+    "Basic_Medical_Science",
+    "Biology",
+    "Chemistry",
+    "Clinical_Medicine",
+    "Computer_Science",
+    "Design",
+    "Diagnostics_and_Laboratory_Medicine",
+    "Economics",
+    "Electronics",
+    "Energy_and_Power",
+    "Finance",
+    "Geography",
+    "History",
+    "Literature",
+    "Manage",
+    "Marketing",
+    "Materials",
+    "Math",
+    "Mechanical_Engineering",
+    "Music",
+    "Pharmacy",
+    "Physics",
+    "Psychology",
+    "Public_Health",
+    "Sociology"
+  ]
+}

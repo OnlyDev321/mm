@@ -1,0 +1,4627 @@
+{
+  "sections": {
+    "system": [
+      {
+        "status": "INFO",
+        "name": "system_info",
+        "python": "3.12.3",
+        "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+        "os_pretty_name": "Ubuntu 24.04.5 LTS",
+        "env_vars": {
+          "CUDA_VISIBLE_DEVICES": "unset",
+          "HF_HOME": "/workspace/hf_cache",
+          "HF_HUB_CACHE": "unset",
+          "TOKENIZERS_PARALLELISM": "false",
+          "VLLM_ENABLE_V1_MULTIPROCESSING": "0",
+          "VLLM_USE_FLASHINFER_SAMPLER": "0",
+          "VLLM_WORKER_MULTIPROC_METHOD": "spawn"
+        }
+      },
+      {
+        "status": "PASS",
+        "name": "env_var",
+        "key": "VLLM_ENABLE_V1_MULTIPROCESSING",
+        "expected": "0",
+        "actual": "0"
+      },
+      {
+        "status": "PASS",
+        "name": "env_var",
+        "key": "VLLM_WORKER_MULTIPROC_METHOD",
+        "expected": "spawn",
+        "actual": "spawn"
+      },
+      {
+        "status": "PASS",
+        "name": "env_var",
+        "key": "TOKENIZERS_PARALLELISM",
+        "expected": "false",
+        "actual": "false"
+      },
+      {
+        "status": "PASS",
+        "name": "env_var",
+        "key": "VLLM_USE_FLASHINFER_SAMPLER",
+        "expected": "0",
+        "actual": "0"
+      }
+    ],
+    "packages": [
+      {
+        "status": "PASS",
+        "name": "expected_version",
+        "package": "python",
+        "expected": "3.12.3",
+        "actual": "3.12.3"
+      },
+      {
+        "status": "PASS",
+        "name": "expected_version",
+        "package": "torch",
+        "expected": "2.8.0+cu128",
+        "actual": "2.8.0+cu128"
+      },
+      {
+        "status": "PASS",
+        "name": "expected_version",
+        "package": "vllm",
+        "expected": "0.11.0",
+        "actual": "0.11.0"
+      },
+      {
+        "status": "PASS",
+        "name": "expected_version",
+        "package": "transformers",
+        "expected": "4.57.1",
+        "actual": "4.57.1"
+      },
+      {
+        "status": "PASS",
+        "name": "expected_version",
+        "package": "tokenizers",
+        "expected": "0.22.2",
+        "actual": "0.22.2"
+      },
+      {
+        "status": "PASS",
+        "name": "requirements_pins",
+        "checked": 13,
+        "mismatches": []
+      },
+      {
+        "status": "INFO",
+        "name": "installed_versions",
+        "versions": {
+          "vllm": "0.11.0",
+          "torch": "2.8.0+cu128",
+          "transformers": "4.57.1",
+          "tokenizers": "0.22.2",
+          "openai": "3.14.1",
+          "qwen-vl-utils": "0.0.14",
+          "datasets": "4.0.0",
+          "huggingface_hub": "0.35.3",
+          "pillow": "11.3.0",
+          "pyyaml": "6.0.3",
+          "numpy": "2.2.6",
+          "flashinfer": "unknown",
+          "xformers": "0.0.32.post1"
+        }
+      },
+      {
+        "status": "INFO",
+        "name": "vllm_dependency_specifiers",
+        "dependencies": [
+          {
+            "raw": "transformers>=4.55.2",
+            "installed": "4.57.1",
+            "applicable": true,
+            "satisfied": true
+          },
+          {
+            "raw": "tokenizers>=0.21.1",
+            "installed": "0.22.2",
+            "applicable": true,
+            "satisfied": true
+          },
+          {
+            "raw": "openai>=1.99.1",
+            "installed": "3.14.1",
+            "applicable": true,
+            "satisfied": true
+          },
+          {
+            "raw": "torch==2.8.0",
+            "installed": "2.8.0+cu128",
+            "applicable": true,
+            "satisfied": true
+          }
+        ]
+      },
+      {
+        "status": "PASS",
+        "name": "pip_check",
+        "returncode": 0,
+        "elapsed_seconds": 0.305,
+        "stdout": "No broken requirements found.\n",
+        "stderr": ""
+      }
+    ],
+    "vllm_import": [
+      {
+        "status": "PASS",
+        "name": "vllm_import",
+        "returncode": 0,
+        "elapsed_seconds": 4.423,
+        "stdout": "INFO 11-06 17:10:15 [__init__.py:216] Automatically detected platform cuda.\n",
+        "stderr_tail": ""
+      }
+    ],
+    "gpu": [
+      {
+        "status": "INFO",
+        "name": "nvidia_smi_query",
+        "returncode": 0,
+        "elapsed_seconds": 0.018,
+        "stdout": "NVIDIA GeForce RTX 4090, 24564 MiB, 1 MiB, 595.91.07\n",
+        "stderr": ""
+      },
+      {
+        "status": "INFO",
+        "name": "nvidia_smi_cuda",
+        "version": "13.2"
+      },
+      {
+        "status": "PASS",
+        "name": "gpu_driver",
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "memory_total": "24564 MiB",
+        "memory_used": "1 MiB",
+        "driver_version": "595.91.07",
+        "min_driver_major": 570
+      },
+      {
+        "status": "INFO",
+        "name": "torch_cuda",
+        "available": true,
+        "device_name": "NVIDIA GeForce RTX 4090",
+        "cuda_version": "12.8",
+        "bf16_supported": true
+      }
+    ],
+    "qwen_vl_utils": [
+      {
+        "status": "PASS",
+        "name": "qwen_vl_utils",
+        "process_vision_info": "(conversations: Union[List[Dict[str, Any]], List[List[Dict[str, Any]]]], return_video_kwargs: bool = False, return_video_metadata: bool = False, image_patch_size: int = 14) -> Tuple[Optional[List[PIL.Image.Image]], Optional[List[Union[torch.Tensor, List[PIL.Image.Image]]]], Optional[Dict[str, Any]]]",
+        "smart_resize": "(height: int, width: int, factor: int, min_pixels: Optional[int] = None, max_pixels: Optional[int] = None) -> Tuple[int, int]",
+        "constants": {
+          "MAX_RATIO": 200,
+          "SPATIAL_MERGE_SIZE": 2,
+          "IMAGE_MIN_TOKEN_NUM": 4,
+          "IMAGE_MAX_TOKEN_NUM": 16384,
+          "VIDEO_MIN_TOKEN_NUM": 128,
+          "VIDEO_MAX_TOKEN_NUM": 768,
+          "FRAME_FACTOR": 2
+        }
+      }
+    ],
+    "model": [
+      {
+        "status": "PASS",
+        "name": "model_config",
+        "dtype": "bfloat16",
+        "dtype_source": "dtype",
+        "max_position_embeddings": 262144,
+        "vision": {
+          "patch_size": 16,
+          "spatial_merge_size": 2,
+          "temporal_patch_size": 2
+        }
+      },
+      {
+        "status": "INFO",
+        "name": "generation_config.json",
+        "content": {
+          "bos_token_id": 151643,
+          "pad_token_id": 151643,
+          "do_sample": true,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "top_k": 20,
+          "top_p": 0.8,
+          "repetition_penalty": 1.0,
+          "temperature": 0.7,
+          "transformers_version": "4.56.0"
+        }
+      },
+      {
+        "status": "INFO",
+        "name": "preprocessor_config.json",
+        "content": {
+          "size": {
+            "longest_edge": 16777216,
+            "shortest_edge": 65536
+          },
+          "patch_size": 16,
+          "temporal_patch_size": 2,
+          "merge_size": 2,
+          "image_mean": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "image_std": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "processor_class": "Qwen3VLProcessor",
+          "image_processor_type": "Qwen2VLImageProcessorFast"
+        }
+      },
+      {
+        "status": "INFO",
+        "name": "video_preprocessor_config.json",
+        "keys": [
+          "size",
+          "patch_size",
+          "temporal_patch_size",
+          "merge_size",
+          "image_mean",
+          "image_std",
+          "processor_class",
+          "video_processor_type"
+        ]
+      },
+      {
+        "status": "INFO",
+        "name": "chat_template",
+        "tokenizer_config": true,
+        "chat_template_json": true,
+        "chat_template_jinja": false
+      }
+    ],
+    "data": [
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Accounting",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 18,
+          "2": 2,
+          "3": 10
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'B'",
+              "'C'",
+              "'B'",
+              "'D'",
+              "'B'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 30
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Accounting_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Accounting_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Accounting_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Accounting_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Accounting_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Accounting_1",
+          "validation_Accounting_2",
+          "validation_Accounting_3",
+          "validation_Accounting_4",
+          "validation_Accounting_5"
+        ],
+        "image_pixels": {
+          "min": 45835,
+          "median": 126958.0,
+          "max": 458679
+        },
+        "samples": [
+          {
+            "id": "validation_Accounting_1",
+            "question_type": "multiple-choice",
+            "options_repr": "\"['$6', '$7', '$8', '$9']\"",
+            "answer": "B",
+            "question_prefix": "<image 1> Baxter Company has a relevant range of production between 15,000 and 30,000 units. The following cost data represents average variable costs per unit for 25,000 units of production. If 30,00"
+          },
+          {
+            "id": "validation_Accounting_2",
+            "question_type": "multiple-choice",
+            "options_repr": "\"['$194,815', '$182,815', '$12,000', '$9,000']\"",
+            "answer": "C",
+            "question_prefix": "Assume accounts have normal balances, solve for the one missing account balance: Dividends. Equipment was recently purchased, so there is neither depreciation expense nor accumulated depreciation. <im"
+          }
+        ]
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Agriculture",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 3,
+          "5": 25,
+          "3": 2
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'C'",
+              "'E'",
+              "'A'",
+              "'E'",
+              "'C'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 29,
+          "2": 1
+        },
+        "marker_comparison": {
+          "match": 29,
+          "image_without_marker": 1
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Agriculture_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Agriculture_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Agriculture_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Agriculture_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Agriculture_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": [
+            {
+              "id": "validation_Agriculture_26",
+              "markers": [
+                1
+              ],
+              "images": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Agriculture_1",
+          "validation_Agriculture_2",
+          "validation_Agriculture_3",
+          "validation_Agriculture_4",
+          "validation_Agriculture_5"
+        ],
+        "image_pixels": {
+          "min": 58800,
+          "median": 3145728,
+          "max": 5460480
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Architecture_and_Engineering",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "3": 8,
+          "4": 21,
+          "0": 1
+        },
+        "question_types": {
+          "multiple-choice": 29,
+          "open": 1
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 29,
+            "other": 0,
+            "examples": [
+              "'A'",
+              "'A'",
+              "'A'",
+              "'C'",
+              "'C'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 0,
+            "other": 1,
+            "open_answer_examples": [
+              "'1.06'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 29,
+          "2": 1
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Architecture_and_Engineering_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Architecture_and_Engineering_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Architecture_and_Engineering_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Architecture_and_Engineering_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Architecture_and_Engineering_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Architecture_and_Engineering_1",
+          "validation_Architecture_and_Engineering_2",
+          "validation_Architecture_and_Engineering_3",
+          "validation_Architecture_and_Engineering_4",
+          "validation_Architecture_and_Engineering_5"
+        ],
+        "image_pixels": {
+          "min": 4690,
+          "median": 114409,
+          "max": 267804
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Art",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 28,
+          "3": 2
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'C'",
+              "'B'",
+              "'C'",
+              "'D'",
+              "'D'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 30
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Art_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Art_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Art_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Art_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Art_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Art_1",
+          "validation_Art_2",
+          "validation_Art_3",
+          "validation_Art_4",
+          "validation_Art_5"
+        ],
+        "image_pixels": {
+          "min": 204304,
+          "median": 660772.0,
+          "max": 1186464
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Art_Theory",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 30
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'B'",
+              "'C'",
+              "'B'",
+              "'C'",
+              "'A'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "2": 5,
+          "1": 25
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Art_Theory_1",
+              "markers": [
+                1,
+                2
+              ],
+              "images": [
+                1,
+                2
+              ]
+            },
+            {
+              "id": "validation_Art_Theory_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Art_Theory_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Art_Theory_4",
+              "markers": [
+                1,
+                2
+              ],
+              "images": [
+                1,
+                2
+              ]
+            },
+            {
+              "id": "validation_Art_Theory_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Art_Theory_1",
+          "validation_Art_Theory_2",
+          "validation_Art_Theory_3",
+          "validation_Art_Theory_4",
+          "validation_Art_Theory_5"
+        ],
+        "image_pixels": {
+          "min": 173432,
+          "median": 684400,
+          "max": 1640496
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Basic_Medical_Science",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "5": 5,
+          "3": 8,
+          "4": 11,
+          "0": 2,
+          "2": 4
+        },
+        "question_types": {
+          "multiple-choice": 28,
+          "open": 2
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 28,
+            "other": 0,
+            "examples": [
+              "'C'",
+              "'C'",
+              "'B'",
+              "'D'",
+              "'A'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 1,
+            "other": 1,
+            "open_answer_examples": [
+              "'C'",
+              "'Transformation'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 30
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Basic_Medical_Science_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Basic_Medical_Science_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Basic_Medical_Science_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Basic_Medical_Science_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Basic_Medical_Science_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Basic_Medical_Science_1",
+          "validation_Basic_Medical_Science_2",
+          "validation_Basic_Medical_Science_3",
+          "validation_Basic_Medical_Science_4",
+          "validation_Basic_Medical_Science_5"
+        ],
+        "image_pixels": {
+          "min": 26600,
+          "median": 85800.0,
+          "max": 1287503
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Biology",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 11,
+          "2": 1,
+          "9": 2,
+          "5": 11,
+          "0": 1,
+          "3": 2,
+          "7": 2
+        },
+        "question_types": {
+          "multiple-choice": 29,
+          "open": 1
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 29,
+            "other": 0,
+            "examples": [
+              "'D'",
+              "'D'",
+              "'A'",
+              "'B'",
+              "'B'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 0,
+            "other": 1,
+            "open_answer_examples": [
+              "'1/64'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 28,
+          "3": 1,
+          "5": 1
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Biology_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Biology_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Biology_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Biology_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Biology_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 2,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Biology_1",
+          "validation_Biology_2",
+          "validation_Biology_3",
+          "validation_Biology_4",
+          "validation_Biology_5"
+        ],
+        "image_pixels": {
+          "min": 27935,
+          "median": 268043.5,
+          "max": 2310396
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Chemistry",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "3": 2,
+          "5": 4,
+          "4": 16,
+          "0": 7,
+          "9": 1
+        },
+        "question_types": {
+          "multiple-choice": 23,
+          "open": 7
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 23,
+            "other": 0,
+            "examples": [
+              "'B'",
+              "'B'",
+              "'C'",
+              "'C'",
+              "'B'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 0,
+            "other": 7,
+            "open_answer_examples": [
+              "'trans-1-Chloro-4-methylcyclohexane'",
+              "'12.97'",
+              "'4'",
+              "'5'",
+              "'6.5'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 25,
+          "2": 2,
+          "5": 1,
+          "4": 2
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Chemistry_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Chemistry_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Chemistry_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Chemistry_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Chemistry_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 3,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Chemistry_1",
+          "validation_Chemistry_2",
+          "validation_Chemistry_3",
+          "validation_Chemistry_4",
+          "validation_Chemistry_5"
+        ],
+        "image_pixels": {
+          "min": 8944,
+          "median": 51152.5,
+          "max": 670700
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Clinical_Medicine",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "6": 4,
+          "4": 20,
+          "5": 6
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'A'",
+              "'D'",
+              "'C'",
+              "'C'",
+              "'A'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 29,
+          "3": 1
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Clinical_Medicine_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Clinical_Medicine_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Clinical_Medicine_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Clinical_Medicine_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Clinical_Medicine_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Clinical_Medicine_1",
+          "validation_Clinical_Medicine_2",
+          "validation_Clinical_Medicine_3",
+          "validation_Clinical_Medicine_4",
+          "validation_Clinical_Medicine_5"
+        ],
+        "image_pixels": {
+          "min": 32640,
+          "median": 167328.0,
+          "max": 1520992
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Computer_Science",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "5": 5,
+          "4": 19,
+          "3": 3,
+          "0": 3
+        },
+        "question_types": {
+          "multiple-choice": 27,
+          "open": 3
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 27,
+            "other": 0,
+            "examples": [
+              "'A'",
+              "'C'",
+              "'C'",
+              "'A'",
+              "'A'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 0,
+            "other": 3,
+            "open_answer_examples": [
+              "'60'",
+              "'253.75'",
+              "'251'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 28,
+          "4": 1,
+          "2": 1
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Computer_Science_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Computer_Science_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Computer_Science_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Computer_Science_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Computer_Science_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 1,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Computer_Science_1",
+          "validation_Computer_Science_2",
+          "validation_Computer_Science_3",
+          "validation_Computer_Science_4",
+          "validation_Computer_Science_5"
+        ],
+        "image_pixels": {
+          "min": 12288,
+          "median": 169540.0,
+          "max": 2286000
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Design",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 30
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'C'",
+              "'D'",
+              "'A'",
+              "'A'",
+              "'C'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 30
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Design_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Design_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Design_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Design_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Design_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Design_1",
+          "validation_Design_2",
+          "validation_Design_3",
+          "validation_Design_4",
+          "validation_Design_5"
+        ],
+        "image_pixels": {
+          "min": 48000,
+          "median": 357952.0,
+          "max": 1290396
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Diagnostics_and_Laboratory_Medicine",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "5": 9,
+          "4": 20,
+          "2": 1
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'A'",
+              "'B'",
+              "'B'",
+              "'D'",
+              "'B'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 29,
+          "2": 1
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Diagnostics_and_Laboratory_Medicine_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Diagnostics_and_Laboratory_Medicine_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Diagnostics_and_Laboratory_Medicine_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Diagnostics_and_Laboratory_Medicine_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Diagnostics_and_Laboratory_Medicine_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Diagnostics_and_Laboratory_Medicine_1",
+          "validation_Diagnostics_and_Laboratory_Medicine_2",
+          "validation_Diagnostics_and_Laboratory_Medicine_3",
+          "validation_Diagnostics_and_Laboratory_Medicine_4",
+          "validation_Diagnostics_and_Laboratory_Medicine_5"
+        ],
+        "image_pixels": {
+          "min": 16200,
+          "median": 509312,
+          "max": 3015520
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Economics",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 15,
+          "3": 13,
+          "5": 1,
+          "0": 1
+        },
+        "question_types": {
+          "multiple-choice": 29,
+          "open": 1
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 29,
+            "other": 0,
+            "examples": [
+              "'A'",
+              "'B'",
+              "'A'",
+              "'B'",
+              "'B'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 0,
+            "other": 1,
+            "open_answer_examples": [
+              "'8'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 28,
+          "2": 2
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Economics_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Economics_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Economics_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Economics_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Economics_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Economics_1",
+          "validation_Economics_2",
+          "validation_Economics_3",
+          "validation_Economics_4",
+          "validation_Economics_5"
+        ],
+        "image_pixels": {
+          "min": 73150,
+          "median": 235081.0,
+          "max": 860836
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Electronics",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "2": 1,
+          "0": 14,
+          "4": 15
+        },
+        "question_types": {
+          "multiple-choice": 16,
+          "open": 14
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 16,
+            "other": 0,
+            "examples": [
+              "'A'",
+              "'C'",
+              "'C'",
+              "'B'",
+              "'C'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 0,
+            "other": 14,
+            "open_answer_examples": [
+              "'2.83'",
+              "'8.4'",
+              "'62.6'",
+              "'71.6'",
+              "'0.3'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 30
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Electronics_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Electronics_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Electronics_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Electronics_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Electronics_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Electronics_1",
+          "validation_Electronics_2",
+          "validation_Electronics_3",
+          "validation_Electronics_4",
+          "validation_Electronics_5"
+        ],
+        "image_pixels": {
+          "min": 30060,
+          "median": 84761.0,
+          "max": 170355
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Energy_and_Power",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "3": 24,
+          "4": 5,
+          "5": 1
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'B'",
+              "'A'",
+              "'C'",
+              "'B'",
+              "'C'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 30
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Energy_and_Power_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Energy_and_Power_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Energy_and_Power_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Energy_and_Power_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Energy_and_Power_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Energy_and_Power_1",
+          "validation_Energy_and_Power_2",
+          "validation_Energy_and_Power_3",
+          "validation_Energy_and_Power_4",
+          "validation_Energy_and_Power_5"
+        ],
+        "image_pixels": {
+          "min": 44715,
+          "median": 103844.0,
+          "max": 908010
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Finance",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 22,
+          "0": 8
+        },
+        "question_types": {
+          "multiple-choice": 22,
+          "open": 8
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 22,
+            "other": 0,
+            "examples": [
+              "'B'",
+              "'B'",
+              "'C'",
+              "'A'",
+              "'D'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 0,
+            "other": 8,
+            "open_answer_examples": [
+              "'360'",
+              "'2000000'",
+              "'1000'",
+              "'7243000'",
+              "'527.89'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 30
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Finance_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Finance_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Finance_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Finance_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Finance_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Finance_1",
+          "validation_Finance_2",
+          "validation_Finance_3",
+          "validation_Finance_4",
+          "validation_Finance_5"
+        ],
+        "image_pixels": {
+          "min": 30752,
+          "median": 139187.0,
+          "max": 672216
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Geography",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 23,
+          "0": 3,
+          "3": 3,
+          "2": 1
+        },
+        "question_types": {
+          "multiple-choice": 27,
+          "open": 3
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 27,
+            "other": 0,
+            "examples": [
+              "'D'",
+              "'D'",
+              "'A'",
+              "'C'",
+              "'C'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 0,
+            "other": 3,
+            "open_answer_examples": [
+              "\"['Tampa', 'Florida']\"",
+              "'8200'",
+              "'3'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 29,
+          "4": 1
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Geography_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Geography_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Geography_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Geography_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Geography_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 1,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Geography_1",
+          "validation_Geography_2",
+          "validation_Geography_3",
+          "validation_Geography_4",
+          "validation_Geography_5"
+        ],
+        "image_pixels": {
+          "min": 19360,
+          "median": 83538,
+          "max": 1543636
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "History",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 29,
+          "5": 1
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'B'",
+              "'D'",
+              "'A'",
+              "'D'",
+              "'A'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 28,
+          "2": 2
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_History_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_History_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_History_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_History_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_History_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_History_1",
+          "validation_History_2",
+          "validation_History_3",
+          "validation_History_4",
+          "validation_History_5"
+        ],
+        "image_pixels": {
+          "min": 169320,
+          "median": 529868.0,
+          "max": 2033856
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Literature",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 30
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'C'",
+              "'D'",
+              "'C'",
+              "'D'",
+              "'B'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 29,
+          "4": 1
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Literature_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Literature_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Literature_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Literature_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Literature_5",
+              "markers": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "images": [
+                1,
+                2,
+                3,
+                4
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 1,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Literature_1",
+          "validation_Literature_2",
+          "validation_Literature_3",
+          "validation_Literature_4",
+          "validation_Literature_5"
+        ],
+        "image_pixels": {
+          "min": 41040,
+          "median": 210000,
+          "max": 4627773
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Manage",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 17,
+          "0": 6,
+          "5": 3,
+          "2": 4
+        },
+        "question_types": {
+          "multiple-choice": 24,
+          "open": 6
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 24,
+            "other": 0,
+            "examples": [
+              "'A'",
+              "'B'",
+              "'C'",
+              "'B'",
+              "'D'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 0,
+            "other": 6,
+            "open_answer_examples": [
+              "'242110.62'",
+              "'65'",
+              "'2960'",
+              "'9.20'",
+              "'1464'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 29,
+          "2": 1
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Manage_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Manage_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Manage_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Manage_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Manage_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Manage_1",
+          "validation_Manage_2",
+          "validation_Manage_3",
+          "validation_Manage_4",
+          "validation_Manage_5"
+        ],
+        "image_pixels": {
+          "min": 43016,
+          "median": 194928,
+          "max": 1191840
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Marketing",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 24,
+          "3": 3,
+          "2": 2,
+          "0": 1
+        },
+        "question_types": {
+          "multiple-choice": 29,
+          "open": 1
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 29,
+            "other": 0,
+            "examples": [
+              "'D'",
+              "'B'",
+              "'D'",
+              "'A'",
+              "'B'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 0,
+            "other": 1,
+            "open_answer_examples": [
+              "'0.10'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 30
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Marketing_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Marketing_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Marketing_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Marketing_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Marketing_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Marketing_1",
+          "validation_Marketing_2",
+          "validation_Marketing_3",
+          "validation_Marketing_4",
+          "validation_Marketing_5"
+        ],
+        "image_pixels": {
+          "min": 149008,
+          "median": 499604.0,
+          "max": 899932
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Materials",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "3": 3,
+          "4": 26,
+          "9": 1
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'B'",
+              "'B'",
+              "'D'",
+              "'B'",
+              "'B'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 27,
+          "4": 2,
+          "2": 1
+        },
+        "marker_comparison": {
+          "match": 29,
+          "image_without_marker": 1
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Materials_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Materials_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Materials_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Materials_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Materials_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": [
+            {
+              "id": "validation_Materials_15",
+              "markers": [
+                1
+              ],
+              "images": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        "options_with_marker": 2,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Materials_1",
+          "validation_Materials_2",
+          "validation_Materials_3",
+          "validation_Materials_4",
+          "validation_Materials_5"
+        ],
+        "image_pixels": {
+          "min": 64728,
+          "median": 198996,
+          "max": 457677
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Math",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "3": 2,
+          "4": 21,
+          "2": 3,
+          "5": 3,
+          "0": 1
+        },
+        "question_types": {
+          "multiple-choice": 29,
+          "open": 1
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 29,
+            "other": 0,
+            "examples": [
+              "'C'",
+              "'B'",
+              "'B'",
+              "'A'",
+              "'A'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 0,
+            "other": 1,
+            "open_answer_examples": [
+              "\"['24/7', '3.429']\""
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 28,
+          "3": 1,
+          "2": 1
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Math_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Math_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Math_3",
+              "markers": [
+                1,
+                2,
+                3
+              ],
+              "images": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "id": "validation_Math_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Math_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 1,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Math_1",
+          "validation_Math_2",
+          "validation_Math_3",
+          "validation_Math_4",
+          "validation_Math_5"
+        ],
+        "image_pixels": {
+          "min": 30660,
+          "median": 161994,
+          "max": 1833552
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Mechanical_Engineering",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 16,
+          "3": 14
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'D'",
+              "'D'",
+              "'B'",
+              "'B'",
+              "'A'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 29,
+          "2": 1
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Mechanical_Engineering_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Mechanical_Engineering_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Mechanical_Engineering_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Mechanical_Engineering_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Mechanical_Engineering_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Mechanical_Engineering_1",
+          "validation_Mechanical_Engineering_2",
+          "validation_Mechanical_Engineering_3",
+          "validation_Mechanical_Engineering_4",
+          "validation_Mechanical_Engineering_5"
+        ],
+        "image_pixels": {
+          "min": 21038,
+          "median": 119274,
+          "max": 864831
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Music",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 25,
+          "2": 5
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'C'",
+              "'A'",
+              "'B'",
+              "'B'",
+              "'B'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "5": 1,
+          "1": 25,
+          "4": 1,
+          "2": 3
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Music_1",
+              "markers": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "images": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            {
+              "id": "validation_Music_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Music_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Music_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Music_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 2,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Music_1",
+          "validation_Music_2",
+          "validation_Music_3",
+          "validation_Music_4",
+          "validation_Music_5"
+        ],
+        "image_pixels": {
+          "min": 12084,
+          "median": 173010.0,
+          "max": 3202749
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Pharmacy",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "3": 10,
+          "5": 1,
+          "0": 3,
+          "2": 3,
+          "4": 13
+        },
+        "question_types": {
+          "multiple-choice": 27,
+          "open": 3
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 27,
+            "other": 0,
+            "examples": [
+              "'C'",
+              "'E'",
+              "'A'",
+              "'D'",
+              "'B'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 2,
+            "other": 1,
+            "open_answer_examples": [
+              "'2'",
+              "'B'",
+              "'A'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 27,
+          "2": 1,
+          "3": 2
+        },
+        "marker_comparison": {
+          "match": 28,
+          "image_without_marker": 2
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Pharmacy_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Pharmacy_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Pharmacy_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Pharmacy_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Pharmacy_6",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": [
+            {
+              "id": "validation_Pharmacy_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1,
+                2
+              ]
+            },
+            {
+              "id": "validation_Pharmacy_22",
+              "markers": [
+                1
+              ],
+              "images": [
+                1,
+                2,
+                3
+              ]
+            }
+          ]
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Pharmacy_1",
+          "validation_Pharmacy_2",
+          "validation_Pharmacy_3",
+          "validation_Pharmacy_4",
+          "validation_Pharmacy_5"
+        ],
+        "image_pixels": {
+          "min": 5162,
+          "median": 100674,
+          "max": 1123016
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Physics",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 26,
+          "5": 3,
+          "0": 1
+        },
+        "question_types": {
+          "multiple-choice": 29,
+          "open": 1
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 29,
+            "other": 0,
+            "examples": [
+              "'A'",
+              "'A'",
+              "'B'",
+              "'D'",
+              "'B'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 1,
+            "other": 0,
+            "open_answer_examples": [
+              "'A'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 30
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Physics_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Physics_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Physics_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Physics_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Physics_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Physics_1",
+          "validation_Physics_2",
+          "validation_Physics_3",
+          "validation_Physics_4",
+          "validation_Physics_5"
+        ],
+        "image_pixels": {
+          "min": 18876,
+          "median": 150988.0,
+          "max": 564960
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Psychology",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "5": 11,
+          "4": 17,
+          "6": 1,
+          "0": 1
+        },
+        "question_types": {
+          "multiple-choice": 29,
+          "open": 1
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 29,
+            "other": 0,
+            "examples": [
+              "'A'",
+              "'A'",
+              "'E'",
+              "'B'",
+              "'D'"
+            ],
+            "valid_multiple_choice": true
+          },
+          "open": {
+            "single_letter": 0,
+            "other": 1,
+            "open_answer_examples": [
+              "'embryonic'"
+            ]
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "5": 3,
+          "1": 26,
+          "2": 1
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Psychology_1",
+              "markers": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "images": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            {
+              "id": "validation_Psychology_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Psychology_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Psychology_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Psychology_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 3,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Psychology_1",
+          "validation_Psychology_2",
+          "validation_Psychology_3",
+          "validation_Psychology_4",
+          "validation_Psychology_5"
+        ],
+        "image_pixels": {
+          "min": 108744,
+          "median": 315456,
+          "max": 1405320
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Public_Health",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 28,
+          "5": 1,
+          "3": 1
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'C'",
+              "'A'",
+              "'A'",
+              "'D'",
+              "'C'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 30
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Public_Health_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Public_Health_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Public_Health_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Public_Health_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Public_Health_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Public_Health_1",
+          "validation_Public_Health_2",
+          "validation_Public_Health_3",
+          "validation_Public_Health_4",
+          "validation_Public_Health_5"
+        ],
+        "image_pixels": {
+          "min": 36456,
+          "median": 130955.5,
+          "max": 924420
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "subject",
+        "subject": "Sociology",
+        "columns_match": true,
+        "rows": 30,
+        "columns": [
+          "id",
+          "question",
+          "options",
+          "explanation",
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7",
+          "img_type",
+          "answer",
+          "topic_difficulty",
+          "question_type",
+          "subfield"
+        ],
+        "options_types": {
+          "str": 30
+        },
+        "options_literal_eval": {
+          "success": 30
+        },
+        "parsed_option_counts": {
+          "4": 27,
+          "3": 1,
+          "2": 1,
+          "5": 1
+        },
+        "question_types": {
+          "multiple-choice": 30
+        },
+        "answer_formats": {
+          "multiple-choice": {
+            "single_letter": 30,
+            "other": 0,
+            "examples": [
+              "'B'",
+              "'D'",
+              "'B'",
+              "'C'",
+              "'C'"
+            ],
+            "valid_multiple_choice": true
+          }
+        },
+        "image_columns": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "image_7"
+        ],
+        "non_null_image_counts": {
+          "1": 30
+        },
+        "marker_comparison": {
+          "match": 30
+        },
+        "marker_examples": {
+          "match": [
+            {
+              "id": "validation_Sociology_1",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Sociology_2",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Sociology_3",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Sociology_4",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            },
+            {
+              "id": "validation_Sociology_5",
+              "markers": [
+                1
+              ],
+              "images": [
+                1
+              ]
+            }
+          ],
+          "marker_without_image": [],
+          "image_without_marker": []
+        },
+        "options_with_marker": 0,
+        "ids_unique": true,
+        "id_examples": [
+          "validation_Sociology_1",
+          "validation_Sociology_2",
+          "validation_Sociology_3",
+          "validation_Sociology_4",
+          "validation_Sociology_5"
+        ],
+        "image_pixels": {
+          "min": 205332,
+          "median": 745980.0,
+          "max": 1704864
+        },
+        "samples": []
+      },
+      {
+        "status": "PASS",
+        "name": "total_rows",
+        "expected": 900,
+        "actual": 900,
+        "selected_subjects": 30
+      }
+    ]
+  },
+  "counts": {
+    "INFO": 10,
+    "PASS": 46
+  },
+  "config": "/workspace/eval_D1_20261107/source/code/config.yaml",
+  "model_path": "/workspace/eval_D1_20261107/models/D1",
+  "revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+  "selected_subjects": [
+    "Accounting",
+    "Agriculture",
+    "Architecture_and_Engineering",
+    "Art",
+    "Art_Theory",
+    "Basic_Medical_Science",
+    "Biology",
+    "Chemistry",
+    "Clinical_Medicine",
+    "Computer_Science",
+    "Design",
+    "Diagnostics_and_Laboratory_Medicine",
+    "Economics",
+    "Electronics",
+    "Energy_and_Power",
+    "Finance",
+    "Geography",
+    "History",
+    "Literature",
+    "Manage",
+    "Marketing",
+    "Materials",
+    "Math",
+    "Mechanical_Engineering",
+    "Music",
+    "Pharmacy",
+    "Physics",
+    "Psychology",
+    "Public_Health",
+    "Sociology"
+  ]
+}

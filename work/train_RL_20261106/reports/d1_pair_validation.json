@@ -1,0 +1,277 @@
+{
+  "input_sha256": {
+    "raw.jsonl": "8ba0b1edfa9b2bb5c58fad9b96b2f320bd5b35789466aa3b4ded6d98d33a2d2e",
+    "groups.json": "327f74646280b68edaa389200af5643b22cc8e86b021af756db953572a9a6434",
+    "r1_train.jsonl": "a3f94290caf2d2bbc0b0b3beea26bd83e0b994b78b572ea00691e8df400a1017"
+  },
+  "pairs": 707,
+  "questions": 548,
+  "pairs_per_question": {
+    "2": 159,
+    "1": 389
+  },
+  "by_group": {
+    "retain": {
+      "wrong": 250,
+      "extract_fail": 30
+    },
+    "target": {
+      "truncated": 190,
+      "wrong": 225,
+      "extract_fail": 12
+    }
+  },
+  "by_discipline": {
+    "Health & Medicine": {
+      "retain": 80,
+      "target": 91
+    },
+    "Science": {
+      "target": 159,
+      "retain": 51
+    },
+    "Humanities & Social Science": {
+      "retain": 58,
+      "target": 19
+    },
+    "Business": {
+      "target": 124,
+      "retain": 49
+    },
+    "Tech & Engineering": {
+      "retain": 41,
+      "target": 32
+    },
+    "Art & Design": {
+      "target": 2,
+      "retain": 1
+    }
+  },
+  "rejected": {
+    "wrong": 475,
+    "truncated": 190,
+    "extract_fail": 42
+  },
+  "lengths": {
+    "chosen": {
+      "mean": 1998.6039603960396,
+      "median": 1370,
+      "max": 8147
+    },
+    "rejected": {
+      "mean": 3501.5770862800564,
+      "median": 1884,
+      "max": 8192
+    },
+    "chosen_output": {
+      "mean": 1997.7029702970297,
+      "median": 1369,
+      "max": 8146
+    },
+    "rejected_output": {
+      "mean": 3501.2050919377652,
+      "median": 1883,
+      "max": 8192
+    }
+  },
+  "longest": {
+    "pair": 114,
+    "row": "156933",
+    "prompt": 1516,
+    "chosen": 1794,
+    "rejected": 8192,
+    "chosen_output": 1793,
+    "rejected_output": 8192,
+    "category": "truncated",
+    "longest": 9708
+  },
+  "over_limit": [],
+  "sha256": {
+    "d1_pairs_swift.jsonl": "d6ae9fa2a4b391ed533964beadb1f1ed4d887359df7f7fd3aa88c5433d4abbca",
+    "d1_pairs_index.jsonl": "2de82d0968838795254097d419082907e79e4a57044eaaff39f46d903cca63f5"
+  },
+  "swift_checks": [
+    {
+      "pair": 0,
+      "row": "1295429",
+      "prompt": 1086,
+      "chosen": 975,
+      "rejected": 500,
+      "chosen_output": 974,
+      "rejected_output": 499,
+      "category": "wrong",
+      "longest": 2061,
+      "image_tokens": 1020,
+      "branches": {
+        "chosen": {
+          "prompt": 1086,
+          "completion": 975,
+          "full_ids_match": true,
+          "labels_match": true
+        },
+        "rejected": {
+          "prompt": 1086,
+          "completion": 500,
+          "full_ids_match": true,
+          "labels_match": true
+        }
+      }
+    },
+    {
+      "pair": 1,
+      "row": "1295429",
+      "prompt": 1086,
+      "chosen": 652,
+      "rejected": 413,
+      "chosen_output": 651,
+      "rejected_output": 412,
+      "category": "wrong",
+      "longest": 1738,
+      "image_tokens": 1020,
+      "branches": {
+        "chosen": {
+          "prompt": 1086,
+          "completion": 652,
+          "full_ids_match": true,
+          "labels_match": true
+        },
+        "rejected": {
+          "prompt": 1086,
+          "completion": 413,
+          "full_ids_match": true,
+          "labels_match": true
+        }
+      }
+    },
+    {
+      "pair": 2,
+      "row": "1541116",
+      "prompt": 1154,
+      "chosen": 5456,
+      "rejected": 8192,
+      "chosen_output": 5455,
+      "rejected_output": 8192,
+      "category": "truncated",
+      "longest": 9346,
+      "image_tokens": 1012,
+      "branches": {
+        "chosen": {
+          "prompt": 1154,
+          "completion": 5456,
+          "full_ids_match": true,
+          "labels_match": true
+        },
+        "rejected": {
+          "prompt": 1154,
+          "completion": 8192,
+          "full_ids_match": true,
+          "labels_match": true
+        }
+      }
+    },
+    {
+      "pair": 11,
+      "row": "208154",
+      "prompt": 1207,
+      "chosen": 472,
+      "rejected": 500,
+      "chosen_output": 471,
+      "rejected_output": 499,
+      "category": "extract_fail",
+      "longest": 1707,
+      "image_tokens": 1088,
+      "branches": {
+        "chosen": {
+          "prompt": 1207,
+          "completion": 472,
+          "full_ids_match": true,
+          "labels_match": true
+        },
+        "rejected": {
+          "prompt": 1207,
+          "completion": 500,
+          "full_ids_match": true,
+          "labels_match": true
+        }
+      }
+    },
+    {
+      "pair": 12,
+      "row": "140407",
+      "prompt": 1089,
+      "chosen": 1658,
+      "rejected": 8192,
+      "chosen_output": 1657,
+      "rejected_output": 8192,
+      "category": "truncated",
+      "longest": 9281,
+      "image_tokens": 1000,
+      "branches": {
+        "chosen": {
+          "prompt": 1089,
+          "completion": 1658,
+          "full_ids_match": true,
+          "labels_match": true
+        },
+        "rejected": {
+          "prompt": 1089,
+          "completion": 8192,
+          "full_ids_match": true,
+          "labels_match": true
+        }
+      }
+    },
+    {
+      "pair": 21,
+      "row": "160659",
+      "prompt": 1129,
+      "chosen": 321,
+      "rejected": 430,
+      "chosen_output": 320,
+      "rejected_output": 429,
+      "category": "extract_fail",
+      "longest": 1559,
+      "image_tokens": 1040,
+      "branches": {
+        "chosen": {
+          "prompt": 1129,
+          "completion": 321,
+          "full_ids_match": true,
+          "labels_match": true
+        },
+        "rejected": {
+          "prompt": 1129,
+          "completion": 430,
+          "full_ids_match": true,
+          "labels_match": true
+        }
+      }
+    },
+    {
+      "pair": 114,
+      "row": "156933",
+      "prompt": 1516,
+      "chosen": 1794,
+      "rejected": 8192,
+      "chosen_output": 1793,
+      "rejected_output": 8192,
+      "category": "truncated",
+      "longest": 9708,
+      "image_tokens": 989,
+      "branches": {
+        "chosen": {
+          "prompt": 1516,
+          "completion": 1794,
+          "full_ids_match": true,
+          "labels_match": true
+        },
+        "rejected": {
+          "prompt": 1516,
+          "completion": 8192,
+          "full_ids_match": true,
+          "labels_match": true
+        }
+      }
+    }
+  ]
+}

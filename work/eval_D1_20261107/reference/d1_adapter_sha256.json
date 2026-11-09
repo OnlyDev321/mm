@@ -1,0 +1,9 @@
+{
+  "adapter/full/adapter_config.json": "fe8ddf9b08ec8dab42a42a55072360d9dbe9a944b10d2a76a3441f34e7a32d58",
+  "adapter/full/adapter_model.safetensors": "2d4bcce4972b36b6ef49b0b73d46c9d72a3803f43632b6847ae6f4d65e0132e8",
+  "adapter/full/additional_config.json": "c7799462ebedae6557ffad31566029e2d2f958b7b40e46e972cf901bcaf45733",
+  "adapter/full/args.json": "32dd7fafd51017902913e43108b36686f142d66258c300e511830afcc72a1ea2",
+  "adapter/full/README.md": "8c402a3f7663ebe1edb087b529c66b29c71f5d740fec9d6b0b4f3db099c467f4",
+  "adapter/full/trainer_state.json": "625a0260c77ca114cc2d5b773cbc6b2178abe1bd2606d1289cae9a8fe05360e9",
+  "adapter/full/training_args.bin": "7a66698f9c213acc925625de34c92556c645ee4f193c3f66d6ad76d8b12ec1a1"
+}

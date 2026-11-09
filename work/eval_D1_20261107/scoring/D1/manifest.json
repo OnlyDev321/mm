@@ -1,0 +1,50 @@
+{
+  "schema_version": "portable-evaluation-1",
+  "created_at": "2026-11-06T18:11:45.644243+00:00",
+  "source_path": "input/raw.jsonl",
+  "source_sha256": "60ee87670752b663edacf7a42f24320f97c33198741a6b1465594939361ba23e",
+  "policy_id": "hybrid100_mc_qwen_ab_open_no_length_gate_v2",
+  "judge_settings": {
+    "model": "gpt-4.1-mini-2025-04-14",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 3407,
+    "max_tokens": 8
+  },
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "config_path": "input/config.yaml",
+  "config_sha256": "a41d4973f753da715b8cf5258913ff075b5de60ffdc014ee4eb58dea17e41ce7",
+  "judge_model_override": null,
+  "price_per_million_usd": {
+    "input": 0.4,
+    "cached_input": 0.1,
+    "output": 1.6
+  },
+  "total": 900,
+  "judge_count": 316,
+  "automatic_count": 584,
+  "items_sha256": "e159e943245af9bc5e5263b09f68f06659e8ccb63e94a50cd23686ba9992042d",
+  "requests_sha256": "3902c99917ce68b3683c47a8829719836f675ee81c46ebbf9ddf1b0daa4464aa",
+  "code_sha256": {
+    "evaluate.py": "4b6439f4e36e1f4fe8445e2598d779a694d0dc09ad93d71eafe777dd49896c6b",
+    "frozen/parsers.py": "9c66095d23d19c9fe59379a90d8748c09a23747f11f84e6d31b34fdb30e1b304",
+    "frozen/vendor/mmmu_eval.py": "cc1a89b4a27f697702d340bc6a7578b5237135754ddaa9ef105239a3d9847367",
+    "frozen/vendor/qwen_eval_utils.py": "bd1b3e6cf98fd3679cf5f8e7c0ddddc54469ee1af869ed3755b2539b5a7b190e",
+    "frozen/vendor/vlmevalkit_matching.py": "7b86dfdf1efedc25637e25a02db806a5f723ee8b0ca9a7f7ad9087b002577333"
+  },
+  "max_new_tokens_values": [
+    8192
+  ],
+  "reproducibility_metadata": {
+    "model_revision": "not_attested_by_raw",
+    "dataset_revision": "not_attested_by_raw",
+    "generation_seed": "not_attested_by_raw",
+    "inference_code_commit": "not_attested_by_raw"
+  },
+  "policy_notes": [
+    "MC gold hidden from Judge; open A contains verbatim gold and B is Other Answers.",
+    "Only rule failures and MC rule conflicts go to Judge, regardless of backbone finish_reason; no random fallback or retries of completed Z.",
+    "Pinned prompt lists A-D/Z; parsing permits all actual option labels.",
+    "Raw snapshot is byte-identical; original input was not modified."
+  ]
+}

@@ -1,0 +1,10 @@
+metadata check: OK (run_metadata.json)
+status: {'ok': 900}
+invariant violations: 0
+prompt token mismatches: 0
+skip: 0 error: 0
+60ee87670752b663edacf7a42f24320f97c33198741a6b1465594939361ba23e  /workspace/eval_D1_20261107/runs/D1/generation/raw.jsonl
+bytes=14051303
+started_utc=2026-11-06T17:16:07Z
+finished_utc=2026-11-06T18:07:44Z
+61880a7c84cc2af83086eebb45b9535ac6d7374b7fad24b3d7ea8b19360d09aa  /workspace/eval_D1_20261107/runs/D1/generation/run_metadata.json

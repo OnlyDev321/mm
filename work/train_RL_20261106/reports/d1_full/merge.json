@@ -1,0 +1,8 @@
+{
+  "adapter_sha256": "2d4bcce4972b36b6ef49b0b73d46c9d72a3803f43632b6847ae6f4d65e0132e8",
+  "adapter_tensors": 504,
+  "merged_shards": {
+    "model-00001-of-00002.safetensors": "31d4561504484269e16e1cc00baef16d694cd44f25c9d282cfd45977caaab351",
+    "model-00002-of-00002.safetensors": "1280742e74baab97037603e9bc2912626f2c85d6347d9762a1286566b4b7f431"
+  }
+}

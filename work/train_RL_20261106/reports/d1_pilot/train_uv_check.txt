@@ -1,0 +1,72 @@
+Using Python 3.12.3 environment at: .venv-train
+Checked 115 packages in 635ms
+Found 69 incompatibilities
+The package `opentelemetry-api` requires `typing-extensions>=4.5.0`, but it's not installed
+The package `safehttpx` requires `httpx`, but it's not installed
+The package `modelscope-hub` requires `requests>=2.28`, but it's not installed
+The package `modelscope-hub` requires `urllib3>=1.26`, but it's not installed
+The package `tensorboard` requires `packaging`, but it's not installed
+The package `huggingface-hub` requires `packaging>=20.9`, but it's not installed
+The package `huggingface-hub` requires `pyyaml>=5.1`, but it's not installed
+The package `huggingface-hub` requires `requests`, but it's not installed
+The package `huggingface-hub` requires `typing-extensions>=3.7.4.3`, but it's not installed
+The package `yarl` requires `idna>=2.0`, but it's not installed
+The package `nltk` requires `defusedxml`, but it's not installed
+The package `aiosignal` requires `typing-extensions>=4.2 ; python_full_version < '3.13'`, but it's not installed
+The package `uvicorn` requires `h11>=0.8`, but it's not installed
+The package `cryptography` requires `cffi>=2.0.0 ; platform_python_implementation != 'PyPy'`, but it's not installed
+The package `openai` requires `anyio>=4.10.0,<5`, but it's not installed
+The package `openai` requires `typing-extensions>=4.14,<5`, but it's not installed
+The package `omegaconf` requires `pyyaml>=5.1.0`, but it's not installed
+The package `werkzeug` requires `markupsafe>=2.1.1`, but it's not installed
+The package `starlette` requires `anyio>=3.6.2,<5`, but it's not installed
+The package `starlette` requires `typing-extensions>=4.10.0 ; python_full_version < '3.13'`, but it's not installed
+The package `aiohttp` requires `attrs>=17.3.0`, but it's not installed
+The package `aiohttp` requires `typing-extensions>=4.4 ; python_full_version < '3.13'`, but it's not installed
+The package `datasets` requires `requests>=2.32.2`, but it's not installed
+The package `datasets` requires `packaging`, but it's not installed
+The package `datasets` requires `pyyaml>=5.1`, but it's not installed
+The package `fastapi` requires `typing-extensions>=4.8.0`, but it's not installed
+The package `typing-inspection` requires `typing-extensions>=4.15.0`, but it's not installed
+The package `oss2` requires `requests!=2.9.0`, but it's not installed
+The package `modelscope` requires `packaging`, but it's not installed
+The package `modelscope` requires `requests>=2.25`, but it's not installed
+The package `modelscope` requires `urllib3>=1.26`, but it's not installed
+The package `accelerate` requires `packaging>=20.0`, but it's not installed
+The package `accelerate` requires `psutil`, but it's not installed
+The package `accelerate` requires `pyyaml`, but it's not installed
+The package `accelerate` requires `torch>=2.0.0`, but it's not installed
+The package `rich` requires `pygments>=2.13.0,<3.0.0`, but it's not installed
+The package `pandas` requires `python-dateutil>=2.8.2`, but it's not installed
+The package `ms-swift` requires `charset-normalizer`, but it's not installed
+The package `ms-swift` requires `pyyaml>=5.4`, but it's not installed
+The package `ms-swift` requires `requests`, but it's not installed
+The package `peft` requires `packaging>=20.0`, but it's not installed
+The package `peft` requires `psutil`, but it's not installed
+The package `peft` requires `pyyaml`, but it's not installed
+The package `peft` requires `torch>=1.13.0`, but it's not installed
+The package `qwen-vl-utils` requires `packaging`, but it's not installed
+The package `qwen-vl-utils` requires `requests`, but it's not installed
+The package `grpcio` requires `typing-extensions~=4.12`, but it's not installed
+The package `transformers` requires `packaging>=20.0`, but it's not installed
+The package `transformers` requires `pyyaml>=5.1`, but it's not installed
+The package `transformers` requires `requests`, but it's not installed
+The package `pydantic` requires `typing-extensions>=4.12.2`, but it's not installed
+The package `pydantic-core` requires `typing-extensions>=4.6.0,!=4.7.0`, but it's not installed
+The package `httpx2` requires `anyio>=4.10 ; sys_platform != 'emscripten'`, but it's not installed
+The package `httpx2` requires `idna>=3.18`, but it's not installed
+The package `httpx2` requires `typing-extensions>=4.5.0 ; python_full_version < '3.13'`, but it's not installed
+The package `matplotlib` requires `packaging>=20.0`, but it's not installed
+The package `matplotlib` requires `python-dateutil>=2.7`, but it's not installed
+The package `gradio` requires `anyio>=3.0,<5.0`, but it's not installed
+The package `gradio` requires `httpx>=0.24.1,<1.0`, but it's not installed
+The package `gradio` requires `jinja2<4.0`, but it's not installed
+The package `gradio` requires `markupsafe>=2.0,<4.0`, but it's not installed
+The package `gradio` requires `packaging`, but it's not installed
+The package `gradio` requires `pyyaml>=5.0,<7.0`, but it's not installed
+The package `gradio` requires `typing-extensions~=4.0`, but it's not installed
+The package `gradio-client` requires `httpx>=0.24.1`, but it's not installed
+The package `gradio-client` requires `packaging`, but it's not installed
+The package `gradio-client` requires `typing-extensions~=4.0`, but it's not installed
+The package `tiktoken` requires `requests`, but it's not installed
+The package `httpcore2` requires `h11>=0.16`, but it's not installed

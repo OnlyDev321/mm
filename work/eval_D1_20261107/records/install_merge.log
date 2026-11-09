@@ -1,0 +1,5 @@
+Collecting peft==0.17.1
+  Using cached peft-0.17.1-py3-none-any.whl.metadata (14 kB)
+Using cached peft-0.17.1-py3-none-any.whl (504 kB)
+Installing collected packages: peft
+Successfully installed peft-0.17.1
