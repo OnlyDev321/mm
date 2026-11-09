@@ -1,0 +1,21 @@
+# Virtual environments & caches
+__pycache__/
+*.py[cod]
+*$py.class
+merge_env/
+.venv/
+env/
+hf_cache/
+
+# Large checkpoints & weights
+*.safetensors
+*.bin
+*.pt
+*.pth
+models/
+adapter/
+runs/d2p_k4/raw.jsonl
+
+# System & OS
+.DS_Store
+Thumbs.db
