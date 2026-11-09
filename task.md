@@ -204,10 +204,46 @@ Khôi phục rồi đọc CLI thật của `scripts/dpo_train.py` (bao gồm `--
 3. Merge **D1 merged + D2′ adapter** sang bf16 vào `/workspace/models/D2p`. Không merge D2′ trực tiếp lên M0; không nạp D1 adapter lần nữa trên D1 merged.
 4. Ghi hash adapter D2′ và toàn bộ merged shards; đây là hash mới, không so chúng với hash D1.
 5. Kiểm tra load model D2′ bằng vLLM `0.11.0` theo cấu hình đánh giá chuẩn; **không gửi yêu cầu generation hoặc chạy benchmark** trên A100/H100.
-6. Trên pod, thu adapter/log vào `work/train_RL_20261106/adapter/d2p_full/` và `reports/d2p_full/`, tạo archive cùng manifest SHA-256. Khi agent chạy ngay trên pod và chưa có kết nối tới máy người dùng, không tự coi đường dẫn trên pod là local của người dùng: hoàn thành đóng gói, cung cấp lệnh SCP tải về và ghi rõ “chờ tải về local”. Nếu đã có kênh nhận được cho phép, chuyển kết quả và đối chiếu hash pod/local. Không yêu cầu thông tin đích nhận để bắt đầu training; không tự upload kết quả lên GitHub/HF. Nếu đích có nội dung khác, dùng đường dẫn lần chạy riêng.
-7. Lưu receipt vị trí merged model/hash để chuyển sang RTX 4090 ở bước 4. Không tự tải merged weights lớn về local nếu chưa cần.
-8. Viết `work/train_RL_20261106/reports/D2P_STAGE3_TRAIN_REPORT.md`: input hashes, 696 cặp, preflight template/reward, config diff, môi trường, LoRA/reference, epochs/steps, thời gian/VRAM, số liệu training, lỗi nếu có, checkpoint cuối, merge/load và transfer verification. Nêu rõ chưa đánh giá MMMU.
-9. Dừng sau báo cáo training và gói bàn giao; nếu chưa tải về máy người dùng, ghi trạng thái bàn giao còn chờ, không đánh dấu đã hoàn tất transfer. Không tự chạy bước 4, gọi Judge, upload GitHub/HF hoặc Stop/Terminate pod.
+6. Lưu receipt vị trí/hash merged model vào hồ sơ training để chuyển sang RTX 4090 ở bước 4. Không đưa merged model lớn vào ZIP bàn giao.
+7. Hoàn tất `work/train_RL_20261106/reports/D2P_STAGE3_TRAIN_REPORT.md`: input hashes, 696 cặp, preflight template/reward, config diff, môi trường, LoRA/reference, epochs/steps, thời gian/VRAM, số liệu training, lỗi nếu có, checkpoint cuối, merge/load và trạng thái bàn giao. Nêu rõ chưa đánh giá MMMU; nếu chưa tải về máy người dùng thì ghi “chờ tải về local”.
+8. **Bắt buộc đóng gói ZIP sau khi báo cáo và log đã ghi xong**, theo hướng dẫn dưới. Không yêu cầu thông tin đích nhận để hoàn tất việc tạo ZIP. Nếu thư mục kết quả đã tồn tại khác nội dung, dùng đường dẫn lần chạy riêng và phản ánh chính xác trong ZIP/báo cáo.
+9. Dừng sau báo cáo training và gói ZIP đã kiểm tra. Chỉ đánh dấu transfer về local hoàn tất khi thực sự đối chiếu được hash pod/local. Không tự chạy bước 4, gọi Judge, upload GitHub/HF hoặc Stop/Terminate pod.
+
+### ZIP kết quả để người dùng tải về local
+
+Tạo trên pod:
+
+```text
+/workspace/mm/exports/D2P_STAGE3_results_<YYYYMMDD_HHMMSS>.zip
+/workspace/mm/exports/D2P_STAGE3_results_<YYYYMMDD_HHMMSS>.zip.sha256
+```
+
+Dùng timestamp thực tế khi đóng gói để không ghi đè lần chạy khác. ZIP phải chứa đủ **ba phần**, giữ đường dẫn tính từ repo root để giải nén vào workspace local:
+
+```text
+work/train_RL_20261106/adapter/d2p_full/                  # toàn bộ adapter cuối, weights + config
+work/train_RL_20261106/reports/d2p_full/                  # toàn bộ log, metrics, args/config, receipts
+work/train_RL_20261106/reports/D2P_STAGE3_TRAIN_REPORT.md  # báo cáo cuối đã hoàn tất
+SHA256SUMS.json                                         # SHA-256 từng file của ba phần trên
+```
+
+Agent thực hiện tuần tự:
+
+1. Kiểm tra ba phần tồn tại, adapter có weights và `adapter_config.json`, log/metrics có nội dung và báo cáo đã hoàn tất; không đóng gói thiếu phần rồi báo thành công. Nếu kết quả là symlink đến checkpoint, đóng gói nội dung file thật, không tạo ZIP phụ thuộc đường dẫn checkpoint ngoài gói.
+2. Tạo ZIP bằng `zipfile` của Python chuẩn hoặc công cụ ZIP sẵn có; chỉ lấy ba phần nêu trên và manifest. Không đưa M0/D1/D2′ merged model, dataset, ảnh, cache, venv, token hoặc file credentials vào ZIP.
+3. Tính SHA-256 từng file và đưa manifest `SHA256SUMS.json` vào ZIP. Đóng ZIP rồi tính hash toàn bộ ZIP, lưu vào file `.zip.sha256` cạnh nó. Không ghi hash ZIP vào báo cáo nằm bên trong ZIP để tránh phụ thuộc vòng.
+4. Mở lại ZIP, kiểm tra CRC (`ZipFile.testzip()` nếu dùng Python), danh sách file và SHA-256 nội dung so với manifest; kiểm tra đủ cả ba phần. Nếu lỗi, sửa hoặc báo lỗi, không thông báo gói sẵn sàng.
+5. Trả cho người dùng **đường dẫn ZIP, dung lượng, SHA-256 và lệnh SCP cho cả ZIP lẫn `.zip.sha256`**. Dùng IP/port/key thực tế khi đã biết; nếu chưa biết, ghi rõ placeholder cần thay. Lệnh SCP chạy trên máy người dùng, không chạy trên pod để giả lập tải về.
+
+Mẫu lệnh người dùng chạy ở local (agent thay timestamp và thông tin kết nối nếu có):
+
+```bash
+scp -P <PORT> -i <KEY_PATH> root@<IP>:/workspace/mm/exports/D2P_STAGE3_results_<TIMESTAMP>.zip .
+scp -P <PORT> -i <KEY_PATH> root@<IP>:/workspace/mm/exports/D2P_STAGE3_results_<TIMESTAMP>.zip.sha256 .
+shasum -a 256 -c D2P_STAGE3_results_<TIMESTAMP>.zip.sha256
+```
+
+File checksum ngoài ZIP phải dùng **tên ZIP, không dùng đường dẫn tuyệt đối trên pod**, để lệnh kiểm tra chạy được ở local. Giữ nguyên gói trên pod để người dùng tải; không tự xóa hay tắt pod.
 
 ## 9. Checklist hoàn tất
 
@@ -220,6 +256,8 @@ Khôi phục rồi đọc CLI thật của `scripts/dpo_train.py` (bao gồm `--
 - [ ] Config thực thi đúng D1→D2′, LoRA 252 modules và reference D1.
 - [ ] Full training 2 epoch hoàn tất, log hữu hạn và đủ metrics.
 - [ ] Adapter cuối merge trên D1; vLLM load thành công, không generation.
-- [ ] Adapter/log về local khớp hash, báo cáo bước 3 hoàn tất.
+- [ ] Báo cáo hoàn tất; ZIP chứa đủ ba phần và manifest, CRC/hash nội dung đã kiểm tra.
+- [ ] Đã cung cấp đường dẫn ZIP, dung lượng, checksum và lệnh SCP tải về.
+- [ ] Sau khi người dùng tải: adapter/log/báo cáo về local khớp hash; nếu chưa tải thì trạng thái bàn giao vẫn còn chờ.
 
 Luôn giữ nguyên raw, pairs, D1 và pipeline benchmark gốc. Không dùng MMMU/MMMU-Pro để train, không đổi cấu hình hoặc chọn checkpoint theo validation. Người dùng đã cho phép đưa toàn bộ dữ liệu/hồ sơ D2′ trong mục 2 lên GitHub để bootstrap bước 3. Quyền này không bao gồm weights, token, ảnh tải từ HF hoặc kết quả training mới; giữ các phần đó ngoài Git và không tự upload.
