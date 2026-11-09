@@ -234,7 +234,7 @@ SHA256SUMS.json                                         # SHA-256 từng file c�
 Agent thực hiện tuần tự:
 
 1. Kiểm tra ba phần tồn tại, adapter có đủ bốn file bắt buộc nêu ở mục 8.2, log/metrics có nội dung và báo cáo đã hoàn tất; không đóng gói thiếu phần rồi báo thành công. Nếu kết quả là symlink đến checkpoint, đóng gói nội dung file thật, không tạo ZIP phụ thuộc đường dẫn checkpoint ngoài gói.
-2. Bảo đảm diff/dry-run và hash shards/vLLM receipt ở `reports/d2p_full/`. Manifest `SHA256SUMS.txt` cho HF được tạo riêng theo layout staging của mục 9; ZIP dùng `SHA256SUMS.json` theo đường dẫn trong ZIP. Tạo ZIP bằng `zipfile` của Python chuẩn hoặc công cụ ZIP sẵn có; chỉ lấy ba phần nêu trên và manifest. Không đưa M0/D1/D2′ merged model, dataset, ảnh, cache, venv, token hoặc file credentials vào ZIP.
+2. Bảo đảm hash shards/vLLM receipt ở `reports/d2p_full/`. Manifest `SHA256SUMS.txt` cho HF được tạo riêng theo layout staging của mục 9; ZIP dùng `SHA256SUMS.json` theo đường dẫn trong ZIP. Tạo ZIP bằng `zipfile` của Python chuẩn hoặc công cụ ZIP sẵn có; chỉ lấy ba phần nêu trên và manifest. Không đưa M0/D1/D2′ merged model, dataset, ảnh, cache, venv, token hoặc file credentials vào ZIP.
 3. Tính SHA-256 từng file và đưa manifest `SHA256SUMS.json` vào ZIP. Đóng ZIP rồi tính hash toàn bộ ZIP, lưu vào file `.zip.sha256` cạnh nó. Không ghi hash ZIP vào báo cáo nằm bên trong ZIP để tránh phụ thuộc vòng.
 4. Mở lại ZIP, kiểm tra CRC (`ZipFile.testzip()` nếu dùng Python), danh sách file và SHA-256 nội dung so với manifest; kiểm tra đủ cả ba phần. Nếu lỗi, sửa hoặc báo lỗi, không thông báo gói sẵn sàng.
 5. Trả cho người dùng **đường dẫn ZIP, dung lượng, SHA-256 và lệnh SCP cho cả ZIP lẫn `.zip.sha256`**. Dùng IP/port/key thực tế khi đã biết; nếu chưa biết, ghi rõ placeholder cần thay. Lệnh SCP chạy trên máy người dùng, không chạy trên pod để giả lập tải về.
@@ -275,22 +275,11 @@ reports/d2p_full/
     merged_sha256.json          # SHA-256 toàn bộ D2′ merged shards, không kèm weights
     vllm_load.json              # kết quả load thực tế, version và exit status
     vllm_load.log
-    sample_policy.diff
-    sampling_dry_run/           # bằng chứng sampling thật, xem dưới
 D2P_STAGE3_TRAIN_REPORT.md
 SHA256SUMS.txt
 ```
 
 Các đường dẫn receipt mới có thể khác tên gốc nhưng phải tham chiếu rõ nguồn. Không upload dataset, ảnh, cache, môi trường, token, weights merged hoặc checkpoints trung gian.
-
-### Diff và dry-run của bước sampling
-
-**Hiện chưa tìm thấy `sample_policy.py`, diff và dry-run D2′ trong bundle/repo local.** Không lấy `sampling_dry_run.json` M0/R1 cũ rồi gắn nhãn D2′.
-
-- Trước khi kết thúc pod 4090 cũ, thu hồi `sample_m0.py` gốc, `sample_policy.py` thực sự đã chạy, diff và dry-run logs nếu pod còn truy cập được. Tìm thêm trong backup/HF manifests đã có. Kiểm tra hash sampler với `runs/d2p_k4/manifest.json`; diff chỉ thêm tùy chọn model path theo handoff.
-- Đưa diff và dry-run đã thu hồi vào `reports/d2p_full/`. Dry-run phải ghi nguồn và ít nhất 5 câu, prompt/ảnh/token/request seed được đối chiếu với R1; không phát sinh GPU sampling mới chỉ để làm báo cáo.
-- Nếu bản ghi lịch sử bị thiếu nhưng có script thật, có thể tạo **CPU dry-run tái kiểm tra**, ghi rõ ngày chạy mới và phạm vi, không gọi là log lịch sử. Không bịa file, số đo hoặc kết quả.
-- Nếu không thu hồi được script/log cần thiết, báo rõ thiếu bằng chứng và đề nghị người phụ trách chấp nhận bằng chứng thay thế; vẫn có thể train theo phê duyệt hiện tại nếu input/model checks đạt, nhưng không tuyên bố payload bàn giao đã đầy đủ.
 
 ### Upload và xác minh
 
@@ -298,13 +287,13 @@ Các đường dẫn receipt mới có thể khác tên gốc nhưng phải tham
 2. Tạo **`SHA256SUMS.txt`** chuẩn `sha256sum`: mỗi dòng là hash và đường dẫn tương đối tính từ staging root, bao phủ **mọi file payload trừ chính manifest** (tránh tự tham chiếu). Giữ cả manifest checksum ZIP riêng theo mục 8. Không đổi payload sau khi tạo manifest; nếu đổi thì tái tạo manifest và gói ZIP tương ứng.
 3. Dùng `HF_TOKEN` qua môi trường để upload **các file payload**, không chỉ upload một ZIP, vào model repo đã xác minh private, revision `run-jinho`. Không lưu token vào credential file, không truyền giá trị token trên command line được log.
 4. Lấy commit SHA trả về. Đọc lại listing và tải xác minh **từng file tại đúng commit SHA**, đối chiếu đầy đủ `SHA256SUMS.txt`, bao gồm adapter binary. Không chỉ kiểm tra HTTP upload thành công. Xác nhận `main` không bị ghi payload bởi thao tác này.
-5. Lưu upload receipt ngoài payload đã chốt để tránh vòng tham chiếu: repo, private status, branch, commit SHA, danh sách/count file, kết quả hash verification. Trả **link repo/branch, commit SHA và trạng thái thiếu bằng chứng nếu có** cho người dùng để họ báo người phụ trách; không tự nhắn cho người khác.
+5. Lưu upload receipt ngoài payload đã chốt để tránh vòng tham chiếu: repo, private status, branch, commit SHA, danh sách/count file, kết quả hash verification. Trả **link repo/branch, commit SHA và kết quả xác minh upload** cho người dùng để họ báo người phụ trách; không tự nhắn cho người khác.
 
 ZIP tải về local vẫn bắt buộc theo yêu cầu trước của người dùng; HF upload là kênh bàn giao bổ sung. Không cần upload merged weights vì người nhận sẽ merge M0 → D1 → D2′ theo receipt.
 
 ## 10. Pod và thời hạn
 
-- Người phụ trách đã yêu cầu kết thúc pod **4090 sampling**. Thu hồi diff/dry-run và kiểm tra backup trước; chỉ thao tác đúng pod được xác định, không đoán pod ID hoặc dừng các pod 4090 khác. Nếu agent chỉ có SSH A100 và không có quyền quản lý 4090, báo người dùng thực hiện; không để việc thiếu quyền này ngăn training A100 đã được duyệt.
+- Người phụ trách đã yêu cầu kết thúc pod **4090 sampling**. Kiểm tra backup dữ liệu cần giữ trước; chỉ thao tác đúng pod được xác định, không đoán pod ID hoặc dừng các pod 4090 khác. Nếu agent chỉ có SSH A100 và không có quyền quản lý 4090, báo người dùng thực hiện; không để việc thiếu quyền này ngăn training A100 đã được duyệt.
 - **A100:** giữ chạy trong lúc train, kiểm tra, ZIP và upload. Chỉ kết thúc sau khi người phụ trách xác nhận đã nhận đủ; upload thành công chưa phải xác nhận đã nhận đủ. Người dùng thực hiện Stop/Terminate, hoặc agent chỉ làm khi có lệnh trực tiếp cùng pod ID chính xác.
 - Mục tiêu “trước cuối tuần” là thời hạn người phụ trách nêu trong tin nhắn; chưa có ngày cụ thể của tin nhắn nên không tự gán deadline lịch. Báo ETA theo thời gian thực đo và báo sớm nếu có nguy cơ chậm.
 
@@ -322,7 +311,6 @@ ZIP tải về local vẫn bắt buộc theo yêu cầu trước của người 
 - [ ] Adapter cuối có đủ weights/config/args/trainer_state; merge trên D1; vLLM load thành công, không generation.
 - [ ] Báo cáo hoàn tất; ZIP chứa đủ ba phần và manifest, CRC/hash nội dung đã kiểm tra.
 - [ ] Đã cung cấp đường dẫn ZIP, dung lượng, checksum và lệnh SCP tải về.
-- [ ] Thu hồi sample_policy diff và dry-run thật hoặc báo rõ bằng chứng còn thiếu.
 - [ ] HF repo xác minh private, payload đủ và hash khớp tại commit nhánh `run-jinho`; đã trả commit SHA.
 - [ ] Sau khi người dùng tải: adapter/log/báo cáo về local khớp hash; nếu chưa tải thì trạng thái bàn giao vẫn còn chờ.
 
