@@ -293,7 +293,6 @@ ZIP tải về local vẫn bắt buộc theo yêu cầu trước của người 
 
 ## 10. Pod và thời hạn
 
-- Người phụ trách đã yêu cầu kết thúc pod **4090 sampling**. Kiểm tra backup dữ liệu cần giữ trước; chỉ thao tác đúng pod được xác định, không đoán pod ID hoặc dừng các pod 4090 khác. Nếu agent chỉ có SSH A100 và không có quyền quản lý 4090, báo người dùng thực hiện; không để việc thiếu quyền này ngăn training A100 đã được duyệt.
 - **A100:** giữ chạy trong lúc train, kiểm tra, ZIP và upload. Chỉ kết thúc sau khi người phụ trách xác nhận đã nhận đủ; upload thành công chưa phải xác nhận đã nhận đủ. Người dùng thực hiện Stop/Terminate, hoặc agent chỉ làm khi có lệnh trực tiếp cùng pod ID chính xác.
 - Mục tiêu “trước cuối tuần” là thời hạn người phụ trách nêu trong tin nhắn; chưa có ngày cụ thể của tin nhắn nên không tự gán deadline lịch. Báo ETA theo thời gian thực đo và báo sớm nếu có nguy cơ chậm.
 
