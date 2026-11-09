@@ -17,6 +17,31 @@ Cập nhật: 2026-11-09. Đây là file giao việc cho agent thực hiện **b
 4. `work/train_RL_20261106/reports/D1_STAGE3_TRAIN_REPORT.md`, `reports/d1_full/args.json` và `HANDOFF_D1.md` để tái dùng cách thiết lập, ghi log và merge.
 5. `work/train_RL_20261106/reports/D2P_STAGE3_PREPARATION.json` để biết file đã nhập, checksum và các thiếu hụt local.
 
+## Khởi động trên pod A100 80GB
+
+Hai file `work/train_RL_20261106/data/d2p_pairs_swift.jsonl` và `work/train_RL_20261106/runs/d2p_k4/d2p_train.jsonl` đã có trên GitHub. Sau clone/pull không cần chuyển riêng hai file này.
+
+Trong terminal **Bash trên pod**, tại repo `/workspace/mm`, nhập HF token qua prompt ẩn:
+
+```bash
+set +x
+read -r -s -p "HF token (read access to MMDL-team4): " HF_TOKEN
+printf '\n'
+export HF_TOKEN
+export HF_HOME=/workspace/hf_cache
+python3 -c 'import os; assert os.environ.get("HF_TOKEN"), "Missing HF_TOKEN"; print("HF_TOKEN is set; value hidden")'
+```
+
+Dùng token mới có quyền đọc các repo private của nhóm. Không chép token từng gửi trong chat vào file này. Không lưu token vào Git, shell startup file hoặc lệnh có giá trị token trực tiếp.
+
+Khởi chạy agent từ **chính shell đã export** để tiến trình con thừa hưởng `HF_TOKEN`/`HF_HOME`. Export ở terminal khác, ở máy local hoặc ở một phiên SSH khác không tự truyền token sang tiến trình agent đang chạy. Nếu agent đã chạy, cấp biến môi trường qua cơ chế khởi chạy của phiên đó hoặc khởi chạy lại từ shell trên. Agent chỉ kiểm tra token có tồn tại, không chạy `env`, `printenv HF_TOKEN`, `set -x` hay in HTTP Authorization headers.
+
+Sau khi đã duyệt báo cáo bước 1–2 và đồng ý dùng pod này để training, giao việc:
+
+> Tôi đã duyệt báo cáo bước 1–2 và đồng ý chi phí pod A100 80GB hiện tại cho bước 3. Hãy thực hiện `task.md` đến hết bước 3. HF_TOKEN và HF_HOME đã có trong môi trường. Tự tải script, adapter, ảnh và base còn thiếu từ các nguồn đã chỉ định; kiểm tra hash, template và cấu hình rồi train 2 epoch. Không cần hỏi lại các thao tác tải, cài đúng môi trường, merge và training nằm trong phạm vi này. Dừng nếu thiếu quyền truy cập, sai hash, OOM/NaN hoặc cần thay đổi cấu hình; dừng sau báo cáo bước 3, không evaluation, upload hay Stop/Terminate pod.
+
+Đây là mẫu lệnh để người dùng gửi khi bắt đầu trên pod, không phải xác nhận rằng training đã được thực hiện. Token chỉ cấp quyền tải dữ liệu, không thay thế xác nhận chạy GPU. Khi có lệnh thực thi và đủ điều kiện, agent tiếp tục tự động qua các mục 3–8; không chỉ báo thiếu file rồi kết thúc nếu có thể tải từ nguồn đã chỉ định.
+
 ## 2. Đầu vào bước 3 và hồ sơ bước 2
 
 Workspace local: `work/train_RL_20261106/`.
@@ -78,6 +103,8 @@ Nguồn đã được handoff chỉ định:
 | HF dataset private `MMDL-team4/hypB-train-data`, v1.1, commit prefix `1833bac3` | Ảnh nguồn A theo hướng dẫn handoff |
 | `Qwen/Qwen3-VL-4B-Instruct`, revision `ebb281ec70b05090aa6165b016eac8ec08e71b17` | Base M0 |
 
+Agent dùng `HF_TOKEN` từ môi trường để xác thực với Hugging Face, tải trực tiếp trên pod các file còn thiếu và tái dùng file đã có sau khi kiểm tra hash. Kiểm tra quyền truy cập cả ba repo private; nếu token thiếu hoặc bị từ chối, chỉ báo tên repo và lỗi đã loại thông tin nhạy cảm. Không yêu cầu người dùng gửi token trong chat.
+
 Khôi phục đúng layout theo `HANDOFF_D2p.md`, đối chiếu `SHA256SUMS.txt` của từng nguồn và hash ảnh trong train metadata. Ghi full revision tải thực tế vào receipt. Nếu nguồn không có file cần thiết hoặc hash không khớp, báo rõ phần thiếu; không tự viết pipeline thay thế rồi coi là script gốc.
 
 Chỉ tải dữ liệu/checkpoint cần thiết; không cần tải lại toàn bộ sampling M0 cho bước 3. Không đưa token hoặc API key vào file, lệnh được log hay báo cáo. Bước 3 không cần OpenAI Judge key.
@@ -115,7 +142,7 @@ Theo `content.md`, bước 1–2 đã tạo dữ liệu; bước 3 dùng lại k
 ### Kiểm tra hồ sơ bước 2 ở local
 
 - Mapping index/raw, chosen/rejected nguyên văn và không reuse response đã kiểm tra khi chuẩn bị; dùng receipt hiện có, không bắt buộc chạy lại trên A100.
-- Tái tính reward bằng `reward_v2.py` gốc: chosen=1, rejected=0, dùng raw/index/train metadata ở local. Lưu báo cáo và hash inputs; không coi kiểm tra cờ reward đã lưu là tái tính. Nếu local thiếu môi trường phù hợp, có thể kiểm tra trên pod và chỉ chuyển thêm artifacts cần cho việc đó.
+- Tái tính reward bằng `reward_v2.py` gốc: chosen=1, rejected=0. Trên pod clone mới, ưu tiên dùng nguyên văn chosen/rejected trong pairs và ground truth/metadata từ `d2p_train.jsonl`, nối bằng prompt và danh sách ảnh; kiểm tra ánh xạ duy nhất. Đọc API thật của reward script trước khi gọi, giữ nguyên logic chấm. Không bắt buộc có raw/index chỉ để đọc lại hai response đã có trong pairs. Nếu API hoặc metadata không đủ để tái tính chính xác, dùng kết quả kiểm tra từ local hoặc lấy thêm đúng artifacts còn thiếu qua SSH; không giả định chúng có trên GitHub/HF và không bỏ qua kiểm tra. Lưu báo cáo/hash inputs, phân biệt tái tính với cờ reward đã lưu.
 
 ### Kiểm tra trên pod trước training
 
@@ -149,7 +176,7 @@ Kiểm tra regex thực sự chọn đúng 252 modules trước khi train; lưu 
 
 ## 7. Chạy full training và theo dõi
 
-Khôi phục rồi đọc CLI thật của `scripts/dpo_train.py` (bao gồm `--help`) trước khi lập lệnh. Không suy đoán flag từ tên file. Lưu lệnh chính xác và args ms-swift thực tế vào `reports/d2p_full/`.
+Khôi phục rồi đọc CLI thật của `scripts/dpo_train.py` (bao gồm `--help`) trước khi lập lệnh. Kiểm tra working directory và cách script resolve đường dẫn: ảnh trong JSONL tính từ repo root `/workspace/mm`, còn dataset trong config tính từ workspace RL; truyền đường dẫn tuyệt đối hoặc dùng cơ chế resolve có sẵn của script để cả hai đúng, không sửa JSONL gốc. Không suy đoán flag từ tên file. Lưu lệnh chính xác và args ms-swift thực tế vào `reports/d2p_full/`.
 
 - Chạy đủ 2 epoch từ D1 merged với LoRA D2′ mới.
 - Output training ở vùng D2′ riêng, ví dụ `outputs/d2p_full/`; không dùng output D1.
