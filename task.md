@@ -5,7 +5,9 @@ Cập nhật: 2026-11-09. Đây là file giao việc cho agent thực hiện **b
 ## 1. Phạm vi và trạng thái
 
 - Repo đã chứa dữ liệu D2′ và hồ sơ bước 1–2 trong `work/train_RL_20261106/`, giữ nguyên nội dung và checksum. Không cần bundle hoặc file đầu vào từ máy local sau clone.
-- **Chưa thuê pod, chưa chạy training, chưa có xác nhận duyệt báo cáo bước 1–2 trong lần chuẩn bị này.** Yêu cầu chuẩn bị file không phải là lệnh chạy GPU.
+- Theo tin nhắn người phụ trách do người dùng cung cấp: **bước 1–2 đã được duyệt**, 696 cặp/hash/reward khớp, độ dài chính xác được xác nhận là **9.708 token**, không cần memory pilot; yêu cầu full training trên A100 trong 2 epoch.
+- Người thực hiện: **jinho**. Đầu ra bàn giao lên HF model repo **`MMDL-team4/hypB-d2p-dpo`**, **private**, nhánh **`run-jinho`**, không upload lên `main`. Người phụ trách tự thực hiện bước 4.
+- Tài liệu này chuẩn bị việc thực thi; chưa có pod/SSH hay kết quả training trong phiên chỉnh tài liệu. Khi người dùng ra lệnh chạy trên pod đã thuê, tiếp tục tự động trong phạm vi đó.
 - Khi người dùng xác nhận báo cáo và yêu cầu chạy bước 3, tiếp tục trong phạm vi đã được cho phép; không hỏi lại những phần đã được xác nhận.
 - Kết thúc training sau khi lấy adapter cuối, merge, kiểm tra vLLM load và đóng gói kết quả để tải về; chỉ xác nhận bàn giao về máy người dùng khi đã đối chiếu hash thực tế. Evaluation là bước 4, thực hiện riêng trên RTX 4090.
 
@@ -35,22 +37,22 @@ Trong terminal **Bash trên pod**, tại repo `/workspace/mm`, nhập HF token q
 
 ```bash
 set +x
-read -r -s -p "HF token (read access to MMDL-team4): " HF_TOKEN
+read -r -s -p "HF token (read sources + write hypB-d2p-dpo): " HF_TOKEN
 printf '\n'
 export HF_TOKEN
 export HF_HOME=/workspace/hf_cache
 python3 -c 'import os; assert os.environ.get("HF_TOKEN"), "Missing HF_TOKEN"; print("HF_TOKEN is set; value hidden")'
 ```
 
-Dùng token mới có quyền đọc các repo private của nhóm. Không chép token từng gửi trong chat vào file này. Không lưu token vào Git, shell startup file hoặc lệnh có giá trị token trực tiếp.
+Dùng token mới có quyền đọc các repo nguồn private của nhóm **và quyền ghi repo đích `MMDL-team4/hypB-d2p-dpo`**; nếu phải tạo repo thì tài khoản cần quyền tạo model repo trong org. Token chỉ đọc không đủ để upload kết quả. Không chép token từng gửi trong chat vào file này. Không lưu token vào Git, shell startup file hoặc lệnh có giá trị token trực tiếp.
 
 Khởi chạy agent từ **chính shell đã export** để tiến trình con thừa hưởng `HF_TOKEN`/`HF_HOME`. Export ở terminal khác, ở máy local hoặc ở một phiên SSH khác không tự truyền token sang tiến trình agent đang chạy. Nếu agent đã chạy, cấp biến môi trường qua cơ chế khởi chạy của phiên đó hoặc khởi chạy lại từ shell trên. Agent chỉ kiểm tra token có tồn tại, không chạy `env`, `printenv HF_TOKEN`, `set -x` hay in HTTP Authorization headers.
 
-Sau khi đã duyệt báo cáo bước 1–2 và đồng ý dùng pod này để training, giao việc:
+Báo cáo bước 1–2 đã được người phụ trách duyệt. Khi đồng ý dùng pod này để training, giao việc:
 
-> Tôi đã duyệt báo cáo bước 1–2 và đồng ý chi phí pod A100 80GB hiện tại cho bước 3. Hãy thực hiện `task.md` đến hết bước 3. HF_TOKEN và HF_HOME đã có trong môi trường. Tự tải script, adapter, ảnh và base còn thiếu từ các nguồn đã chỉ định; kiểm tra hash, template và cấu hình rồi train 2 epoch. Không cần hỏi lại các thao tác tải, cài đúng môi trường, merge và training nằm trong phạm vi này. Dừng nếu thiếu quyền truy cập, sai hash, OOM/NaN hoặc cần thay đổi cấu hình; dừng sau báo cáo bước 3, không evaluation, upload hay Stop/Terminate pod.
+> Tôi đã duyệt báo cáo bước 1–2 và đồng ý chi phí pod A100 80GB hiện tại cho bước 3. Hãy thực hiện `task.md` đến hết bước 3. HF_TOKEN và HF_HOME đã có trong môi trường. Tự tải script, adapter, ảnh và base còn thiếu từ các nguồn đã chỉ định; kiểm tra hash, template và cấu hình rồi train 2 epoch. Không cần hỏi lại các thao tác tải, cài đúng môi trường, merge và training nằm trong phạm vi này. Dừng nếu thiếu quyền truy cập, sai hash, OOM/NaN hoặc cần thay đổi cấu hình; hoàn tất ZIP và upload HF private `MMDL-team4/hypB-d2p-dpo` nhánh `run-jinho`, xác minh file/hash rồi trả commit hash. Không evaluation, không upload GitHub hoặc HF main; không Stop/Terminate A100 trước khi người nhận xác nhận đã nhận đủ.
 
-Đây là mẫu lệnh để người dùng gửi khi bắt đầu trên pod, không phải xác nhận rằng training đã được thực hiện. Token chỉ cấp quyền tải dữ liệu, không thay thế xác nhận chạy GPU. Khi có lệnh thực thi và đủ điều kiện, agent tiếp tục tự động qua các mục 3–8; không chỉ báo thiếu file rồi kết thúc nếu có thể tải từ nguồn đã chỉ định.
+Đây là mẫu lệnh để người dùng gửi khi bắt đầu trên pod, không phải xác nhận rằng training đã được thực hiện. Token chỉ cấp quyền tải dữ liệu, không thay thế xác nhận chạy GPU. Khi có lệnh thực thi và đủ điều kiện, agent tiếp tục tự động qua các mục 3–10; không chỉ báo thiếu file rồi kết thúc nếu có thể tải từ nguồn đã chỉ định.
 
 ## 2. Đầu vào bước 3 và hồ sơ bước 2
 
@@ -92,14 +94,14 @@ Kết quả kiểm tra local khi chuẩn bị:
 - Nội dung chosen/rejected trùng raw, chosen có reward ghi nhận bằng 1 và không kết thúc `length`, rejected có reward ghi nhận bằng 0; không tái dùng response, tối đa 2 cặp/câu.
 - Đây là kiểm tra reward **đã lưu**, chưa phải tái tính bằng `reward_v2.py`.
 - Có 521 đường dẫn ảnh duy nhất trong pairs; **cả 521 ảnh hiện thiếu ở local**. Hash ảnh tham chiếu có trong `d2p_train.jsonl`.
-- Cận nhánh lớn nhất từ sampling là **9.740 token**; config giữ `max_length=10240`. **Chưa xác minh encoding thực tế bằng template ms-swift**.
+- Receipt bundle cũ ghi cận sampling **9.740 token** và còn yêu cầu xác minh template; tin nhắn người phụ trách mới xác nhận độ dài chính xác **9.708 token**, reward/hash khớp và không cần pilot. Giữ receipt cũ nguyên bản, ghi xác nhận mới trong báo cáo; config vẫn `max_length=10240`.
 
 ## 3. Các phần agent tự tải từ Hugging Face
 
 Những phần sau chưa có trên GitHub và phải tải trên pod bằng `HF_TOKEN`:
 
 - Để chạy training: `scripts/dpo_train.py` và dependencies mà script import; `scripts/dpo_config.json` gốc để đối chiếu config D1 với config D2′ đã có.
-- Để hoàn tất kiểm tra bước 2 còn thiếu: `scripts/reward_v2.py` và dependencies. Script reward dùng để tái kiểm tra pairs trên pod, không truyền làm dataset cho Trainer.
+- Để đối chiếu kiểm tra bước 2 đã được người phụ trách duyệt: `scripts/reward_v2.py` và dependencies. Script reward dùng để tái kiểm tra pairs trên pod, không truyền làm dataset cho Trainer.
 - D1 adapter đầy đủ trong `adapter/d1_full/`, gồm weights, adapter config và metadata cần thiết.
 - 521 ảnh mà pairs tham chiếu; giữ đúng đường dẫn tương đối `work/...` đã lưu trong JSONL.
 - Base M0 đúng revision và D1 merged weights trên pod sẽ dùng để train.
@@ -119,6 +121,8 @@ Trước khi tải, liệt kê file của từng repo qua API Hugging Face và c
 
 Khôi phục đúng layout theo `HANDOFF_D2p.md`, đối chiếu `SHA256SUMS.txt` của từng nguồn và hash ảnh trong train metadata. Ghi full revision tải thực tế vào receipt. Nếu nguồn không có file cần thiết hoặc hash không khớp, báo rõ phần thiếu; không tự viết pipeline thay thế rồi coi là script gốc.
 
+Kiểm tra quyền ghi repo đích HF ngay khi chuẩn bị để phát hiện thiếu quyền trước khi train; vẫn phải xác minh private/branch lại ngay trước upload.
+
 Chỉ tải dữ liệu/checkpoint cần thiết; không cần tải lại toàn bộ sampling M0 cho bước 3. Không đưa token hoặc API key vào file, lệnh được log hay báo cáo. Bước 3 không cần OpenAI Judge key.
 
 ## 4. Điều kiện trước khi chạy GPU
@@ -126,7 +130,7 @@ Chỉ tải dữ liệu/checkpoint cần thiết; không cần tải lại toàn
 1. Đã có xác nhận cho báo cáo bước 1–2 và chi phí GPU, đang chạy trên pod đã được người dùng cho phép (hoặc có SSH nếu agent điều khiển từ local). File task cũ không được dùng làm ủy quyền cho bước 3.
 2. GPU là một A100 hoặc H100 **80GB**, xác nhận bằng `nvidia-smi`; đủ disk/RAM để chứa M0, D1 merge, D2′ merge, cache và checkpoints.
 3. Toàn bộ dữ liệu, script và ảnh cần thiết đã có; kiểm tra lại hash trên pod sau transfer.
-4. Đã xác minh template, reward và phạm vi LoRA như các mục dưới.
+4. Đã đối chiếu bằng chứng được duyệt và kiểm tra template/phạm vi LoRA theo các mục dưới; không yêu cầu lại một pilot đã được miễn.
 5. Output lần chạy mới chưa chứa kết quả khác; không xóa hoặc ghi đè D1 hay lần D2′ trước.
 
 Các điều kiện này dành cho lúc thực thi training, không ngăn hoàn tất chuẩn bị local.
@@ -149,7 +153,7 @@ Merge **M0 + D1 adapter** sang bf16 trên pod training bằng quy trình D1 đã
 
 ## 6. Hoàn tất kiểm tra còn thiếu và preflight training
 
-Theo `content.md`, bước 1–2 đã tạo dữ liệu; bước 3 dùng lại kết quả đó. Không sampling hoặc tạo pairs lại. Handoff yêu cầu xác minh reward/template, nhưng báo cáo hiện tại còn thiếu các bằng chứng này nên cần bổ sung trước training.
+Theo `content.md`, bước 1–2 đã tạo dữ liệu và nay đã được người phụ trách duyệt. Không sampling hoặc tạo pairs lại. Dùng xác nhận 696 cặp/reward/hash và độ dài 9.708 token làm kết quả kiểm tra đã được duyệt; đối chiếu trên pod để bắt lỗi transfer hoặc môi trường, không coi đây là thí nghiệm mới.
 
 ### Kiểm tra hồ sơ bước 2 trực tiếp trên pod
 
@@ -200,14 +204,14 @@ Khôi phục rồi đọc CLI thật của `scripts/dpo_train.py` (bao gồm `--
 ## 8. Checkpoint cuối, merge và bàn giao
 
 1. Xác định checkpoint cuối từ Trainer state/log; không hard-code checkpoint-90 của D1.
-2. Thu adapter cuối vào `adapter/d2p_full/`, kèm adapter config và config/provenance cần thiết.
+2. Thu adapter cuối vào `adapter/d2p_full/`. Bắt buộc có **`adapter_model.safetensors`, `adapter_config.json`, `args.json`, `trainer_state.json`** của đúng lần train/checkpoint cuối. Lưu Trainer state thực tế trước khi dọn checkpoint; nếu `save_only_model` khiến framework không xuất state, bổ sung thao tác xuất state từ Trainer đang chạy mà không đổi hyperparameters. Không tạo state giả hoặc lấy metadata từ D1/pilot.
 3. Merge **D1 merged + D2′ adapter** sang bf16 vào `/workspace/models/D2p`. Không merge D2′ trực tiếp lên M0; không nạp D1 adapter lần nữa trên D1 merged.
 4. Ghi hash adapter D2′ và toàn bộ merged shards; đây là hash mới, không so chúng với hash D1.
 5. Kiểm tra load model D2′ bằng vLLM `0.11.0` theo cấu hình đánh giá chuẩn; **không gửi yêu cầu generation hoặc chạy benchmark** trên A100/H100.
 6. Lưu receipt vị trí/hash merged model vào hồ sơ training để chuyển sang RTX 4090 ở bước 4. Không đưa merged model lớn vào ZIP bàn giao.
 7. Hoàn tất `work/train_RL_20261106/reports/D2P_STAGE3_TRAIN_REPORT.md`: input hashes, 696 cặp, preflight template/reward, config diff, môi trường, LoRA/reference, epochs/steps, thời gian/VRAM, số liệu training, lỗi nếu có, checkpoint cuối, merge/load và trạng thái bàn giao. Nêu rõ chưa đánh giá MMMU; nếu chưa tải về máy người dùng thì ghi “chờ tải về local”.
 8. **Bắt buộc đóng gói ZIP sau khi báo cáo và log đã ghi xong**, theo hướng dẫn dưới. Không yêu cầu thông tin đích nhận để hoàn tất việc tạo ZIP. Nếu thư mục kết quả đã tồn tại khác nội dung, dùng đường dẫn lần chạy riêng và phản ánh chính xác trong ZIP/báo cáo.
-9. Dừng sau báo cáo training và gói ZIP đã kiểm tra. Chỉ đánh dấu transfer về local hoàn tất khi thực sự đối chiếu được hash pod/local. Không tự chạy bước 4, gọi Judge, upload GitHub/HF hoặc Stop/Terminate pod.
+9. Sau ZIP, thực hiện upload và kiểm tra HF theo mục 9; trả commit hash cho người dùng. Chỉ đánh dấu transfer về local hoàn tất khi thực sự đối chiếu được hash pod/local. Không tự chạy bước 4, gọi Judge, upload GitHub hay HF main. Vòng đời pod theo mục 10.
 
 ### ZIP kết quả để người dùng tải về local
 
@@ -229,8 +233,8 @@ SHA256SUMS.json                                         # SHA-256 từng file c�
 
 Agent thực hiện tuần tự:
 
-1. Kiểm tra ba phần tồn tại, adapter có weights và `adapter_config.json`, log/metrics có nội dung và báo cáo đã hoàn tất; không đóng gói thiếu phần rồi báo thành công. Nếu kết quả là symlink đến checkpoint, đóng gói nội dung file thật, không tạo ZIP phụ thuộc đường dẫn checkpoint ngoài gói.
-2. Tạo ZIP bằng `zipfile` của Python chuẩn hoặc công cụ ZIP sẵn có; chỉ lấy ba phần nêu trên và manifest. Không đưa M0/D1/D2′ merged model, dataset, ảnh, cache, venv, token hoặc file credentials vào ZIP.
+1. Kiểm tra ba phần tồn tại, adapter có đủ bốn file bắt buộc nêu ở mục 8.2, log/metrics có nội dung và báo cáo đã hoàn tất; không đóng gói thiếu phần rồi báo thành công. Nếu kết quả là symlink đến checkpoint, đóng gói nội dung file thật, không tạo ZIP phụ thuộc đường dẫn checkpoint ngoài gói.
+2. Bảo đảm diff/dry-run và hash shards/vLLM receipt ở `reports/d2p_full/`. Manifest `SHA256SUMS.txt` cho HF được tạo riêng theo layout staging của mục 9; ZIP dùng `SHA256SUMS.json` theo đường dẫn trong ZIP. Tạo ZIP bằng `zipfile` của Python chuẩn hoặc công cụ ZIP sẵn có; chỉ lấy ba phần nêu trên và manifest. Không đưa M0/D1/D2′ merged model, dataset, ảnh, cache, venv, token hoặc file credentials vào ZIP.
 3. Tính SHA-256 từng file và đưa manifest `SHA256SUMS.json` vào ZIP. Đóng ZIP rồi tính hash toàn bộ ZIP, lưu vào file `.zip.sha256` cạnh nó. Không ghi hash ZIP vào báo cáo nằm bên trong ZIP để tránh phụ thuộc vòng.
 4. Mở lại ZIP, kiểm tra CRC (`ZipFile.testzip()` nếu dùng Python), danh sách file và SHA-256 nội dung so với manifest; kiểm tra đủ cả ba phần. Nếu lỗi, sửa hoặc báo lỗi, không thông báo gói sẵn sàng.
 5. Trả cho người dùng **đường dẫn ZIP, dung lượng, SHA-256 và lệnh SCP cho cả ZIP lẫn `.zip.sha256`**. Dùng IP/port/key thực tế khi đã biết; nếu chưa biết, ghi rõ placeholder cần thay. Lệnh SCP chạy trên máy người dùng, không chạy trên pod để giả lập tải về.
@@ -245,19 +249,81 @@ shasum -a 256 -c D2P_STAGE3_results_<TIMESTAMP>.zip.sha256
 
 File checksum ngoài ZIP phải dùng **tên ZIP, không dùng đường dẫn tuyệt đối trên pod**, để lệnh kiểm tra chạy được ở local. Giữ nguyên gói trên pod để người dùng tải; không tự xóa hay tắt pod.
 
-## 9. Checklist hoàn tất
+## 9. Bàn giao HF private cho người phụ trách đánh giá
+
+Đây là yêu cầu mới thay cho quy tắc cũ “không upload HF” trong handoff ban đầu. Người dùng cung cấp chỉ định upload của người phụ trách; chỉ repo/branch đích dưới đây nằm trong phạm vi được phép.
+
+- Model repo: **`MMDL-team4/hypB-d2p-dpo`**.
+- Visibility: **private**, phải kiểm tra bằng metadata API trước upload và kiểm tra lại sau upload. Nếu repo tồn tại ở public, dừng và báo; không upload rồi mới sửa visibility.
+- Branch: **`run-jinho`**, tuyệt đối không ghi payload vào `main`. Tạo branch nếu chưa có. Nếu repo chưa có, chỉ tạo private khi có đủ quyền. Nếu branch đã có kết quả khác, không ghi đè/xóa; báo xung đột.
+
+### Payload bắt buộc
+
+Dựng một staging folder riêng ngoài Git, ví dụ `/workspace/mm/exports/hf_d2p_run_jinho/`, có cấu trúc:
+
+```text
+adapter/d2p_full/
+    adapter_model.safetensors
+    adapter_config.json
+    args.json
+    trainer_state.json
+reports/d2p_full/
+    step_metrics.csv
+    logging.jsonl
+    train.log
+    ...                         # GPU memory, timing, config, các log/receipt còn lại
+    merged_sha256.json          # SHA-256 toàn bộ D2′ merged shards, không kèm weights
+    vllm_load.json              # kết quả load thực tế, version và exit status
+    vllm_load.log
+    sample_policy.diff
+    sampling_dry_run/           # bằng chứng sampling thật, xem dưới
+D2P_STAGE3_TRAIN_REPORT.md
+SHA256SUMS.txt
+```
+
+Các đường dẫn receipt mới có thể khác tên gốc nhưng phải tham chiếu rõ nguồn. Không upload dataset, ảnh, cache, môi trường, token, weights merged hoặc checkpoints trung gian.
+
+### Diff và dry-run của bước sampling
+
+**Hiện chưa tìm thấy `sample_policy.py`, diff và dry-run D2′ trong bundle/repo local.** Không lấy `sampling_dry_run.json` M0/R1 cũ rồi gắn nhãn D2′.
+
+- Trước khi kết thúc pod 4090 cũ, thu hồi `sample_m0.py` gốc, `sample_policy.py` thực sự đã chạy, diff và dry-run logs nếu pod còn truy cập được. Tìm thêm trong backup/HF manifests đã có. Kiểm tra hash sampler với `runs/d2p_k4/manifest.json`; diff chỉ thêm tùy chọn model path theo handoff.
+- Đưa diff và dry-run đã thu hồi vào `reports/d2p_full/`. Dry-run phải ghi nguồn và ít nhất 5 câu, prompt/ảnh/token/request seed được đối chiếu với R1; không phát sinh GPU sampling mới chỉ để làm báo cáo.
+- Nếu bản ghi lịch sử bị thiếu nhưng có script thật, có thể tạo **CPU dry-run tái kiểm tra**, ghi rõ ngày chạy mới và phạm vi, không gọi là log lịch sử. Không bịa file, số đo hoặc kết quả.
+- Nếu không thu hồi được script/log cần thiết, báo rõ thiếu bằng chứng và đề nghị người phụ trách chấp nhận bằng chứng thay thế; vẫn có thể train theo phê duyệt hiện tại nếu input/model checks đạt, nhưng không tuyên bố payload bàn giao đã đầy đủ.
+
+### Upload và xác minh
+
+1. Kiểm tra đủ payload, rà token/credentials trong args/logs và báo cáo. Nếu có secret, tạo bản đã loại secret cho bàn giao và ghi nhận; không in secret ra console.
+2. Tạo **`SHA256SUMS.txt`** chuẩn `sha256sum`: mỗi dòng là hash và đường dẫn tương đối tính từ staging root, bao phủ **mọi file payload trừ chính manifest** (tránh tự tham chiếu). Giữ cả manifest checksum ZIP riêng theo mục 8. Không đổi payload sau khi tạo manifest; nếu đổi thì tái tạo manifest và gói ZIP tương ứng.
+3. Dùng `HF_TOKEN` qua môi trường để upload **các file payload**, không chỉ upload một ZIP, vào model repo đã xác minh private, revision `run-jinho`. Không lưu token vào credential file, không truyền giá trị token trên command line được log.
+4. Lấy commit SHA trả về. Đọc lại listing và tải xác minh **từng file tại đúng commit SHA**, đối chiếu đầy đủ `SHA256SUMS.txt`, bao gồm adapter binary. Không chỉ kiểm tra HTTP upload thành công. Xác nhận `main` không bị ghi payload bởi thao tác này.
+5. Lưu upload receipt ngoài payload đã chốt để tránh vòng tham chiếu: repo, private status, branch, commit SHA, danh sách/count file, kết quả hash verification. Trả **link repo/branch, commit SHA và trạng thái thiếu bằng chứng nếu có** cho người dùng để họ báo người phụ trách; không tự nhắn cho người khác.
+
+ZIP tải về local vẫn bắt buộc theo yêu cầu trước của người dùng; HF upload là kênh bàn giao bổ sung. Không cần upload merged weights vì người nhận sẽ merge M0 → D1 → D2′ theo receipt.
+
+## 10. Pod và thời hạn
+
+- Người phụ trách đã yêu cầu kết thúc pod **4090 sampling**. Thu hồi diff/dry-run và kiểm tra backup trước; chỉ thao tác đúng pod được xác định, không đoán pod ID hoặc dừng các pod 4090 khác. Nếu agent chỉ có SSH A100 và không có quyền quản lý 4090, báo người dùng thực hiện; không để việc thiếu quyền này ngăn training A100 đã được duyệt.
+- **A100:** giữ chạy trong lúc train, kiểm tra, ZIP và upload. Chỉ kết thúc sau khi người phụ trách xác nhận đã nhận đủ; upload thành công chưa phải xác nhận đã nhận đủ. Người dùng thực hiện Stop/Terminate, hoặc agent chỉ làm khi có lệnh trực tiếp cùng pod ID chính xác.
+- Mục tiêu “trước cuối tuần” là thời hạn người phụ trách nêu trong tin nhắn; chưa có ngày cụ thể của tin nhắn nên không tự gán deadline lịch. Báo ETA theo thời gian thực đo và báo sớm nếu có nguy cơ chậm.
+
+## 11. Checklist hoàn tất
 
 - [x] Đưa đủ 13 file dữ liệu/config/hồ sơ bước 1–2 vào repo; checksum giữ nguyên.
 - [x] Ghi receipt chuẩn bị local và danh sách phụ thuộc còn thiếu.
-- [ ] Báo cáo bước 1–2 và chi phí GPU đã được xác nhận; có pod/SSH phù hợp.
+- [x] Người phụ trách đã duyệt bước 1–2, 696 cặp, reward/hash và 9.708 token; không cần pilot.
+- [ ] Người dùng đã cho phép chạy trên pod A100 cụ thể; GPU/chi phí được xác nhận.
 - [ ] Khôi phục script gốc, D1 adapter, 521 ảnh; kiểm tra hash và đường dẫn.
 - [ ] Merge D1 trên pod và khớp hash chuẩn.
-- [ ] Có báo cáo reward tái tính đạt trên pod; encoding ms-swift xác minh đầy đủ; giải quyết pilot nếu cần.
+- [ ] Xác nhận kiểm tra được duyệt đã ghi vào báo cáo, preflight pod đạt; giữ max_length=10240 và không pilot trừ khi có sai khác thực tế cần báo lại.
 - [ ] Config thực thi đúng D1→D2′, LoRA 252 modules và reference D1.
 - [ ] Full training 2 epoch hoàn tất, log hữu hạn và đủ metrics.
-- [ ] Adapter cuối merge trên D1; vLLM load thành công, không generation.
+- [ ] Adapter cuối có đủ weights/config/args/trainer_state; merge trên D1; vLLM load thành công, không generation.
 - [ ] Báo cáo hoàn tất; ZIP chứa đủ ba phần và manifest, CRC/hash nội dung đã kiểm tra.
 - [ ] Đã cung cấp đường dẫn ZIP, dung lượng, checksum và lệnh SCP tải về.
+- [ ] Thu hồi sample_policy diff và dry-run thật hoặc báo rõ bằng chứng còn thiếu.
+- [ ] HF repo xác minh private, payload đủ và hash khớp tại commit nhánh `run-jinho`; đã trả commit SHA.
 - [ ] Sau khi người dùng tải: adapter/log/báo cáo về local khớp hash; nếu chưa tải thì trạng thái bàn giao vẫn còn chờ.
 
-Luôn giữ nguyên raw, pairs, D1 và pipeline benchmark gốc. Không dùng MMMU/MMMU-Pro để train, không đổi cấu hình hoặc chọn checkpoint theo validation. Người dùng đã cho phép đưa toàn bộ dữ liệu/hồ sơ D2′ trong mục 2 lên GitHub để bootstrap bước 3. Quyền này không bao gồm weights, token, ảnh tải từ HF hoặc kết quả training mới; giữ các phần đó ngoài Git và không tự upload.
+Luôn giữ nguyên raw, pairs, D1 và pipeline benchmark gốc. Không dùng MMMU/MMMU-Pro để train, không đổi cấu hình hoặc chọn checkpoint theo validation. Người dùng đã cho phép đưa toàn bộ dữ liệu/hồ sơ D2′ trong mục 2 lên GitHub để bootstrap bước 3. Không đưa weights, token, ảnh HF hoặc kết quả training mới lên GitHub. Riêng payload bước 3 nêu ở mục 9 được phép upload lên HF private `MMDL-team4/hypB-d2p-dpo`, nhánh `run-jinho`; không upload sang nơi khác.
