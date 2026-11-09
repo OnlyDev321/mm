@@ -44,23 +44,23 @@ Sau khi đã duyệt báo cáo bước 1–2 và đồng ý dùng pod này để
 
 ## 2. Đầu vào bước 3 và hồ sơ bước 2
 
-Workspace local: `work/train_RL_20261106/`.
+Workspace: `work/train_RL_20261106/`. Bảng dưới liệt kê cả file local và file đã push; cột cuối cho biết file nào có sẵn sau clone. Các file chỉ ở local là hồ sơ đối chiếu, không phải phụ thuộc bắt buộc của lệnh training.
 
-| Đường dẫn trong workspace | Mục đích |
-| --- | --- |
-| `data/d2p_pairs_swift.jsonl` | 696 cặp dùng cho training |
-| `data/d2p_pairs_index.jsonl` | Ánh xạ cặp với câu hỏi và chosen/rejected trong raw |
-| `scripts/d2p_config.json` | Config D2′ đã chuẩn bị từ bước 2 |
-| `reports/D2P_STAGE1_REPORT.md` | Báo cáo sampling và tạo pairs |
-| `reports/d2p_artifacts_sha256.json` | Hash dữ liệu, config và sampling artifacts |
-| `reports/d2p_weights_verified.json` | Hash D1 adapter và merged shards đã ghi nhận |
-| `reports/d2p_token_check.json` | Cận độ dài và trạng thái kiểm tra template |
-| `runs/d2p_k4/raw.jsonl` | Đối chiếu nguyên văn, reward và token của chosen/rejected |
-| `runs/d2p_k4/groups.json` | Đối chiếu nhóm |
-| `runs/d2p_k4/d2p_train.jsonl` | Metadata 521 câu và ảnh, bao gồm hash ảnh |
-| `runs/d2p_k4/manifest.json` | Provenance sampling; đọc cùng receipt D1, không dựa riêng trường model của manifest |
-| `runs/d2p_k4/SHA256SUMS.json` | Hash đầu ra sampling |
-| `README.txt` | Ghi chú phạm vi bundle, không chứa weights hoặc ảnh |
+| Đường dẫn trong workspace | Mục đích | Có khi clone GitHub? |
+| --- | --- | --- |
+| `data/d2p_pairs_swift.jsonl` | 696 cặp dùng cho training | Có |
+| `data/d2p_pairs_index.jsonl` | Ánh xạ cặp với câu hỏi và chosen/rejected trong raw | **Không — chỉ ở local** |
+| `scripts/d2p_config.json` | Config D2′ đã chuẩn bị từ bước 2 | Có |
+| `reports/D2P_STAGE1_REPORT.md` | Báo cáo sampling và tạo pairs | Có |
+| `reports/d2p_artifacts_sha256.json` | Hash dữ liệu, config và sampling artifacts | Có |
+| `reports/d2p_weights_verified.json` | Hash D1 adapter và merged shards đã ghi nhận | Có |
+| `reports/d2p_token_check.json` | Cận độ dài và trạng thái kiểm tra template | Có |
+| `runs/d2p_k4/raw.jsonl` | Đối chiếu nguyên văn, reward và token của chosen/rejected | **Không — chỉ ở local** |
+| `runs/d2p_k4/groups.json` | Đối chiếu nhóm | **Không — chỉ ở local** |
+| `runs/d2p_k4/d2p_train.jsonl` | Metadata 521 câu và ảnh, bao gồm hash ảnh | Có |
+| `runs/d2p_k4/manifest.json` | Provenance sampling; đọc cùng receipt D1, không dựa riêng trường model của manifest | **Không — chỉ ở local** |
+| `runs/d2p_k4/SHA256SUMS.json` | Hash đầu ra sampling | **Không — chỉ ở local** |
+| `README.txt` | Ghi chú phạm vi bundle, không chứa weights hoặc ảnh | Có |
 
 Giữ các file này nguyên bản. Không chạy lại bước 1–2 để tạo dữ liệu mới.
 
