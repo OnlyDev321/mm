@@ -1,0 +1,9 @@
+{
+  "runs/d2p_k4/raw.jsonl": "ecdc68745096bad87cb96e39576ee2be66c5f64e4f1eb306fda75697327bac50",
+  "runs/d2p_k4/groups.json": "1729dd26d952df4a8aa17a8510a8a8f15caee3f8b0048cb6c1f7cef883922f7d",
+  "runs/d2p_k4/d2p_train.jsonl": "10e2912ea78b61e2624d05cb977de5df2ffd57ce09ce0f1f9af3a0fcdf48305c",
+  "runs/d2p_k4/manifest.json": "5ba16d76a5e6ed6104499f08646a9a87ed44ac17479e242482004d09f2544235",
+  "data/d2p_pairs_swift.jsonl": "c09fd284464b4be507012c7e7c3cb1409a3b9b683e97288290d96352ae61c4ac",
+  "data/d2p_pairs_index.jsonl": "f66d181b86d970481ffe6aefbbbd62564c25a69f2dbef5ed92930a2b2dce7901",
+  "scripts/d2p_config.json": "f7157983e189bf7ebfcfb25f4e2ce07885b887b71f27e5dbeabe8f967dd2a850"
+}

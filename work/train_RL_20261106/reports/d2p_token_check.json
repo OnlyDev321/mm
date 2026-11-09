@@ -1,0 +1,7 @@
+{
+  "method": "vLLM prompt_tokens + output_tokens for each chosen/rejected branch + 32 token reserve; includes image tokens",
+  "conservative_max_tokens": 9740,
+  "max_length": 10240,
+  "memory_pilot_required": false,
+  "training_template_verification_required": true
+}

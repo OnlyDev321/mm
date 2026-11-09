@@ -1,663 +1,169 @@
-# Kế hoạch Thực thi D2' Tự động (Bước 1 & Bước 2) trên RunPod RTX 4090
-
-Tài liệu này được thiết kế như một **Actionable Agent Instruction File** để Antigravity (hoặc agent AI) có thể đọc và tự động thực thi tuần tự từ đầu đến cuối toàn bộ **Bước 1 (Sampling)** và **Bước 2 (Pair Construction)** theo quy định trong [content.md](file:///Users/hau/Downloads/mm/content.md), [HANDOFF_D2p.md](file:///Users/hau/Downloads/mm/work/train_RL_20261106/HANDOFF_D2p.md), [PLAN_D2p.md](file:///Users/hau/Downloads/mm/work/train_RL_20261106/PLAN_D2p.md) và [handoff_D2p_message.md](file:///Users/hau/Downloads/mm/handoff_D2p_message.md).
-
----
-
-## ⚡ CẤP QUYỀN TỰ QUYẾT CHO ANTIGRAVITY (AUTONOMOUS EXECUTION MANDATE)
-
-> [!IMPORTANT]
-> **ỦY QUYỀN THỰC THI TOÀN QUYỀN TỪ NGƯỜI DÙNG:**
-> Người dùng cấp toàn quyền tự quyết cho Antigravity tự động thực thi mọi lệnh terminal (`run_command`), thao tác file (đọc, tạo, ghi đè, sửa đổi mã nguồn), thiết lập môi trường venv, tải checkpoint/dataset, quản lý tiến trình GPU mà **KHÔNG CẦN DỪNG LẠI HỎI XÁC NHẬN Ở TỪNG BƯỚC**.
-> 
-> **Antigravity CHỈ dừng lại trong 4 trường hợp sau:**
-> 1. Phát hiện GPU không phải **RTX 4090**.
-> 2. SHA-256 của weights/adapter/shards không khớp với mã băm chuẩn.
-> 3. Tổng số cặp DPO preference tạo được **< 300 cặp** (Quy tắc dừng bắt buộc theo kế hoạch).
-> 4. Đã hoàn thành toàn bộ Bước 1 & Bước 2 và xuất xong file báo cáo [reports/D2P_STAGE1_REPORT.md](file:///Users/hau/Downloads/mm/work/train_RL_20261106/reports/D2P_STAGE1_REPORT.md) (Dừng chờ người dùng duyệt trước khi chuyển sang Bước 3 - Huấn luyện A100).
-
----
-
-## ⏱️ BẢNG THEO DÕI TIẾN ĐỘ & THỜI GIAN ƯỚC TÍNH (PROGRESS & TIMELINE)
-
-Antigravity **BẮT BUỘC** in ra thông báo trạng thái `[BẮT ĐẦU: GIAI ĐOẠN X/8]` và `[HOÀN THÀNH: GIAI ĐOẠN X/8]` ra màn hình chat ở từng giai đoạn để người dùng luôn biết mình đang ở bước nào và cần chờ bao lâu.
-
-| Giai đoạn | Nội dung công việc | Ước lượng thời gian | Đầu ra kiểm tra |
-| :---: | :--- | :---: | :--- |
-| **0/8** | Khởi tạo Pod, cấu hình Git, kiểm tra GPU RTX 4090 & tạo `merge_env` | **~1 - 2 phút** | GPU RTX 4090 xác nhận, Git sẵn sàng |
-| **1/8** | Tải D1 adapter, dataset `hypB-rl-data`, ảnh A và base model snapshot | **~3 - 5 phút** | Hash adapter `2d4bcce4...` khớp |
-| **2/8** | Merge Base M0 + D1 Adapter sang bf16 trên CPU/RAM & đối chiếu SHA-256 | **~4 - 6 phút** | 2 shards safetensors khớp 100% |
-| **3/8** | Tạo `sample_policy.py` từ `sample_m0.py` & chạy CPU dry-run kiểm tra | **~1 - 2 phút** | File diff hợp lệ, dry-run 5 câu pass |
-| **4/8** | **(Bước 1 content.md)** Chạy vLLM Sampling 1.500 câu × K=4 = 6.000 outputs, chấm reward realtime, phân nhóm Target/Keep/Discard | **~3.0 - 3.5 giờ** | `runs/d2p_k4/raw.jsonl` (6.000 dòng), `d2p_train.jsonl` |
-| **5/8** | **(Bước 2 content.md)** Xây dựng DPO pairs bằng `build_dpo_pairs.py` | **~2 - 3 phút** | `data/d2p_pairs_swift.jsonl` |
-| **6/8** | Kiểm tra quy tắc dừng (< 300 cặp), kiểm tra max token length & tạo config train | **~1 - 2 phút** | Đạt ≥ 300 cặp, `scripts/d2p_config.json` |
-| **7/8** | Lập bảng so sánh M0 vs D1, xuất báo cáo `reports/D2P_STAGE1_REPORT.md` | **~1 phút** | Báo cáo hoàn chỉnh tại `reports/` |
-| **8/8** | Hoàn tất Bước 1 & 2, tóm tắt kết quả cho người dùng & **DỪNG CHỜ XÁC NHẬN** | **Tức thì** | Trạng thái sẵn sàng cho Bước 3 trên A100 |
-
-*Tổng thời gian dự kiến: ~3.5 đến 4.0 giờ (trong đó ~3 giờ 20 phút là thời gian vLLM sinh 6.000 outputs trên RTX 4090).*
-
----
-
-## ⚠️ CÁC NGUYÊN TẮC BẢO MẬT & AN TOÀN BẮT BUỘC (DO & DON'T)
-
-1. **Bảo mật Token tuyệt đối**:
-   - KHÔNG lưu cứng token GitHub hay Hugging Face vào file này hay git repository.
-   - GitHub Token và Hugging Face Token sẽ do người dùng tự cung cấp qua biến môi trường hoặc thiết lập thủ công khi SSH vào máy chủ.
-   - Scripts đọc Hugging Face Token an toàn từ biến môi trường `HF_TOKEN`.
-2. **Không upload adapter hay data lên GitHub public**:
-   - Mọi dữ liệu và weights của dự án là private. Không bao giờ commit weights/data lên git public.
-3. **Không chỉnh sửa script gốc**:
-   - Giữ nguyên bản `scripts/sample_m0.py`. Khi cần chạy policy D1, copy sang `scripts/sample_policy.py` và CHỈ bổ sung option đường dẫn mô hình.
-4. **Quy tắc dừng bắt buộc (Stop Rules)**:
-   - Nếu GPU không phải RTX 4090 -> **DỪNG và báo cáo**.
-   - Nếu SHA-256 của weights/adapter không khớp -> **DỪNG và báo cáo**.
-   - Nếu tổng số DPO pairs ở Bước 2 **< 300 cặp** -> **DỪNG NGAY LẬP TỨC và báo cáo, không chuẩn bị training**.
-   - Sau khi hoàn thành Bước 1 & Bước 2 và xuất báo cáo `reports/D2P_STAGE1_REPORT.md` -> **DỪNG TẠI ĐÂY**, chờ người dùng kiểm tra và xác nhận trước khi chuyển sang Bước 3 (A100 Training).
-5. **Không tự ý tắt Pod**: Tuyệt đối không chạy lệnh `runpodctl stop/terminate` hay tương tự.
-
----
-
-## BẢNG THÔNG SỐ KỸ THUẬT D2' (GIAI ĐOẠN 1 & 2)
-
-| Tham số | Giá trị quy định | Ghi chú |
-| :--- | :--- | :--- |
-| **GPU mục tiêu** | NVIDIA GeForce RTX 4090 (24GB VRAM) | Duy trì tính nhất quán với baseline |
-| **Base Model (M0)** | `Qwen/Qwen3-VL-4B-Instruct` | Revision: `ebb281ec70b05090aa6165b016eac8ec08e71b17` |
-| **D1 Adapter** | Repo: `MMDL-team4/hypB-d1-dpo` (nhánh `run-yoonseok`) | Hash adapter: `2d4bcce4972b36b6ef49b0b73d46c9d72a3803f43632b6847ae6f4d65e0132e8` |
-| **Dữ liệu Sampling** | Repo: `MMDL-team4/hypB-rl-data` (nhánh `run-yoonseok`) | 1.500 câu hỏi trong `data/r1_pool.jsonl`, ảnh B/C |
-| **Ảnh tập A** | Repo: `MMDL-team4/hypB-train-data` v1.1 | Commit: `1833bac3be047aa8bd146492436323bb7c14092a` |
-| **Số lượng output** | 1.500 câu hỏi × K=4 = 6.000 mẫu | Seed yêu cầu: 3407 |
-| **Hyperparameters Sampling** | Temp: 0.7, Top-p: 0.8, Top-k: 20, Presence Penalty: 1.5 | Max new tokens: 8192, Context len: 16384 |
-| **Chấm điểm trực tiếp** | `reward_v2.py` | Tính reward (1 hoặc 0) cho 6.000 mẫu |
-| **Ngưỡng dừng Pairs** | ≥ 300 cặp | Dưới 300 cặp phải dừng lại báo cáo |
-
----
-
-## QUY TRÌNH THỰC THI CHI TIẾT (STEP-BY-STEP)
-
-```mermaid
-flowchart TD
-    S0["Bước 0: Khởi tạo Pod & Git, Xác thực HF"] --> S1["Bước 1: Tải Checkpoint D1 & Dataset từ HF"]
-    S1 --> S2["Bước 2: Merge Base M0 + D1 Adapter (bf16) & Kiểm tra Hash"]
-    S2 --> S3["Bước 3: Tạo script sample_policy.py & Dry-run"]
-    S3 --> S4["Bước 4: Chạy vLLM Sampling (1500 câu x K=4) & Phân nhóm"]
-    S4 --> S5["Bước 5: Xây dựng DPO Pairs (build_dpo_pairs.py)"]
-    S5 --> Q1{"Số pairs >= 300?"}
-    Q1 -- "Không (< 300)" --> STOP1["DỪNG NGAY: Báo cáo thiếu cặp & đề xuất phương án mở rộng"]
-    Q1 -- "Có (>= 300)" --> S6["Bước 6: Kiểm tra max_length & Tạo d2p_config.json"]
-    S6 --> S7["Bước 7: Xuất báo cáo D2P_STAGE1_REPORT.md & DỪNG chờ xác nhận"]
-```
-
----
-
-### GIAI ĐOẠN 0: KHỞI TẠO POD, CẤU HÌNH GIT VÀ KIỂM TRA MÔI TRƯỜNG (ƯỚC TÍNH: ~1 - 2 PHÚT)
-*Antigravity xuất thông báo: `[BẮT ĐẦU: GIAI ĐOẠN 0/8] Khởi tạo Pod, cấu hình Git và kiểm tra môi trường RTX 4090 (Ước tính: ~1-2 phút)`*
-
-#### 0.1. Cấu hình Git với Credentials của OnlyDev321
-Chạy các lệnh cấu hình trên RunPod (thay `<YOUR_GITHUB_TOKEN>` bằng GitHub token của bạn):
-```bash
-git config --global user.name "OnlyDev321"
-git config --global user.email "onlydev.321@gmail.com"
-git config --global credential.helper store
-echo "https://OnlyDev321:<YOUR_GITHUB_TOKEN>@github.com" > ~/.git-credentials
-chmod 600 ~/.git-credentials
-```
-
-#### 0.2. Clone Repository về máy Pod (nếu chưa clone)
-```bash
-cd /workspace
-if [ ! -d "/workspace/mm" ]; then
-    git clone https://github.com/OnlyDev321/mm.git /workspace/mm
-fi
-cd /workspace/mm
-```
-
-#### 0.3. Kiểm tra GPU & Môi trường Python / PyTorch
-Thực hiện preflight check:
-```bash
-python3.12 - << 'EOF'
-import sys, torch
-print("Python version:", sys.version.split()[0])
-assert sys.version_info >= (3, 11), "Yêu cầu Python >= 3.11"
-assert torch.cuda.is_available(), "CUDA không khả dụng!"
-gpu_name = torch.cuda.get_device_name(0)
-print("GPU phát hiện:", gpu_name)
-assert "4090" in gpu_name, f"LỖI: GPU phải là RTX 4090, hiện tại là {gpu_name}!"
-print("PREFLIGHT GPU PASS: Đang chạy trên NVIDIA RTX 4090")
-EOF
-```
-
-#### 0.4. Thiết lập Hugging Face Token & Đăng nhập
-Trước khi chạy, hãy export token của bạn trong terminal (hoặc đã export từ trước):
-```bash
-export HF_TOKEN="<YOUR_HF_TOKEN>"
-export HF_HOME=/workspace/hf_cache
-```
-
-Kiểm tra xác thực Hugging Face:
-```bash
-python3.12 - << 'EOF'
-import os, sys
-from huggingface_hub import HfApi, login
-
-token = os.environ.get("HF_TOKEN")
-if not token:
-    print("❌ LỖI: Biến môi trường HF_TOKEN chưa được thiết lập!")
-    print("Vui lòng chạy: export HF_TOKEN=\"<huggingface_token>\" trước khi thực thi.")
-    sys.exit(1)
-
-login(token=token, add_to_git_credential=True)
-
-api = HfApi(token=token)
-user = api.whoami()
-print(f"✅ Hugging Face Authentication Thành công! Đăng nhập với user: {user.get('name')}")
-EOF
-```
-
-#### 0.5. Chuẩn bị môi trường Merge (venv riêng tránh conflict)
-```bash
-export HF_HOME=/workspace/hf_cache
-mkdir -p /workspace/hf_cache
-cd /workspace/mm/work/train_RL_20261106
-
-# Tạo merge_env nếu chưa có
-if [ ! -d "merge_env" ]; then
-    python3.12 -m venv --system-site-packages merge_env
-    merge_env/bin/python -m pip install --no-deps peft==0.17.1
-fi
-```
-
----
-
-### GIAI ĐOẠN 1: TẢI CHECKPOINT D1, DATASET & KIỂM TRA HASH (ƯỚC TÍNH: ~3 - 5 PHÚT)
-*Antigravity xuất thông báo: `[BẮT ĐẦU: GIAI ĐOẠN 1/8] Tải Checkpoint D1, Dataset và kiểm tra SHA-256 (Ước tính: ~3-5 phút)`*
-
-Tất cả dữ liệu được lưu vào đúng cây thư mục chuẩn: `/workspace/mm/work/train_RL_20261106/`.
-
-#### 1.1. Script Tải Checkpoint D1 (`MMDL-team4/hypB-d1-dpo`)
-Tải adapter D1 và đối chiếu SHA-256 của `adapter_model.safetensors`:
-```bash
-python3.12 - << 'EOF'
-import os, hashlib
-from pathlib import Path
-from huggingface_hub import snapshot_download
-
-token = os.environ.get("HF_TOKEN")
-assert token, "Biến môi trường HF_TOKEN chưa được thiết lập! Hãy chạy export HF_TOKEN='...'"
-adapter_dir = Path("/workspace/mm/work/train_RL_20261106/adapter/d1_full")
-adapter_dir.mkdir(parents=True, exist_ok=True)
-
-print("Đang tải D1 adapter từ MMDL-team4/hypB-d1-dpo (nhánh run-yoonseok)...")
-path = snapshot_download(
-    repo_id="MMDL-team4/hypB-d1-dpo",
-    repo_type="model",
-    revision="run-yoonseok",
-    local_dir=adapter_dir,
-    token=token
-)
-
-def sha256(p):
-    with open(p, "rb") as f:
-        return hashlib.file_digest(f, "sha256").hexdigest()
-
-adapter_weight = adapter_dir / "adapter_model.safetensors"
-assert adapter_weight.exists(), "Không tìm thấy adapter_model.safetensors!"
-h = sha256(adapter_weight)
-EXPECTED_HASH = "2d4bcce4972b36b6ef49b0b73d46c9d72a3803f43632b6847ae6f4d65e0132e8"
-print(f"SHA-256 adapter_model.safetensors: {h}")
-assert h == EXPECTED_HASH, f"Hash không khớp! Kỳ vọng {EXPECTED_HASH}, thực tế {h}"
-print("✅ D1 Adapter SHA-256 HỢP LỆ!")
-EOF
-```
-
-#### 1.2. Script Tải Dữ liệu Sampling & Scripts (`MMDL-team4/hypB-rl-data`)
-Tải 1.500 câu hỏi, ảnh B/C, các script (`sample_m0.py`, `build_groups.py`, `reward_v2.py`, `build_dpo_pairs.py`):
-```bash
-python3.12 - << 'EOF'
-import os
-from pathlib import Path
-from huggingface_hub import snapshot_download
-
-token = os.environ.get("HF_TOKEN")
-assert token, "Biến môi trường HF_TOKEN chưa được thiết lập! Hãy chạy export HF_TOKEN='...'"
-work_dir = Path("/workspace/mm/work/train_RL_20261106")
-
-print("Đang tải dữ liệu RL từ MMDL-team4/hypB-rl-data (nhánh run-yoonseok)...")
-path = snapshot_download(
-    repo_id="MMDL-team4/hypB-rl-data",
-    repo_type="dataset",
-    revision="run-yoonseok",
-    local_dir=work_dir,
-    token=token
-)
-
-assert (work_dir / "data/r1_pool.jsonl").exists(), "Thiếu file data/r1_pool.jsonl"
-assert (work_dir / "scripts/sample_m0.py").exists(), "Thiếu script sample_m0.py"
-assert (work_dir / "scripts/build_groups.py").exists(), "Thiếu script build_groups.py"
-assert (work_dir / "scripts/build_dpo_pairs.py").exists(), "Thiếu script build_dpo_pairs.py"
-assert (work_dir / "scripts/reward_v2.py").exists(), "Thiếu script reward_v2.py"
-print("✅ Đã tải và xác thực toàn bộ scripts và dữ liệu từ hypB-rl-data!")
-EOF
-```
-
-#### 1.3. Tải Ảnh Tập A (`MMDL-team4/hypB-train-data` v1.1)
-```bash
-python3.12 - << 'EOF'
-import os
-from pathlib import Path
-from huggingface_hub import snapshot_download
-
-token = os.environ.get("HF_TOKEN")
-assert token, "Biến môi trường HF_TOKEN chưa được thiết lập! Hãy chạy export HF_TOKEN='...'"
-images_a_dir = Path("/workspace/mm/work/train_RL_20261106/data/images_A")
-images_a_dir.mkdir(parents=True, exist_ok=True)
-
-print("Đang tải ảnh tập A từ MMDL-team4/hypB-train-data (v1.1 / 1833bac3)...")
-snapshot_download(
-    repo_id="MMDL-team4/hypB-train-data",
-    repo_type="dataset",
-    revision="1833bac3be047aa8bd146492436323bb7c14092a",
-    local_dir=images_a_dir,
-    token=token
-)
-print("✅ Hoàn tất tải ảnh tập A!")
-EOF
-```
-
----
-
-### GIAI ĐOẠN 2: MERGE MÔ HÌNH D1 (M0 + D1 ADAPTER -> BF16) & KIỂM TRA HASH (ƯỚC TÍNH: ~4 - 6 PHÚT)
-*Antigravity xuất thông báo: `[BẮT ĐẦU: GIAI ĐOẠN 2/8] Merge Base M0 + D1 Adapter sang bf16 & kiểm tra shard hash (Ước tính: ~4-6 phút)`*
-
-Theo ghi nhận từ đợt chạy A100 và eval_D1, việc merge được thực hiện trên CPU/RAM và lưu thành các safetensors shard. Shard hashes bắt buộc phải khớp 100% với bản ghi D1.
-
-#### 2.1. Thực hiện Merge
-Chạy bằng `merge_env` (chứa `peft==0.17.1`):
-```bash
-cd /workspace/mm/work/train_RL_20261106
-merge_env/bin/python - << 'EOF'
-import os, sys, shutil, hashlib, json
-from pathlib import Path
-from tempfile import TemporaryDirectory
-import torch
-from peft import PeftModel
-from transformers import Qwen3VLForConditionalGeneration
-from huggingface_hub import snapshot_download
-from safetensors import safe_open
-
-BASE = "Qwen/Qwen3-VL-4B-Instruct"
-REV = "ebb281ec70b05090aa6165b016eac8ec08e71b17"
-ROOT = Path("/workspace/mm/work/train_RL_20261106")
-ADAPTER = ROOT / "adapter/d1_full"
-OUT = Path("/workspace/models/D1")
-
-print("1. Tải Base Model snapshot...")
-base_path = Path(snapshot_download(BASE, revision=REV, token=os.environ.get("HF_TOKEN")))
-
-print("2. Nạp Base Model sang BF16 SDPA trên CPU...")
-model = Qwen3VLForConditionalGeneration.from_pretrained(
-    base_path,
-    dtype=torch.bfloat16,
-    attn_implementation="sdpa",
-    device_map="cpu"
-)
-
-print("3. Nạp Adapter D1 và Merge...")
-adapted = PeftModel.from_pretrained(model, ADAPTER)
-merged = adapted.merge_and_unload(safe_merge=True)
-
-print("4. Lưu mô hình Merged...")
-OUT.parent.mkdir(parents=True, exist_ok=True)
-if OUT.exists():
-    shutil.rmtree(OUT)
-
-with TemporaryDirectory(dir=OUT.parent) as tmp:
-    tmp_out = Path(tmp) / "merged"
-    merged.save_pretrained(tmp_out, safe_serialization=True)
-    # Copy các file tokenizer, jinja, txt nguyên bản
-    for f in base_path.iterdir():
-        if f.suffix in {".json", ".jinja", ".txt"} and f.name not in {"config.json", "model.safetensors.index.json"}:
-            shutil.copyfile(f, tmp_out / f.name)
-    tmp_out.rename(OUT)
-
-print("5. Xác minh SHA-256 các Shard...")
-def sha(p):
-    with open(p, "rb") as f:
-        return hashlib.file_digest(f, "sha256").hexdigest()
-
-hashes = {}
-for path in sorted(OUT.glob("*.safetensors")):
-    hashes[path.name] = sha(path)
-
-print("Các shard tạo ra:", json.dumps(hashes, indent=2))
-
-EXPECTED_SHARDS = {
-    "model-00001-of-00002.safetensors": "31d4561504484269e16e1cc00baef16d694cd44f25c9d282cfd45977caaab351",
-    "model-00002-of-00002.safetensors": "1280742e74baab97037603e9bc2912626f2c85d6347d9762a1286566b4b7f431"
-}
-
-assert hashes == EXPECTED_SHARDS, f"LỖI: Shard hash không khớp với bản ghi D1!\nKỳ vọng: {EXPECTED_SHARDS}\nThực tế: {hashes}"
-print("🎉 D1 MERGED SHARD HASHES MATCH 100%! Ready for vLLM.")
-EOF
-```
-
----
-
-### GIAI ĐOẠN 3: TẠO SCRIPT SAMPLING MÔ HÌNH POLICY (`scripts/sample_policy.py`) (ƯỚC TÍNH: ~1 - 2 PHÚT)
-*Antigravity xuất thông báo: `[BẮT ĐẦU: GIAI ĐOẠN 3/8] Tạo scripts/sample_policy.py và chạy CPU dry-run (Ước tính: ~1-2 phút)`*
-
-Nguyên tắc bất biến: **Tuyệt đối không sửa `sample_m0.py` gốc**. Ta copy sang `sample_policy.py` và chỉ thêm đối số `--model-path` trỏ tới `/workspace/models/D1`.
-
-```bash
-cd /workspace/mm/work/train_RL_20261106
-
-# Copy nguyên bản
-cp scripts/sample_m0.py scripts/sample_policy.py
-
-# Bổ sung tham số --model-path vào scripts/sample_policy.py bằng Python script an toàn
-python3.12 - << 'EOF'
-from pathlib import Path
-
-target = Path("scripts/sample_policy.py")
-content = target.read_text(encoding="utf-8")
-
-# Thêm argument model-path vào parser nếu chưa có
-if "--model-path" not in content:
-    # Chèn argument vào ArgumentParser
-    anchor = "parser.add_argument("
-    insert_code = 'parser.add_argument("--model-path", type=str, default="/workspace/models/D1", help="Path to merged D1 model")\n    '
-    content = content.replace(anchor, insert_code + anchor, 1)
-    
-    # Thay thế đường dẫn load model mặc định sang args.model_path
-    content = content.replace('"Qwen/Qwen3-VL-4B-Instruct"', 'args.model_path')
-    target.write_text(content, encoding="utf-8")
-    print("✅ Đã cập nhật scripts/sample_policy.py thành công!")
-else:
-    print("scripts/sample_policy.py đã có --model-path.")
-EOF
-
-# Xuất diff giữa 2 file để lưu vào báo cáo
-diff -u scripts/sample_m0.py scripts/sample_policy.py > reports/sample_policy.diff || true
-cat reports/sample_policy.diff
-```
-
----
-
-### GIAI ĐOẠN 4: THỰC HIỆN SAMPLING VỚI vLLM TRÊN RTX 4090 (BƯỚC 1 TRONG CONTENT.MD) (ƯỚC TÍNH: ~3.0 - 3.5 GIỜ)
-*Antigravity xuất thông báo: `[BẮT ĐẦU: GIAI ĐOẠN 4/8] Chạy vLLM Sampling 1.500 câu hỏi × K=4 = 6.000 mẫu trên RTX 4090 (Ước tính: ~3.0 - 3.5 giờ). Đây là giai đoạn chạy inference lớn, hệ thống sẽ log tiến độ liên tục.`*
-
-#### 4.1. Chạy Sampling 1.500 câu hỏi × K=4 (6.000 outputs)
-Chạy vLLM với đầy đủ các siêu tham số của R1 giai đoạn 3:
-```bash
-cd /workspace/mm/work/train_RL_20261106
-mkdir -p runs/d2p_k4
-
-python3.12 scripts/sample_policy.py \
-    --model-path /workspace/models/D1 \
-    --data data/r1_pool.jsonl \
-    --output runs/d2p_k4/raw.jsonl \
-    --k 4 \
-    --temperature 0.7 \
-    --top-p 0.8 \
-    --top-k 20 \
-    --presence-penalty 1.5 \
-    --max-new-tokens 8192 \
-    --max-model-len 16384 \
-    --seed 3407 \
-    --reward-v2
-```
-
-#### 4.2. Phân loại Group (Target, Keep, Discard) & Tạo tập Train
-```bash
-cd /workspace/mm/work/train_RL_20261106
-
-# Phân nhóm câu hỏi
-python3.12 scripts/build_groups.py \
-    --input runs/d2p_k4/raw.jsonl \
-    --output-groups runs/d2p_k4/groups.json \
-    --output-train runs/d2p_k4/d2p_train.jsonl \
-    --seed 3407
-
-# Tạo checksum cho các file kết quả
-python3.12 - << 'EOF'
-import json, hashlib
-from pathlib import Path
-
-run_dir = Path("runs/d2p_k4")
-sums = {}
-for p in ["raw.jsonl", "groups.json", "d2p_train.jsonl"]:
-    f = run_dir / p
-    if f.exists():
-        with open(f, "rb") as fp:
-            sums[p] = hashlib.file_digest(fp, "sha256").hexdigest()
-
-(run_dir / "SHA256SUMS.json").write_text(json.dumps(sums, indent=2) + "\n")
-print("SHA256SUMS.json đã được tạo:\n", json.dumps(sums, indent=2))
-EOF
-```
-
----
-
-### GIAI ĐOẠN 5: XÂY DỰNG DPO PREFERENCE PAIRS (BƯỚC 2 TRONG CONTENT.MD) (ƯỚC TÍNH: ~2 - 3 PHÚT)
-*Antigravity xuất thông báo: `[BẮT ĐẦU: GIAI ĐOẠN 5/8] Xây dựng DPO Preference Pairs bằng build_dpo_pairs.py (Ước tính: ~2-3 phút)`*
-
-#### 5.1. Chạy Tạo Pairs
-Quy tắc cặp:
-- `Chosen`: trả lời đúng (`reward == 1`) và không bị cắt (`finish_reason != 'length'`).
-- `Rejected`: ưu tiên `length` (bị cắt) > `wrong`/`fallback_wrong` (kết thúc bình thường nhưng trả lời sai) > `extract_fail` (không trích xuất được đáp án).
-- Tối đa 2 cặp cho mỗi câu hỏi, không tái sử dụng cùng một response, random seed 3407.
-
-```bash
-cd /workspace/mm/work/train_RL_20261106
-mkdir -p data
-
-python3.12 scripts/build_dpo_pairs.py \
-    --raw runs/d2p_k4/raw.jsonl \
-    --groups runs/d2p_k4/groups.json \
-    --train runs/d2p_k4/d2p_train.jsonl \
-    --output data/d2p_pairs_swift.jsonl \
-    --seed 3407
-```
-
-#### 5.2. KIỂM TRA QUY TẮC DỪNG BẮT BUỘC (STOP RULE: < 300 PAIRS)
-```bash
-python3.12 - << 'EOF'
-import sys, json
-from pathlib import Path
-
-pairs_path = Path("data/d2p_pairs_swift.jsonl")
-assert pairs_path.exists(), "File data/d2p_pairs_swift.jsonl không tồn tại!"
-
-num_pairs = sum(1 for _ in open(pairs_path, "r", encoding="utf-8"))
-print(f"Tổng số DPO pairs tạo được: {num_pairs}")
-
-if num_pairs < 300:
-    print(f"🚨 [DỪNG BẮT BUỘC]: Số lượng cặp preference ({num_pairs}) NHỎ HƠN 300!")
-    print("Theo quy định PLAN_D2p mục 3: Dừng ngay, không tiến hành chuẩn bị training.")
-    print("Phương án đề xuất tiếp theo: Mở rộng pool dữ liệu (kết hợp MMFR SFT split pass_rate 0.25~0.5).")
-    sys.exit(2)
-else:
-    print(f"✅ ĐẠT YÊU CẦU: Số cặp ({num_pairs} >= 300). Tiếp tục bước tiếp theo.")
-EOF
-```
-
----
-
-### GIAI ĐOẠN 6: KIỂM TRA ĐỘ DÀI TOKEN & TẠO CẤU HÌNH TRAINING (`scripts/d2p_config.json`) (ƯỚC TÍNH: ~1 - 2 PHÚT)
-*Antigravity xuất thông báo: `[BẮT ĐẦU: GIAI ĐOẠN 6/8] Kiểm tra quy tắc dừng (< 300 cặp), độ dài token và tạo d2p_config.json (Ước tính: ~1-2 phút)`*
-
-```bash
-cd /workspace/mm/work/train_RL_20261106
-
-python3.12 - << 'EOF'
-import json
-from pathlib import Path
-from transformers import AutoTokenizer
-
-pairs_path = Path("data/d2p_pairs_swift.jsonl")
-tokenizer = AutoTokenizer.from_pretrained("/workspace/models/D1", trust_remote_code=True)
-
-max_tok = 0
-pairs_count = 0
-for line in open(pairs_path, "r", encoding="utf-8"):
-    row = json.loads(line)
-    # Tính độ dài chosen và rejected
-    msg_len = len(tokenizer.encode(str(row.get("messages", ""))))
-    rej_len = len(tokenizer.encode(str(row.get("rejected_response", ""))))
-    cur_max = msg_len + rej_len
-    if cur_max > max_tok:
-        max_tok = cur_max
-    pairs_count += 1
-
-print(f"Chuỗi dài nhất thực tế trong {pairs_count} cặp là: {max_tok} tokens")
-
-if max_tok <= 10240:
-    chosen_max_length = 10240
-    pilot_needed = False
-elif max_tok <= 12288:
-    chosen_max_length = max_tok + 512
-    pilot_needed = True
-    print(f"⚠️ Chuỗi dài nhất ({max_tok}) vượt 10,240! Thiết lập max_length = {chosen_max_length} và CẦN MEMORY PILOT.")
-else:
-    print(f"❌ LỖI: Chuỗi dài nhất ({max_tok}) vượt giới hạn 12,288 tokens! Dừng và báo cáo.")
-    exit(1)
-
-# Tạo cấu hình training d2p_config.json dựa trên dpo_config.json
-dpo_cfg_file = Path("scripts/dpo_config.json")
-if dpo_cfg_file.exists():
-    cfg = json.loads(dpo_cfg_file.read_text())
-else:
-    # Config chuẩn DPO
-    cfg = {
-        "model": "/workspace/models/D1",
-        "rlhf_type": "dpo",
-        "train_type": "lora",
-        "lora_rank": 16,
-        "lora_alpha": 32,
-        "lora_dropout": 0.05,
-        "learning_rate": 5e-6,
-        "beta": 0.1,
-        "rpo_alpha": 1.0,
-        "num_train_epochs": 2,
-        "per_device_train_batch_size": 1,
-        "gradient_accumulation_steps": 16,
-        "seed": 3407
-    }
-
-cfg["model"] = "/workspace/models/D1"
-cfg["custom_dataset"] = ["data/d2p_pairs_swift.jsonl"]
-cfg["max_length"] = chosen_max_length
-
-Path("scripts/d2p_config.json").write_text(json.dumps(cfg, indent=2) + "\n")
-print(f"✅ Đã tạo scripts/d2p_config.json với max_length = {chosen_max_length}")
-EOF
-```
-
----
-
-### GIAI ĐOẠN 7: TỔNG HỢP SỐ LIỆU & XUẤT BÁO CÁO `reports/D2P_STAGE1_REPORT.md` (ƯỚC TÍNH: ~1 PHÚT)
-*Antigravity xuất thông báo: `[BẮT ĐẦU: GIAI ĐOẠN 7/8] Tổng hợp số liệu so sánh M0 vs D1 và xuất báo cáo reports/D2P_STAGE1_REPORT.md (Ước tính: ~1 phút)`*
-
-Tạo script tự động thống kê và ghi ra báo cáo [D2P_STAGE1_REPORT.md](file:///Users/hau/Downloads/mm/work/train_RL_20261106/reports/D2P_STAGE1_REPORT.md):
-```bash
-cd /workspace/mm/work/train_RL_20261106
-mkdir -p reports
-
-python3.12 - << 'EOF'
-import json
-from pathlib import Path
-
-# Đọc thống kê từ runs/d2p_k4
-raw_file = Path("runs/d2p_k4/raw.jsonl")
-groups_file = Path("runs/d2p_k4/groups.json")
-pairs_file = Path("data/d2p_pairs_swift.jsonl")
-
-# Thống kê câu hỏi & câu trả lời
-questions_stats = {}
-total_outputs = 0
-truncated_count = 0
-correct_count = 0
-
-for line in open(raw_file, "r", encoding="utf-8"):
-    row = json.loads(line)
-    qid = row.get("id", row.get("question_id"))
-    reward = row.get("reward", 0)
-    reason = row.get("reward_reason", row.get("finish_reason", ""))
-    
-    if qid not in questions_stats:
-        questions_stats[qid] = {"correct": 0, "total": 0}
-    questions_stats[qid]["total"] += 1
-    if reward == 1:
-        questions_stats[qid]["correct"] += 1
-        correct_count += 1
-    if "length" in str(reason) or "truncated" in str(reason):
-        truncated_count += 1
-    total_outputs += 1
-
-correct_dist = {i: 0 for i in range(5)}
-for qid, st in questions_stats.items():
-    c = st["correct"]
-    if c in correct_dist:
-        correct_dist[c] += 1
-
-groups_data = json.loads(groups_file.read_text()) if groups_file.exists() else {}
-target_cnt = len(groups_data.get("target", []))
-keep_cnt = len(groups_data.get("keep", []))
-discard_cnt = len(groups_data.get("discard", []))
-
-pairs_cnt = sum(1 for _ in open(pairs_file, "r", encoding="utf-8")) if pairs_file.exists() else 0
-
-report_content = f"""# Báo cáo D2' Giai đoạn 1 & 2 (Sampling & Pair Construction)
-
-- **Mô hình Policy:** D1 Merged (`Qwen3-VL-4B-Instruct` + D1 adapter `2d4bcce4...`)
-- **GPU Sampling:** NVIDIA GeForce RTX 4090
-- **Tổng số câu hỏi:** {len(questions_stats):,} câu
-- **Tổng số câu trả lời sinh ra:** {total_outputs:,} (K=4)
-- **Số câu bị cắt (Length Truncated):** {truncated_count:,} ({truncated_count/total_outputs*100:.2f}%)
-- **Số câu trả lời đúng (Reward = 1):** {correct_count:,} ({correct_count/total_outputs*100:.2f}%)
-
-## 1. Phân bố số câu đúng trên mỗi câu hỏi (0 đến 4)
-
-| Số câu đúng / 4 | Số lượng câu hỏi (D1 Policy) | Số lượng câu hỏi (M0 Baseline) |
-| :---: | :---: | :---: |
-| 0/4 | {correct_dist[0]:,} | 162 |
-| 1/4 | {correct_dist[1]:,} | 140 |
-| 2/4 | {correct_dist[2]:,} | 159 |
-| 3/4 | {correct_dist[3]:,} | 249 |
-| 4/4 | {correct_dist[4]:,} | 790 |
-
-## 2. Phân loại Group & Tập Train
-
-- **Target (표적 - có cả đúng và sai/cắt):** {target_cnt:,} câu
-- **Keep (유지 - toàn bộ đúng):** {keep_cnt:,} câu
-- **Discard (제외 - toàn bộ sai/lỗi):** {discard_cnt:,} câu
-- **Tổng câu hỏi đưa vào DPO:** {target_cnt + keep_cnt:,} câu
-
-## 3. Kết quả Xây dựng Preference Pairs
-
-- **Tổng số cặp preference tạo được:** **{pairs_cnt:,} cặp**
-- **Quy tắc dừng ≥ 300 cặp:** {'✅ ĐẠT CHUẨN' if pairs_cnt >= 300 else '❌ KHÔNG ĐẠT'}
-- **Cấu hình training đã tạo:** `scripts/d2p_config.json`
-
-## 4. Hành động tiếp theo
-
-> **LƯU Ý:** Giai đoạn 1 và 2 đã hoàn tất thành công. Dừng tại đây và gửi báo cáo này cho người phụ trách/nhóm.
-> **CHỈ bật máy RunPod A100 và tiến hành Giai đoạn 3 (Training) sau khi báo cáo này được phê duyệt.**
-"""
-
-Path("reports/D2P_STAGE1_REPORT.md").write_text(report_content, encoding="utf-8")
-print("✅ Báo cáo reports/D2P_STAGE1_REPORT.md đã được tạo thành công!")
-EOF
-```
-
----
-
-### GIAI ĐOẠN 8: DỪNG VÀ BÁO CÁO KẾT THÚC BƯỚC 2 (CHỜ DUYỆT TRƯỚC KHI TRAIN A100)
-*Antigravity xuất thông báo: `[HOÀN THÀNH TOÀN BỘ: GIAI ĐOẠN 8/8] Đã hoàn tất Bước 1 (Sampling) và Bước 2 (Pair Construction). Báo cáo đã sẵn sàng. DỪNG TẠI ĐÂY chờ bạn duyệt trước khi chuyển sang Bước 3.`*
-
-Sau khi `reports/D2P_STAGE1_REPORT.md` được tạo:
-1. Agent in tóm tắt kết quả (số cặp DPO, bảng phân bố đúng/sai).
-2. **Dừng toàn bộ tool execution**.
-3. Yêu cầu người dùng kiểm tra báo cáo và xác nhận trước khi chuyển sang Bước 3 (Training trên A100).
-4. Giữ nguyên Pod, không tắt máy.
+# Bước 3 — Huấn luyện DPO D2′ trên nền D1
 
+Cập nhật: 2026-11-09. Đây là file giao việc cho agent thực hiện **bước 3**, thay cho hướng dẫn sampling và pair construction cũ.
+
+## 1. Phạm vi và trạng thái
+
+- Chuẩn bị local đã xong: nhập kết quả bước 1–2 từ `D2P_STAGE1_bundle/` vào `work/train_RL_20261106/`, giữ nguyên nội dung và kiểm tra SHA-256.
+- **Chưa thuê pod, chưa chạy training, chưa có xác nhận duyệt báo cáo bước 1–2 trong lần chuẩn bị này.** Yêu cầu chuẩn bị file không phải là lệnh chạy GPU.
+- Khi người dùng xác nhận báo cáo và yêu cầu chạy bước 3, tiếp tục trong phạm vi đã được cho phép; không hỏi lại những phần đã được xác nhận.
+- Kết thúc bước 3 sau khi lấy adapter cuối, merge, kiểm tra vLLM load và sao lưu kết quả local. Evaluation là bước 4, thực hiện riêng trên RTX 4090.
+
+Đọc trước khi thực hiện:
+
+1. `content.md`, `process.md`, `CLAUDE.md`.
+2. `work/train_RL_20261106/PLAN_D2p.md`, `HANDOFF_D2p.md` (mục 3).
+3. `work/train_RL_20261106/reports/D2P_STAGE1_REPORT.md` và `d2p_token_check.json`.
+4. `work/train_RL_20261106/reports/D1_STAGE3_TRAIN_REPORT.md`, `reports/d1_full/args.json` và `HANDOFF_D1.md` để tái dùng cách thiết lập, ghi log và merge.
+5. `work/train_RL_20261106/reports/D2P_STAGE3_PREPARATION.json` để biết file đã nhập, checksum và các thiếu hụt local.
+
+## 2. Dữ liệu bước 2 đã được đưa vào work
+
+Workspace local: `work/train_RL_20261106/`.
+
+| Đường dẫn trong workspace | Mục đích |
+| --- | --- |
+| `data/d2p_pairs_swift.jsonl` | 696 cặp dùng cho training |
+| `data/d2p_pairs_index.jsonl` | Ánh xạ cặp với câu hỏi và chosen/rejected trong raw |
+| `scripts/d2p_config.json` | Config D2′ đã chuẩn bị từ bước 2 |
+| `reports/D2P_STAGE1_REPORT.md` | Báo cáo sampling và tạo pairs |
+| `reports/d2p_artifacts_sha256.json` | Hash dữ liệu, config và sampling artifacts |
+| `reports/d2p_weights_verified.json` | Hash D1 adapter và merged shards đã ghi nhận |
+| `reports/d2p_token_check.json` | Cận độ dài và trạng thái kiểm tra template |
+| `runs/d2p_k4/raw.jsonl` | Đối chiếu nguyên văn, reward và token của chosen/rejected |
+| `runs/d2p_k4/groups.json` | Đối chiếu nhóm |
+| `runs/d2p_k4/d2p_train.jsonl` | Metadata 521 câu và ảnh, bao gồm hash ảnh |
+| `runs/d2p_k4/manifest.json` | Provenance sampling; đọc cùng receipt D1, không dựa riêng trường model của manifest |
+| `runs/d2p_k4/SHA256SUMS.json` | Hash đầu ra sampling |
+| `README.txt` | Ghi chú phạm vi bundle, không chứa weights hoặc ảnh |
+
+Giữ các file này nguyên bản. Không chạy lại bước 1–2 để tạo dữ liệu mới.
+
+**Khi clone từ GitHub:** repo chứa hướng dẫn, script/config và báo cáo chuẩn bị. Dữ liệu private trong `data/`, `runs/`, bundle, ảnh và weights được bỏ qua bằng `.gitignore`. Vì vậy clone repo chưa có đủ dữ liệu để train: chuyển `data/d2p_pairs_swift.jsonl`, `data/d2p_pairs_index.jsonl` và các file `runs/d2p_k4/` trong bảng trên từ máy local qua SSH/SCP vào đúng workspace trên pod, rồi đối chiếu `reports/d2p_artifacts_sha256.json`. Các nguồn HF nêu ở mục 3 dùng để bổ sung script, D1 adapter, base và ảnh; không mặc định chúng đã chứa pairs D2′ mới này.
+
+
+Kết quả kiểm tra local khi chuẩn bị:
+
+- 13 file được chép; 7 hash trong artifact manifest và 3 hash sampling đều khớp; bản chép khớp nguồn.
+- 6.000 response duy nhất trên 1.500 câu; 696 cặp từ 521 câu, đạt ngưỡng ≥300.
+- Nội dung chosen/rejected trùng raw, chosen có reward ghi nhận bằng 1 và không kết thúc `length`, rejected có reward ghi nhận bằng 0; không tái dùng response, tối đa 2 cặp/câu.
+- Đây là kiểm tra reward **đã lưu**, chưa phải tái tính bằng `reward_v2.py`.
+- Có 521 đường dẫn ảnh duy nhất trong pairs; **cả 521 ảnh hiện thiếu ở local**. Hash ảnh tham chiếu có trong `d2p_train.jsonl`.
+- Cận nhánh lớn nhất từ sampling là **9.740 token**; config giữ `max_length=10240`. **Chưa xác minh encoding thực tế bằng template ms-swift**.
+
+## 3. Những phần phải bổ sung trước training
+
+Hiện thiếu trong workspace:
+
+- `scripts/dpo_train.py`, `scripts/dpo_config.json`, `scripts/reward_v2.py` và dependencies nội bộ mà các script này import.
+- D1 adapter đầy đủ trong `adapter/d1_full/`, gồm weights, adapter config và metadata cần thiết.
+- 521 ảnh mà pairs tham chiếu; giữ đúng đường dẫn tương đối `work/...` đã lưu trong JSONL.
+- Base M0 đúng revision và D1 merged weights trên pod sẽ dùng để train.
+
+Nguồn đã được handoff chỉ định:
+
+| Nguồn | Nội dung / đối chiếu |
+| --- | --- |
+| HF model private `MMDL-team4/hypB-d1-dpo`, branch `run-yoonseok` | D1 adapter và hồ sơ/config training |
+| HF dataset private `MMDL-team4/hypB-rl-data`, branch `run-yoonseok` | Script RL/DPO, pool và ảnh B/C theo layout gốc |
+| HF dataset private `MMDL-team4/hypB-train-data`, v1.1, commit prefix `1833bac3` | Ảnh nguồn A theo hướng dẫn handoff |
+| `Qwen/Qwen3-VL-4B-Instruct`, revision `ebb281ec70b05090aa6165b016eac8ec08e71b17` | Base M0 |
+
+Khôi phục đúng layout theo `HANDOFF_D2p.md`, đối chiếu `SHA256SUMS.txt` của từng nguồn và hash ảnh trong train metadata. Ghi full revision tải thực tế vào receipt. Nếu nguồn không có file cần thiết hoặc hash không khớp, báo rõ phần thiếu; không tự viết pipeline thay thế rồi coi là script gốc.
+
+Chỉ tải dữ liệu/checkpoint cần thiết; không cần tải lại toàn bộ sampling M0 cho bước 3. Không đưa token hoặc API key vào file, lệnh được log hay báo cáo. Bước 3 không cần OpenAI Judge key.
+
+## 4. Điều kiện trước khi chạy GPU
+
+1. Đã có xác nhận cho báo cáo bước 1–2 và chi phí GPU, cùng thông tin SSH pod do người dùng cung cấp. File task cũ không được dùng làm ủy quyền cho bước 3.
+2. GPU là một A100 hoặc H100 **80GB**, xác nhận bằng `nvidia-smi`; đủ disk/RAM để chứa M0, D1 merge, D2′ merge, cache và checkpoints.
+3. Toàn bộ dữ liệu, script và ảnh cần thiết đã có; kiểm tra lại hash trên pod sau transfer.
+4. Đã xác minh template, reward và phạm vi LoRA như các mục dưới.
+5. Output lần chạy mới chưa chứa kết quả khác; không xóa hoặc ghi đè D1 hay lần D2′ trước.
+
+Các điều kiện này dành cho lúc thực thi training, không ngăn hoàn tất chuẩn bị local.
+
+## 5. Thiết lập pod và merge D1
+
+Dùng layout dự kiến `/workspace/mm/`, workspace `/workspace/mm/work/train_RL_20261106/`. Nếu layout khác, ghi rõ mapping và kiểm tra đường dẫn; không sửa pairs gốc để chữa đường dẫn.
+
+Tái dùng môi trường D1: Torch `2.8.0+cu128`, ms-swift `3.12.3`, transformers `4.57.1`, PEFT `0.17.1`, TRL `0.22.2`, accelerate `1.11.0`, qwen-vl-utils `0.0.14`; môi trường kiểm tra load dùng vLLM `0.11.0`. Dùng venv riêng `--system-site-packages` như D1, không tự thay Torch hoặc nâng phiên bản. Lưu package versions, pip check, GPU và lệnh chạy thực tế.
+
+Merge **M0 + D1 adapter** sang bf16 trên pod training bằng quy trình D1 đã ghi nhận. Kiểm tra:
+
+| File | SHA-256 bắt buộc |
+| --- | --- |
+| D1 `adapter_model.safetensors` | `2d4bcce4972b36b6ef49b0b73d46c9d72a3803f43632b6847ae6f4d65e0132e8` |
+| D1 `model-00001-of-00002.safetensors` | `31d4561504484269e16e1cc00baef16d694cd44f25c9d282cfd45977caaab351` |
+| D1 `model-00002-of-00002.safetensors` | `1280742e74baab97037603e9bc2912626f2c85d6347d9762a1286566b4b7f431` |
+
+Đầu ra D1: `/workspace/models/D1`. Giữ tokenizer/processor đúng snapshot gốc và lưu receipt hash. Hash không khớp thì dừng trước training.
+
+## 6. Preflight dữ liệu và cấu hình
+
+- Kiểm tra lại pairs ≥300, mapping index/raw, chosen/rejected nguyên văn, không reuse response, ảnh đúng hash và kích thước.
+- Tái tính reward bằng `reward_v2.py` gốc: chosen=1, rejected=0. Lưu kết quả; không coi kiểm tra cờ reward đã lưu là tái tính.
+- Dùng đúng ms-swift `qwen3_vl` template/processor và thiết lập ảnh của D1 để encode **toàn bộ 696 cặp**; tính riêng độ dài prompt+chosen và prompt+rejected, gồm visual tokens và EOS theo preprocessing thực tế. Không cộng độ dài hai nhánh với nhau.
+- Đối chiếu token độc lập ít nhất 5 cặp, gồm cặp dài nhất; kiểm tra prompt/ảnh nhất quán với sampling. Lưu trường hợp dài nhất và phân bố độ dài.
+- Nếu nhánh dài nhất ≤10.240: giữ `max_length=10240`, không cần thêm pilot theo kế hoạch.
+- Nếu 10.240 < nhánh dài nhất ≤12.288: báo cáo sai khác với cận sampling, đề xuất `max_length` đủ chứa và không quá 12.288; sau khi được xác nhận mới chạy memory pilot 20 optimizer step có cặp dài nhất. Báo cáo pilot và nhận xác nhận trước bản full; full bắt đầu lại từ D1, không tiếp tục weights pilot.
+- Nếu >12.288: dừng và báo cáo. Không tự truncate, loại cặp hoặc sửa nội dung để qua kiểm tra.
+
+Đối chiếu `scripts/d2p_config.json` với config D1 khôi phục từ nguồn gốc: thay đổi thí nghiệm chỉ ở start model D1, dataset D2′ và max_length nếu được chấp thuận. Chỉ định output mới riêng cho D2′ khi chạy; config bundle không có `output_dir`. Lưu config thực thi và diff, giữ config đã nhập nguyên bản.
+
+Cấu hình cố định:
+
+| Mục | Giá trị |
+| --- | --- |
+| Start model | `/workspace/models/D1`, bf16 |
+| Reference | D1 merged, tắt **adapter D2′ mới**; không dùng M0 làm reference |
+| Adapter khởi đầu / resume | `adapters=[]`, `ref_adapters=[]`, `ref_model=null`, `resume_from_checkpoint=null` |
+| Dataset | `data/d2p_pairs_swift.jsonl` (`dataset`, không phải `custom_dataset`) |
+| Phương pháp | ms-swift DPO, sigmoid, beta=0.1, rpo_alpha=1.0 |
+| LoRA | r=16, alpha=32, dropout=0.05; 36 tầng LM, q/k/v/o/gate/up/down = 252 modules; ViT/merger cố định |
+| Learning rate / scheduler | 5e-6 / cosine, warmup_ratio=0.03 |
+| Batch | 1 × gradient_accumulation_steps 16, 1 GPU |
+| Epoch / seed | 2 / 3407 (cả data_seed) |
+| Length / truncation | 10240 / raise, trừ ngoại lệ được duyệt ở trên |
+| Checkpoint | Chỉ dùng checkpoint cuối, không chọn theo validation |
+| Khác | Giữ nguyên dropout, masking, shuffle và các giá trị còn lại của D1 |
+
+Kiểm tra regex thực sự chọn đúng 252 modules trước khi train; lưu danh sách và trainable parameter counts. Đặt `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True` cho tiến trình training.
+
+## 7. Chạy full training và theo dõi
+
+Khôi phục rồi đọc CLI thật của `scripts/dpo_train.py` (bao gồm `--help`) trước khi lập lệnh. Không suy đoán flag từ tên file. Lưu lệnh chính xác và args ms-swift thực tế vào `reports/d2p_full/`.
+
+- Chạy đủ 2 epoch từ D1 merged với LoRA D2′ mới.
+- Output training ở vùng D2′ riêng, ví dụ `outputs/d2p_full/`; không dùng output D1.
+- Ghi từng optimizer step: loss, reward margin/accuracy, chosen/rejected logp của policy và reference, chosen NLL, grad norm, thời gian, VRAM allocated/reserved và `nvidia-smi`.
+- Lưu stdout/stderr, timestamps, exit code, args, package versions, GPU và receipt input/script hashes.
+- Thông báo tiến độ ngắn khi chạy lâu. D1 trước đây mất khoảng 2 giờ 54 phút trên A100 cho 707 cặp; đây chỉ là tham chiếu, không phải dự báo đã đo cho D2′.
+- OOM, NaN/Inf, lỗi dữ liệu, sai hash hoặc LoRA/reference không đúng: dừng và báo cáo; không tự đổi lr, beta, batch, precision, LoRA hoặc max_length để chạy tiếp.
+
+## 8. Checkpoint cuối, merge và bàn giao
+
+1. Xác định checkpoint cuối từ Trainer state/log; không hard-code checkpoint-90 của D1.
+2. Thu adapter cuối vào `adapter/d2p_full/`, kèm adapter config và config/provenance cần thiết.
+3. Merge **D1 merged + D2′ adapter** sang bf16 vào `/workspace/models/D2p`. Không merge D2′ trực tiếp lên M0; không nạp D1 adapter lần nữa trên D1 merged.
+4. Ghi hash adapter D2′ và toàn bộ merged shards; đây là hash mới, không so chúng với hash D1.
+5. Kiểm tra load model D2′ bằng vLLM `0.11.0` theo cấu hình đánh giá chuẩn; **không gửi yêu cầu generation hoặc chạy benchmark** trên A100/H100.
+6. Copy adapter và log về local `work/train_RL_20261106/adapter/d2p_full/`, `reports/d2p_full/`; đối chiếu hash pod/local. Nếu đích đã tồn tại khác nội dung, dùng đường dẫn lần chạy riêng và ghi rõ trong báo cáo.
+7. Lưu receipt vị trí merged model/hash để chuyển sang RTX 4090 ở bước 4. Không tự tải merged weights lớn về local nếu chưa cần.
+8. Viết `work/train_RL_20261106/reports/D2P_STAGE3_TRAIN_REPORT.md`: input hashes, 696 cặp, preflight template/reward, config diff, môi trường, LoRA/reference, epochs/steps, thời gian/VRAM, số liệu training, lỗi nếu có, checkpoint cuối, merge/load và transfer verification. Nêu rõ chưa đánh giá MMMU.
+9. Dừng sau báo cáo bước 3. Không tự chạy bước 4, gọi Judge, upload GitHub/HF hoặc Stop/Terminate pod.
+
+## 9. Checklist hoàn tất
+
+- [x] Đưa 13 file cần thiết của bundle vào workspace và kiểm tra hash.
+- [x] Ghi receipt chuẩn bị local và danh sách phụ thuộc còn thiếu.
+- [ ] Báo cáo bước 1–2 và chi phí GPU đã được xác nhận; có pod/SSH phù hợp.
+- [ ] Khôi phục script gốc, D1 adapter, 521 ảnh; kiểm tra hash và đường dẫn.
+- [ ] Merge D1 trên pod và khớp hash chuẩn.
+- [ ] Reward tái tính đạt; encoding ms-swift xác minh đầy đủ; giải quyết pilot nếu cần.
+- [ ] Config thực thi đúng D1→D2′, LoRA 252 modules và reference D1.
+- [ ] Full training 2 epoch hoàn tất, log hữu hạn và đủ metrics.
+- [ ] Adapter cuối merge trên D1; vLLM load thành công, không generation.
+- [ ] Adapter/log về local khớp hash, báo cáo bước 3 hoàn tất.
+
+Luôn giữ nguyên raw, pairs, D1 và pipeline benchmark gốc. Không dùng MMMU/MMMU-Pro để train, không đổi cấu hình hoặc chọn checkpoint theo validation. Không commit/push dữ liệu, weights hay token.
