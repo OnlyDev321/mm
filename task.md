@@ -17,7 +17,7 @@ Cập nhật: 2026-11-09. Đây là file giao việc cho agent thực hiện **b
 4. `work/train_RL_20261106/reports/D1_STAGE3_TRAIN_REPORT.md`, `reports/d1_full/args.json` và `HANDOFF_D1.md` để tái dùng cách thiết lập, ghi log và merge.
 5. `work/train_RL_20261106/reports/D2P_STAGE3_PREPARATION.json` để biết file đã nhập, checksum và các thiếu hụt local.
 
-## 2. Dữ liệu bước 2 đã được đưa vào work
+## 2. Đầu vào bước 3 và hồ sơ bước 2
 
 Workspace local: `work/train_RL_20261106/`.
 
@@ -39,8 +39,16 @@ Workspace local: `work/train_RL_20261106/`.
 
 Giữ các file này nguyên bản. Không chạy lại bước 1–2 để tạo dữ liệu mới.
 
-**Khi clone từ GitHub:** repo chứa hướng dẫn, script/config và báo cáo chuẩn bị. Dữ liệu private trong `data/`, `runs/`, bundle, ảnh và weights được bỏ qua bằng `.gitignore`. Vì vậy clone repo chưa có đủ dữ liệu để train: chuyển `data/d2p_pairs_swift.jsonl`, `data/d2p_pairs_index.jsonl` và các file `runs/d2p_k4/` trong bảng trên từ máy local qua SSH/SCP vào đúng workspace trên pod, rồi đối chiếu `reports/d2p_artifacts_sha256.json`. Các nguồn HF nêu ở mục 3 dùng để bổ sung script, D1 adapter, base và ảnh; không mặc định chúng đã chứa pairs D2′ mới này.
+### File cần có trên pod training
 
+- **Dữ liệu training:** `data/d2p_pairs_swift.jsonl` và 521 ảnh mà trường `images` tham chiếu. JSONL chứa prompt/chosen/rejected, không chứa nội dung ảnh.
+- **Model:** base M0 và D1 adapter để merge lại D1 trên pod, kèm tokenizer/processor đúng revision.
+- **Mã chạy và cấu hình:** `scripts/dpo_train.py`, dependencies và `scripts/d2p_config.json`.
+- **Hồ sơ nhỏ để kiểm tra:** báo cáo bước 1–2, hash dữ liệu/model, token check; `runs/d2p_k4/d2p_train.jsonl` có metadata/hash của các ảnh cần dùng. Metadata này phục vụ kiểm tra, không truyền làm dataset training.
+
+`data/d2p_pairs_index.jsonl`, sampling `raw.jsonl`, `groups.json`, `manifest.json` và `SHA256SUMS.json` là hồ sơ đối chiếu bước 1–2, **không phải đầu vào training và không bắt buộc chuyển toàn bộ lên A100**. Giữ chúng ở local để hoàn tất các kiểm tra còn thiếu; chỉ chuyển khi cần đối chiếu trên pod.
+
+**Khi clone từ GitHub:** theo yêu cầu trực tiếp của người dùng, repo có hai file `data/d2p_pairs_swift.jsonl` và `runs/d2p_k4/d2p_train.jsonl` trong workspace RL. Không cần SCP riêng hai file này. Sau clone, đối chiếu hash của chúng trong `reports/d2p_artifacts_sha256.json`, rồi bổ sung ảnh, script và model từ các nguồn ở mục 3. Các sampling artifacts còn lại, pair index, ảnh và weights vẫn ở ngoài GitHub; chuyển riêng qua SSH khi cần kiểm tra. Đây là ngoại lệ được người dùng chỉ định cho đúng hai file JSONL, không mở rộng sang dữ liệu hoặc weights khác.
 
 Kết quả kiểm tra local khi chuẩn bị:
 
@@ -55,7 +63,8 @@ Kết quả kiểm tra local khi chuẩn bị:
 
 Hiện thiếu trong workspace:
 
-- `scripts/dpo_train.py`, `scripts/dpo_config.json`, `scripts/reward_v2.py` và dependencies nội bộ mà các script này import.
+- Để chạy training: `scripts/dpo_train.py` và dependencies mà script import; `scripts/dpo_config.json` gốc để đối chiếu config D1 với config D2′ đã có.
+- Để hoàn tất kiểm tra bước 2 còn thiếu: `scripts/reward_v2.py` và dependencies. Script reward không phải đầu vào trực tiếp của training; có thể kiểm tra trên local rồi chuyển báo cáo kết quả lên pod.
 - D1 adapter đầy đủ trong `adapter/d1_full/`, gồm weights, adapter config và metadata cần thiết.
 - 521 ảnh mà pairs tham chiếu; giữ đúng đường dẫn tương đối `work/...` đã lưu trong JSONL.
 - Base M0 đúng revision và D1 merged weights trên pod sẽ dùng để train.
@@ -99,10 +108,18 @@ Merge **M0 + D1 adapter** sang bf16 trên pod training bằng quy trình D1 đã
 
 Đầu ra D1: `/workspace/models/D1`. Giữ tokenizer/processor đúng snapshot gốc và lưu receipt hash. Hash không khớp thì dừng trước training.
 
-## 6. Preflight dữ liệu và cấu hình
+## 6. Hoàn tất kiểm tra còn thiếu và preflight training
 
-- Kiểm tra lại pairs ≥300, mapping index/raw, chosen/rejected nguyên văn, không reuse response, ảnh đúng hash và kích thước.
-- Tái tính reward bằng `reward_v2.py` gốc: chosen=1, rejected=0. Lưu kết quả; không coi kiểm tra cờ reward đã lưu là tái tính.
+Theo `content.md`, bước 1–2 đã tạo dữ liệu; bước 3 dùng lại kết quả đó. Không sampling hoặc tạo pairs lại. Handoff yêu cầu xác minh reward/template, nhưng báo cáo hiện tại còn thiếu các bằng chứng này nên cần bổ sung trước training.
+
+### Kiểm tra hồ sơ bước 2 ở local
+
+- Mapping index/raw, chosen/rejected nguyên văn và không reuse response đã kiểm tra khi chuẩn bị; dùng receipt hiện có, không bắt buộc chạy lại trên A100.
+- Tái tính reward bằng `reward_v2.py` gốc: chosen=1, rejected=0, dùng raw/index/train metadata ở local. Lưu báo cáo và hash inputs; không coi kiểm tra cờ reward đã lưu là tái tính. Nếu local thiếu môi trường phù hợp, có thể kiểm tra trên pod và chỉ chuyển thêm artifacts cần cho việc đó.
+
+### Kiểm tra trên pod trước training
+
+- Kiểm tra hash pairs sau transfer, số cặp ≥300, ảnh đúng đường dẫn/hash/kích thước, model và config đúng kế hoạch.
 - Dùng đúng ms-swift `qwen3_vl` template/processor và thiết lập ảnh của D1 để encode **toàn bộ 696 cặp**; tính riêng độ dài prompt+chosen và prompt+rejected, gồm visual tokens và EOS theo preprocessing thực tế. Không cộng độ dài hai nhánh với nhau.
 - Đối chiếu token độc lập ít nhất 5 cặp, gồm cặp dài nhất; kiểm tra prompt/ảnh nhất quán với sampling. Lưu trường hợp dài nhất và phân bố độ dài.
 - Nếu nhánh dài nhất ≤10.240: giữ `max_length=10240`, không cần thêm pilot theo kế hoạch.
@@ -160,10 +177,10 @@ Khôi phục rồi đọc CLI thật của `scripts/dpo_train.py` (bao gồm `--
 - [ ] Báo cáo bước 1–2 và chi phí GPU đã được xác nhận; có pod/SSH phù hợp.
 - [ ] Khôi phục script gốc, D1 adapter, 521 ảnh; kiểm tra hash và đường dẫn.
 - [ ] Merge D1 trên pod và khớp hash chuẩn.
-- [ ] Reward tái tính đạt; encoding ms-swift xác minh đầy đủ; giải quyết pilot nếu cần.
+- [ ] Có báo cáo reward tái tính đạt từ local hoặc pod; encoding ms-swift xác minh đầy đủ; giải quyết pilot nếu cần.
 - [ ] Config thực thi đúng D1→D2′, LoRA 252 modules và reference D1.
 - [ ] Full training 2 epoch hoàn tất, log hữu hạn và đủ metrics.
 - [ ] Adapter cuối merge trên D1; vLLM load thành công, không generation.
 - [ ] Adapter/log về local khớp hash, báo cáo bước 3 hoàn tất.
 
-Luôn giữ nguyên raw, pairs, D1 và pipeline benchmark gốc. Không dùng MMMU/MMMU-Pro để train, không đổi cấu hình hoặc chọn checkpoint theo validation. Không commit/push dữ liệu, weights hay token.
+Luôn giữ nguyên raw, pairs, D1 và pipeline benchmark gốc. Không dùng MMMU/MMMU-Pro để train, không đổi cấu hình hoặc chọn checkpoint theo validation. Chỉ hai file JSONL nêu ở mục 2 được người dùng cho phép đưa lên GitHub; không commit/push dữ liệu khác, weights hay token.
