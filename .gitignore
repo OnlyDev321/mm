@@ -20,14 +20,19 @@ runs/d2p_k4/raw.jsonl
 .DS_Store
 Thumbs.db
 
-# D2P artifacts; only two input JSONL files are authorized for GitHub
+# D2P inputs and provenance are tracked; generated outputs remain local
 /D2P_STAGE1_bundle/
 /work/train_RL_20261106/data/*
 !/work/train_RL_20261106/data/d2p_pairs_swift.jsonl
+!/work/train_RL_20261106/data/d2p_pairs_index.jsonl
 /work/train_RL_20261106/runs/*
 !/work/train_RL_20261106/runs/d2p_k4/
 /work/train_RL_20261106/runs/d2p_k4/*
 !/work/train_RL_20261106/runs/d2p_k4/d2p_train.jsonl
+!/work/train_RL_20261106/runs/d2p_k4/raw.jsonl
+!/work/train_RL_20261106/runs/d2p_k4/groups.json
+!/work/train_RL_20261106/runs/d2p_k4/manifest.json
+!/work/train_RL_20261106/runs/d2p_k4/SHA256SUMS.json
 /work/train_RL_20261106/outputs/
 /work/train_RL_20261106/reports/d2p_full/
 

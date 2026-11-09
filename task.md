@@ -4,10 +4,10 @@ Cập nhật: 2026-11-09. Đây là file giao việc cho agent thực hiện **b
 
 ## 1. Phạm vi và trạng thái
 
-- Chuẩn bị local đã xong: nhập kết quả bước 1–2 từ `D2P_STAGE1_bundle/` vào `work/train_RL_20261106/`, giữ nguyên nội dung và kiểm tra SHA-256.
+- Repo đã chứa dữ liệu D2′ và hồ sơ bước 1–2 trong `work/train_RL_20261106/`, giữ nguyên nội dung và checksum. Không cần bundle hoặc file đầu vào từ máy local sau clone.
 - **Chưa thuê pod, chưa chạy training, chưa có xác nhận duyệt báo cáo bước 1–2 trong lần chuẩn bị này.** Yêu cầu chuẩn bị file không phải là lệnh chạy GPU.
 - Khi người dùng xác nhận báo cáo và yêu cầu chạy bước 3, tiếp tục trong phạm vi đã được cho phép; không hỏi lại những phần đã được xác nhận.
-- Kết thúc bước 3 sau khi lấy adapter cuối, merge, kiểm tra vLLM load và sao lưu kết quả local. Evaluation là bước 4, thực hiện riêng trên RTX 4090.
+- Kết thúc training sau khi lấy adapter cuối, merge, kiểm tra vLLM load và đóng gói kết quả để tải về; chỉ xác nhận bàn giao về máy người dùng khi đã đối chiếu hash thực tế. Evaluation là bước 4, thực hiện riêng trên RTX 4090.
 
 Đọc trước khi thực hiện:
 
@@ -19,7 +19,17 @@ Cập nhật: 2026-11-09. Đây là file giao việc cho agent thực hiện **b
 
 ## Khởi động trên pod A100 80GB
 
-Hai file `work/train_RL_20261106/data/d2p_pairs_swift.jsonl` và `work/train_RL_20261106/runs/d2p_k4/d2p_train.jsonl` đã có trên GitHub. Sau clone/pull không cần chuyển riêng hai file này.
+Dữ liệu D2′, pair index, sampling raw/groups/metadata/manifest/checksums, config và báo cáo đều có trong repo. Agent không cần SCP đầu vào từ máy local.
+
+Trong Bash trên pod:
+
+```bash
+cd /workspace
+git clone https://github.com/OnlyDev321/mm.git
+cd /workspace/mm
+```
+
+Nếu đã clone, dùng checkout hiện có và cập nhật `main` khi working tree sạch, không ghi đè thay đổi hoặc kết quả trên pod.
 
 Trong terminal **Bash trên pod**, tại repo `/workspace/mm`, nhập HF token qua prompt ẩn:
 
@@ -44,22 +54,22 @@ Sau khi đã duyệt báo cáo bước 1–2 và đồng ý dùng pod này để
 
 ## 2. Đầu vào bước 3 và hồ sơ bước 2
 
-Workspace: `work/train_RL_20261106/`. Bảng dưới liệt kê cả file local và file đã push; cột cuối cho biết file nào có sẵn sau clone. Các file chỉ ở local là hồ sơ đối chiếu, không phải phụ thuộc bắt buộc của lệnh training.
+Workspace: `work/train_RL_20261106/`. Toàn bộ file trong bảng dưới có sẵn sau clone; giữ nguyên cấu trúc đường dẫn.
 
 | Đường dẫn trong workspace | Mục đích | Có khi clone GitHub? |
 | --- | --- | --- |
 | `data/d2p_pairs_swift.jsonl` | 696 cặp dùng cho training | Có |
-| `data/d2p_pairs_index.jsonl` | Ánh xạ cặp với câu hỏi và chosen/rejected trong raw | **Không — chỉ ở local** |
+| `data/d2p_pairs_index.jsonl` | Ánh xạ cặp với câu hỏi và chosen/rejected trong raw | Có |
 | `scripts/d2p_config.json` | Config D2′ đã chuẩn bị từ bước 2 | Có |
 | `reports/D2P_STAGE1_REPORT.md` | Báo cáo sampling và tạo pairs | Có |
 | `reports/d2p_artifacts_sha256.json` | Hash dữ liệu, config và sampling artifacts | Có |
 | `reports/d2p_weights_verified.json` | Hash D1 adapter và merged shards đã ghi nhận | Có |
 | `reports/d2p_token_check.json` | Cận độ dài và trạng thái kiểm tra template | Có |
-| `runs/d2p_k4/raw.jsonl` | Đối chiếu nguyên văn, reward và token của chosen/rejected | **Không — chỉ ở local** |
-| `runs/d2p_k4/groups.json` | Đối chiếu nhóm | **Không — chỉ ở local** |
+| `runs/d2p_k4/raw.jsonl` | Đối chiếu nguyên văn, reward và token của chosen/rejected | Có |
+| `runs/d2p_k4/groups.json` | Đối chiếu nhóm | Có |
 | `runs/d2p_k4/d2p_train.jsonl` | Metadata 521 câu và ảnh, bao gồm hash ảnh | Có |
-| `runs/d2p_k4/manifest.json` | Provenance sampling; đọc cùng receipt D1, không dựa riêng trường model của manifest | **Không — chỉ ở local** |
-| `runs/d2p_k4/SHA256SUMS.json` | Hash đầu ra sampling | **Không — chỉ ở local** |
+| `runs/d2p_k4/manifest.json` | Provenance sampling; đọc cùng receipt D1, không dựa riêng trường model của manifest | Có |
+| `runs/d2p_k4/SHA256SUMS.json` | Hash đầu ra sampling | Có |
 | `README.txt` | Ghi chú phạm vi bundle, không chứa weights hoặc ảnh | Có |
 
 Giữ các file này nguyên bản. Không chạy lại bước 1–2 để tạo dữ liệu mới.
@@ -71,9 +81,9 @@ Giữ các file này nguyên bản. Không chạy lại bước 1–2 để tạ
 - **Mã chạy và cấu hình:** `scripts/dpo_train.py`, dependencies và `scripts/d2p_config.json`.
 - **Hồ sơ nhỏ để kiểm tra:** báo cáo bước 1–2, hash dữ liệu/model, token check; `runs/d2p_k4/d2p_train.jsonl` có metadata/hash của các ảnh cần dùng. Metadata này phục vụ kiểm tra, không truyền làm dataset training.
 
-`data/d2p_pairs_index.jsonl`, sampling `raw.jsonl`, `groups.json`, `manifest.json` và `SHA256SUMS.json` là hồ sơ đối chiếu bước 1–2, **không phải đầu vào training và không bắt buộc chuyển toàn bộ lên A100**. Giữ chúng ở local để hoàn tất các kiểm tra còn thiếu; chỉ chuyển khi cần đối chiếu trên pod.
+`data/d2p_pairs_swift.jsonl` là dataset truyền vào Trainer. Pair index và sampling artifacts phục vụ kiểm tra/provenance; chúng cũng có trên GitHub để agent kiểm tra trực tiếp trên pod.
 
-**Khi clone từ GitHub:** theo yêu cầu trực tiếp của người dùng, repo có hai file `data/d2p_pairs_swift.jsonl` và `runs/d2p_k4/d2p_train.jsonl` trong workspace RL. Không cần SCP riêng hai file này. Sau clone, đối chiếu hash của chúng trong `reports/d2p_artifacts_sha256.json`, rồi bổ sung ảnh, script và model từ các nguồn ở mục 3. Các sampling artifacts còn lại, pair index, ảnh và weights vẫn ở ngoài GitHub; chuyển riêng qua SSH khi cần kiểm tra. Đây là ngoại lệ được người dùng chỉ định cho đúng hai file JSONL, không mở rộng sang dữ liệu hoặc weights khác.
+**Sau clone:** đối chiếu toàn bộ 7 mục trong `reports/d2p_artifacts_sha256.json` và 3 mục trong `runs/d2p_k4/SHA256SUMS.json`. Không cần tải lại pairs từ HF, không tạo pairs mới và không yêu cầu file đầu vào từ máy local. Chỉ tải các phụ thuộc HF ở mục 3. `reports/D2P_STAGE3_PREPARATION.json` là receipt lịch sử chuẩn bị local, không phải kết quả preflight của pod hiện tại.
 
 Kết quả kiểm tra local khi chuẩn bị:
 
@@ -84,12 +94,12 @@ Kết quả kiểm tra local khi chuẩn bị:
 - Có 521 đường dẫn ảnh duy nhất trong pairs; **cả 521 ảnh hiện thiếu ở local**. Hash ảnh tham chiếu có trong `d2p_train.jsonl`.
 - Cận nhánh lớn nhất từ sampling là **9.740 token**; config giữ `max_length=10240`. **Chưa xác minh encoding thực tế bằng template ms-swift**.
 
-## 3. Những phần phải bổ sung trước training
+## 3. Các phần agent tự tải từ Hugging Face
 
-Hiện thiếu trong workspace:
+Những phần sau chưa có trên GitHub và phải tải trên pod bằng `HF_TOKEN`:
 
 - Để chạy training: `scripts/dpo_train.py` và dependencies mà script import; `scripts/dpo_config.json` gốc để đối chiếu config D1 với config D2′ đã có.
-- Để hoàn tất kiểm tra bước 2 còn thiếu: `scripts/reward_v2.py` và dependencies. Script reward không phải đầu vào trực tiếp của training; có thể kiểm tra trên local rồi chuyển báo cáo kết quả lên pod.
+- Để hoàn tất kiểm tra bước 2 còn thiếu: `scripts/reward_v2.py` và dependencies. Script reward dùng để tái kiểm tra pairs trên pod, không truyền làm dataset cho Trainer.
 - D1 adapter đầy đủ trong `adapter/d1_full/`, gồm weights, adapter config và metadata cần thiết.
 - 521 ảnh mà pairs tham chiếu; giữ đúng đường dẫn tương đối `work/...` đã lưu trong JSONL.
 - Base M0 đúng revision và D1 merged weights trên pod sẽ dùng để train.
@@ -98,12 +108,14 @@ Nguồn đã được handoff chỉ định:
 
 | Nguồn | Nội dung / đối chiếu |
 | --- | --- |
-| HF model private `MMDL-team4/hypB-d1-dpo`, branch `run-yoonseok` | D1 adapter và hồ sơ/config training |
-| HF dataset private `MMDL-team4/hypB-rl-data`, branch `run-yoonseok` | Script RL/DPO, pool và ảnh B/C theo layout gốc |
-| HF dataset private `MMDL-team4/hypB-train-data`, v1.1, commit prefix `1833bac3` | Ảnh nguồn A theo hướng dẫn handoff |
-| `Qwen/Qwen3-VL-4B-Instruct`, revision `ebb281ec70b05090aa6165b016eac8ec08e71b17` | Base M0 |
+| HF model private `MMDL-team4/hypB-d1-dpo`, branch `run-yoonseok` | D1 adapter đầy đủ → `adapter/d1_full/`; lấy config/hồ sơ training gốc để đối chiếu |
+| HF dataset private `MMDL-team4/hypB-rl-data`, branch `run-yoonseok` | `dpo_train.py`, `dpo_config.json`, `reward_v2.py` và dependencies → `scripts/` theo layout nguồn; ảnh B/C về đường dẫn `images[].path` trong metadata |
+| HF dataset private `MMDL-team4/hypB-train-data`, v1.1, commit prefix `1833bac3` | Ảnh nguồn A; chọn theo metadata và khôi phục đúng đường dẫn ảnh trong pairs |
+| `Qwen/Qwen3-VL-4B-Instruct`, revision `ebb281ec70b05090aa6165b016eac8ec08e71b17` | Base M0 cùng tokenizer/processor → cache `HF_HOME`; dùng để merge D1 trên pod |
 
 Agent dùng `HF_TOKEN` từ môi trường để xác thực với Hugging Face, tải trực tiếp trên pod các file còn thiếu và tái dùng file đã có sau khi kiểm tra hash. Kiểm tra quyền truy cập cả ba repo private; nếu token thiếu hoặc bị từ chối, chỉ báo tên repo và lỗi đã loại thông tin nhạy cảm. Không yêu cầu người dùng gửi token trong chat.
+
+Trước khi tải, liệt kê file của từng repo qua API Hugging Face và chốt revision thực tế. Đường dẫn bên trong HF phải tra từ listing/manifest thật, không đoán URL. Tải chọn lọc script và dependencies, toàn bộ thành phần adapter, tokenizer/processor và shards M0; với ảnh, chỉ cần 521 ảnh được pairs tham chiếu. Nếu ảnh nằm trong archive thì tải archive cần thiết và trích đúng file. Xác định nguồn ảnh bằng metadata/hash và manifests HF, không suy nguồn chỉ từ tên thư mục local.
 
 Khôi phục đúng layout theo `HANDOFF_D2p.md`, đối chiếu `SHA256SUMS.txt` của từng nguồn và hash ảnh trong train metadata. Ghi full revision tải thực tế vào receipt. Nếu nguồn không có file cần thiết hoặc hash không khớp, báo rõ phần thiếu; không tự viết pipeline thay thế rồi coi là script gốc.
 
@@ -111,7 +123,7 @@ Chỉ tải dữ liệu/checkpoint cần thiết; không cần tải lại toàn
 
 ## 4. Điều kiện trước khi chạy GPU
 
-1. Đã có xác nhận cho báo cáo bước 1–2 và chi phí GPU, cùng thông tin SSH pod do người dùng cung cấp. File task cũ không được dùng làm ủy quyền cho bước 3.
+1. Đã có xác nhận cho báo cáo bước 1–2 và chi phí GPU, đang chạy trên pod đã được người dùng cho phép (hoặc có SSH nếu agent điều khiển từ local). File task cũ không được dùng làm ủy quyền cho bước 3.
 2. GPU là một A100 hoặc H100 **80GB**, xác nhận bằng `nvidia-smi`; đủ disk/RAM để chứa M0, D1 merge, D2′ merge, cache và checkpoints.
 3. Toàn bộ dữ liệu, script và ảnh cần thiết đã có; kiểm tra lại hash trên pod sau transfer.
 4. Đã xác minh template, reward và phạm vi LoRA như các mục dưới.
@@ -139,10 +151,10 @@ Merge **M0 + D1 adapter** sang bf16 trên pod training bằng quy trình D1 đã
 
 Theo `content.md`, bước 1–2 đã tạo dữ liệu; bước 3 dùng lại kết quả đó. Không sampling hoặc tạo pairs lại. Handoff yêu cầu xác minh reward/template, nhưng báo cáo hiện tại còn thiếu các bằng chứng này nên cần bổ sung trước training.
 
-### Kiểm tra hồ sơ bước 2 ở local
+### Kiểm tra hồ sơ bước 2 trực tiếp trên pod
 
-- Mapping index/raw, chosen/rejected nguyên văn và không reuse response đã kiểm tra khi chuẩn bị; dùng receipt hiện có, không bắt buộc chạy lại trên A100.
-- Tái tính reward bằng `reward_v2.py` gốc: chosen=1, rejected=0. Trên pod clone mới, ưu tiên dùng nguyên văn chosen/rejected trong pairs và ground truth/metadata từ `d2p_train.jsonl`, nối bằng prompt và danh sách ảnh; kiểm tra ánh xạ duy nhất. Đọc API thật của reward script trước khi gọi, giữ nguyên logic chấm. Không bắt buộc có raw/index chỉ để đọc lại hai response đã có trong pairs. Nếu API hoặc metadata không đủ để tái tính chính xác, dùng kết quả kiểm tra từ local hoặc lấy thêm đúng artifacts còn thiếu qua SSH; không giả định chúng có trên GitHub/HF và không bỏ qua kiểm tra. Lưu báo cáo/hash inputs, phân biệt tái tính với cờ reward đã lưu.
+- Dùng pairs, index, raw và train metadata có trong repo: xác minh ánh xạ, nguyên văn chosen/rejected, tối đa 2 cặp/câu và không reuse response.
+- Tái tính reward bằng `reward_v2.py` gốc đã tải từ HF: chosen=1, rejected=0. Ghép bằng row/repeat trong index với raw và ground truth trong train metadata; giữ nguyên API/logic reward. Lưu báo cáo/hash inputs; phân biệt tái tính với việc đọc cờ reward đã lưu. Không cần lấy thêm raw/index từ máy local.
 
 ### Kiểm tra trên pod trước training
 
@@ -192,22 +204,22 @@ Khôi phục rồi đọc CLI thật của `scripts/dpo_train.py` (bao gồm `--
 3. Merge **D1 merged + D2′ adapter** sang bf16 vào `/workspace/models/D2p`. Không merge D2′ trực tiếp lên M0; không nạp D1 adapter lần nữa trên D1 merged.
 4. Ghi hash adapter D2′ và toàn bộ merged shards; đây là hash mới, không so chúng với hash D1.
 5. Kiểm tra load model D2′ bằng vLLM `0.11.0` theo cấu hình đánh giá chuẩn; **không gửi yêu cầu generation hoặc chạy benchmark** trên A100/H100.
-6. Copy adapter và log về local `work/train_RL_20261106/adapter/d2p_full/`, `reports/d2p_full/`; đối chiếu hash pod/local. Nếu đích đã tồn tại khác nội dung, dùng đường dẫn lần chạy riêng và ghi rõ trong báo cáo.
+6. Trên pod, thu adapter/log vào `work/train_RL_20261106/adapter/d2p_full/` và `reports/d2p_full/`, tạo archive cùng manifest SHA-256. Khi agent chạy ngay trên pod và chưa có kết nối tới máy người dùng, không tự coi đường dẫn trên pod là local của người dùng: hoàn thành đóng gói, cung cấp lệnh SCP tải về và ghi rõ “chờ tải về local”. Nếu đã có kênh nhận được cho phép, chuyển kết quả và đối chiếu hash pod/local. Không yêu cầu thông tin đích nhận để bắt đầu training; không tự upload kết quả lên GitHub/HF. Nếu đích có nội dung khác, dùng đường dẫn lần chạy riêng.
 7. Lưu receipt vị trí merged model/hash để chuyển sang RTX 4090 ở bước 4. Không tự tải merged weights lớn về local nếu chưa cần.
 8. Viết `work/train_RL_20261106/reports/D2P_STAGE3_TRAIN_REPORT.md`: input hashes, 696 cặp, preflight template/reward, config diff, môi trường, LoRA/reference, epochs/steps, thời gian/VRAM, số liệu training, lỗi nếu có, checkpoint cuối, merge/load và transfer verification. Nêu rõ chưa đánh giá MMMU.
-9. Dừng sau báo cáo bước 3. Không tự chạy bước 4, gọi Judge, upload GitHub/HF hoặc Stop/Terminate pod.
+9. Dừng sau báo cáo training và gói bàn giao; nếu chưa tải về máy người dùng, ghi trạng thái bàn giao còn chờ, không đánh dấu đã hoàn tất transfer. Không tự chạy bước 4, gọi Judge, upload GitHub/HF hoặc Stop/Terminate pod.
 
 ## 9. Checklist hoàn tất
 
-- [x] Đưa 13 file cần thiết của bundle vào workspace và kiểm tra hash.
+- [x] Đưa đủ 13 file dữ liệu/config/hồ sơ bước 1–2 vào repo; checksum giữ nguyên.
 - [x] Ghi receipt chuẩn bị local và danh sách phụ thuộc còn thiếu.
 - [ ] Báo cáo bước 1–2 và chi phí GPU đã được xác nhận; có pod/SSH phù hợp.
 - [ ] Khôi phục script gốc, D1 adapter, 521 ảnh; kiểm tra hash và đường dẫn.
 - [ ] Merge D1 trên pod và khớp hash chuẩn.
-- [ ] Có báo cáo reward tái tính đạt từ local hoặc pod; encoding ms-swift xác minh đầy đủ; giải quyết pilot nếu cần.
+- [ ] Có báo cáo reward tái tính đạt trên pod; encoding ms-swift xác minh đầy đủ; giải quyết pilot nếu cần.
 - [ ] Config thực thi đúng D1→D2′, LoRA 252 modules và reference D1.
 - [ ] Full training 2 epoch hoàn tất, log hữu hạn và đủ metrics.
 - [ ] Adapter cuối merge trên D1; vLLM load thành công, không generation.
 - [ ] Adapter/log về local khớp hash, báo cáo bước 3 hoàn tất.
 
-Luôn giữ nguyên raw, pairs, D1 và pipeline benchmark gốc. Không dùng MMMU/MMMU-Pro để train, không đổi cấu hình hoặc chọn checkpoint theo validation. Chỉ hai file JSONL nêu ở mục 2 được người dùng cho phép đưa lên GitHub; không commit/push dữ liệu khác, weights hay token.
+Luôn giữ nguyên raw, pairs, D1 và pipeline benchmark gốc. Không dùng MMMU/MMMU-Pro để train, không đổi cấu hình hoặc chọn checkpoint theo validation. Người dùng đã cho phép đưa toàn bộ dữ liệu/hồ sơ D2′ trong mục 2 lên GitHub để bootstrap bước 3. Quyền này không bao gồm weights, token, ảnh tải từ HF hoặc kết quả training mới; giữ các phần đó ngoài Git và không tự upload.

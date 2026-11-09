@@ -1,0 +1,696 @@
+{"pair": 0, "row": "218866", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "extract_fail"}
+{"pair": 1, "row": "1584288", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 2, "row": "1584288", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 3, "row": "48752", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 4, "row": "48752", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 5, "row": "1055205", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 6, "row": "1239101", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 7, "row": "301827", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 8, "row": "661519", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 9, "row": "1602178", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 10, "row": "1003472", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 11, "row": "1003472", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 12, "row": "494659", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 13, "row": "51417", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 14, "row": "994388", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 15, "row": "994388", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "extract_fail"}
+{"pair": 16, "row": "1260564", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 17, "row": "179319", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 18, "row": "1756872", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 19, "row": "831434", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 20, "row": "831434", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 21, "row": "52638", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 22, "row": "88819", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 23, "row": "936098", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 24, "row": "936098", "group": "retain", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 25, "row": "1714793", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 26, "row": "1714793", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 27, "row": "1182614", "group": "retain", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 28, "row": "1182614", "group": "retain", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 29, "row": "383842", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 30, "row": "432194", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 31, "row": "432194", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 32, "row": "445549", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 33, "row": "1084566", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 34, "row": "159986", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 35, "row": "159986", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 36, "row": "556415", "group": "retain", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 37, "row": "1611312", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 38, "row": "359846", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "extract_fail"}
+{"pair": 39, "row": "866687", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 40, "row": "1419007", "group": "target", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 41, "row": "1139468", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 42, "row": "1195322", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 43, "row": "1195322", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 44, "row": "454603", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 45, "row": "587336", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 46, "row": "408591", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 47, "row": "408591", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 48, "row": "1052075", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 49, "row": "233167", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 50, "row": "233167", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 51, "row": "66827", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 52, "row": "817835", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 53, "row": "937495", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 54, "row": "1711023", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 55, "row": "82779", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 56, "row": "82779", "group": "retain", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 57, "row": "1379948", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 58, "row": "1379948", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 59, "row": "103332", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 60, "row": "103332", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 61, "row": "1311284", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 62, "row": "1311284", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 63, "row": "677416", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 64, "row": "1385701", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 65, "row": "633725", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 66, "row": "226453", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 67, "row": "226453", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 68, "row": "983734", "group": "retain", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 69, "row": "1678646", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 70, "row": "1596437", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 71, "row": "998728", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "extract_fail"}
+{"pair": 72, "row": "869601", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 73, "row": "267799", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 74, "row": "189081", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 75, "row": "57041", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 76, "row": "57041", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 77, "row": "1027319", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 78, "row": "15777", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 79, "row": "885173", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 80, "row": "885173", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 81, "row": "941886", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 82, "row": "78887", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 83, "row": "78887", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 84, "row": "835991", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "extract_fail"}
+{"pair": 85, "row": "417333", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 86, "row": "417333", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 87, "row": "1580184", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 88, "row": "1580184", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 89, "row": "920924", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 90, "row": "920924", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 91, "row": "150390", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 92, "row": "695414", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 93, "row": "399385", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 94, "row": "399385", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 95, "row": "997758", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 96, "row": "997758", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 97, "row": "83991", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 98, "row": "1715647", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 99, "row": "1379169", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 100, "row": "1379169", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 101, "row": "1684820", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 102, "row": "1282563", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 103, "row": "1293072", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 104, "row": "95810", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 105, "row": "95810", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "extract_fail"}
+{"pair": 106, "row": "203726", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 107, "row": "1795975", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 108, "row": "1795975", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 109, "row": "1006397", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 110, "row": "1006397", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 111, "row": "1069099", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 112, "row": "442578", "group": "target", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 113, "row": "113921", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 114, "row": "113921", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 115, "row": "1295429", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 116, "row": "1295429", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 117, "row": "436397", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 118, "row": "436397", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 119, "row": "92248", "group": "retain", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 120, "row": "92248", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 121, "row": "1797163", "group": "retain", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 122, "row": "1513495", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 123, "row": "545171", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 124, "row": "182814", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 125, "row": "384755", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 126, "row": "1012609", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 127, "row": "102983", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 128, "row": "1589281", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 129, "row": "1753502", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "extract_fail"}
+{"pair": 130, "row": "1753502", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "extract_fail"}
+{"pair": 131, "row": "1729258", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 132, "row": "46665", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 133, "row": "322164", "group": "retain", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 134, "row": "322164", "group": "retain", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 135, "row": "1018803", "group": "target", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 136, "row": "1018803", "group": "target", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 137, "row": "243318", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 138, "row": "243318", "group": "retain", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 139, "row": "285569", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 140, "row": "285569", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 141, "row": "1245642", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 142, "row": "1245642", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "extract_fail"}
+{"pair": 143, "row": "1050541", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 144, "row": "281285", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 145, "row": "1236185", "group": "retain", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 146, "row": "1326690", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 147, "row": "1326690", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 148, "row": "377816", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 149, "row": "1603835", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 150, "row": "109632", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 151, "row": "945377", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 152, "row": "1011640", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 153, "row": "1210238", "group": "target", "discipline": "Art & Design", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 154, "row": "62344", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 155, "row": "62344", "group": "retain", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 156, "row": "1248898", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 157, "row": "334351", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 158, "row": "1789088", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 159, "row": "1679150", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 160, "row": "586867", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 161, "row": "903343", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 162, "row": "903343", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 163, "row": "412288", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 164, "row": "412288", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 165, "row": "690829", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 166, "row": "690829", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 167, "row": "1366290", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 168, "row": "1366290", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 169, "row": "1261595", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 170, "row": "936827", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 171, "row": "1015993", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 172, "row": "225006", "group": "retain", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 173, "row": "225006", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 174, "row": "156933", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 175, "row": "319381", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 176, "row": "319381", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 177, "row": "1419327", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 178, "row": "74641", "group": "target", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 179, "row": "399198", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 180, "row": "399198", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 181, "row": "45390", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 182, "row": "162082", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 183, "row": "162082", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 184, "row": "1450203", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 185, "row": "598891", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 186, "row": "157002", "group": "target", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 187, "row": "157002", "group": "target", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 188, "row": "130930", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 189, "row": "313014", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 190, "row": "449646", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 191, "row": "449646", "group": "retain", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 192, "row": "1169272", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 193, "row": "885192", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 194, "row": "727088", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 195, "row": "476081", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 196, "row": "476081", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 197, "row": "526118", "group": "retain", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 198, "row": "526118", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 199, "row": "980623", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 200, "row": "980623", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 201, "row": "594961", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 202, "row": "1150683", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 203, "row": "1687984", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 204, "row": "1269025", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 205, "row": "1269025", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 206, "row": "1541116", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 207, "row": "1677168", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 208, "row": "572906", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 209, "row": "572906", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 210, "row": "1309235", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 211, "row": "1309235", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 212, "row": "128912", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 213, "row": "128912", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 214, "row": "1349564", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 215, "row": "340035", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 216, "row": "1057399", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 217, "row": "1295946", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 218, "row": "97203", "group": "retain", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 219, "row": "139679", "group": "retain", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 220, "row": "925073", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 221, "row": "1670972", "group": "retain", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 222, "row": "1016084", "group": "retain", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 223, "row": "57570", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 224, "row": "1623851", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 225, "row": "1623851", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 226, "row": "56488", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 227, "row": "246712", "group": "retain", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 228, "row": "246712", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 229, "row": "1508751", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 230, "row": "1080913", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 231, "row": "1275784", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 232, "row": "1481618", "group": "retain", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 233, "row": "579503", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 234, "row": "579503", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 235, "row": "1795481", "group": "retain", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 236, "row": "1221323", "group": "target", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 237, "row": "49280", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 238, "row": "117517", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 239, "row": "1225457", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 240, "row": "882638", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 241, "row": "40347", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 242, "row": "498372", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 243, "row": "99567", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 244, "row": "857224", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 245, "row": "1755405", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 246, "row": "296778", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 247, "row": "296778", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 248, "row": "596232", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 249, "row": "1584225", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 250, "row": "1581595", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 251, "row": "1581595", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 252, "row": "1592019", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 253, "row": "1592019", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 254, "row": "1072109", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 255, "row": "688559", "group": "retain", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 256, "row": "688559", "group": "retain", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 257, "row": "41750", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 258, "row": "407723", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 259, "row": "1054292", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 260, "row": "40779", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 261, "row": "870009", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 262, "row": "1504266", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 263, "row": "504802", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 264, "row": "504802", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 265, "row": "109550", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 266, "row": "112298", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 267, "row": "1272898", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 268, "row": "98833", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 269, "row": "845033", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 270, "row": "468539", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 271, "row": "526071", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 272, "row": "118156", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 273, "row": "784961", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 274, "row": "974789", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 275, "row": "1089604", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 276, "row": "1089604", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 277, "row": "857750", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 278, "row": "857750", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 279, "row": "1350874", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 280, "row": "1350874", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "extract_fail"}
+{"pair": 281, "row": "1225580", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 282, "row": "998764", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 283, "row": "998764", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "extract_fail"}
+{"pair": 284, "row": "526661", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 285, "row": "526661", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 286, "row": "1279931", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 287, "row": "1279931", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 288, "row": "429178", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 289, "row": "1585695", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 290, "row": "564669", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 291, "row": "1143419", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 292, "row": "47802", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 293, "row": "546207", "group": "target", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 294, "row": "1565484", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 295, "row": "1776298", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 296, "row": "1026551", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 297, "row": "1026551", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 298, "row": "1448179", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 299, "row": "1448179", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 300, "row": "1008243", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 301, "row": "1101595", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 302, "row": "79945", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 303, "row": "762922", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 304, "row": "969449", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "extract_fail"}
+{"pair": 305, "row": "1092104", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 306, "row": "383684", "group": "retain", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "extract_fail"}
+{"pair": 307, "row": "383684", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 308, "row": "1465622", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 309, "row": "298053", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 310, "row": "908411", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 311, "row": "250003", "group": "retain", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 312, "row": "250003", "group": "retain", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 313, "row": "106357", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 314, "row": "106357", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 315, "row": "344397", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 316, "row": "344397", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 317, "row": "1059104", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 318, "row": "1059104", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 319, "row": "1097352", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 320, "row": "1666950", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 321, "row": "1540962", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 322, "row": "1540962", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 323, "row": "1742355", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 324, "row": "1767012", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 325, "row": "1767012", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 326, "row": "337337", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 327, "row": "1511334", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 328, "row": "1511334", "group": "retain", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 329, "row": "610157", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 330, "row": "1330792", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 331, "row": "791447", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 332, "row": "1804459", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 333, "row": "1804459", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "extract_fail"}
+{"pair": 334, "row": "84866", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 335, "row": "84866", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 336, "row": "51521", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 337, "row": "398695", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 338, "row": "1259605", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 339, "row": "257022", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 340, "row": "365592", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 341, "row": "199932", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 342, "row": "636578", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 343, "row": "688833", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 344, "row": "688833", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 345, "row": "1786481", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 346, "row": "345525", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 347, "row": "345525", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "extract_fail"}
+{"pair": 348, "row": "119837", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 349, "row": "119837", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 350, "row": "44752", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 351, "row": "731086", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 352, "row": "731086", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 353, "row": "323189", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "extract_fail"}
+{"pair": 354, "row": "323189", "group": "retain", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "extract_fail"}
+{"pair": 355, "row": "953506", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 356, "row": "953506", "group": "retain", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 357, "row": "314402", "group": "retain", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 358, "row": "1024541", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 359, "row": "1753116", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 360, "row": "19723", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 361, "row": "1318159", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 362, "row": "1318159", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 363, "row": "1113734", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 364, "row": "1532848", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 365, "row": "1360879", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 366, "row": "1360879", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "extract_fail"}
+{"pair": 367, "row": "1220107", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 368, "row": "848722", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 369, "row": "517359", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 370, "row": "517359", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 371, "row": "962457", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 372, "row": "1183206", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 373, "row": "771043", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 374, "row": "771043", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 375, "row": "308126", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 376, "row": "301841", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 377, "row": "1178254", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 378, "row": "880947", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 379, "row": "880947", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 380, "row": "152413", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 381, "row": "1746617", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 382, "row": "1746617", "group": "retain", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 383, "row": "231253", "group": "retain", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 384, "row": "355557", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 385, "row": "1544804", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 386, "row": "1374096", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 387, "row": "27380", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 388, "row": "779574", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 389, "row": "779574", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 390, "row": "1802456", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 391, "row": "579643", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 392, "row": "118267", "group": "retain", "discipline": "Art & Design", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 393, "row": "1590502", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 394, "row": "1590502", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 395, "row": "1615671", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 396, "row": "1615671", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 397, "row": "1524228", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 398, "row": "1524228", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "extract_fail"}
+{"pair": 399, "row": "91349", "group": "target", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 400, "row": "884174", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 401, "row": "884174", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 402, "row": "1079448", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 403, "row": "1144332", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 404, "row": "104656", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 405, "row": "104656", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 406, "row": "53288", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 407, "row": "53288", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 408, "row": "1522872", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 409, "row": "1185111", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 410, "row": "635359", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 411, "row": "635359", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 412, "row": "629323", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 413, "row": "629323", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 414, "row": "188938", "group": "retain", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 415, "row": "665141", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 416, "row": "1642612", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 417, "row": "1560171", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 418, "row": "1098597", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 419, "row": "1098597", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 420, "row": "1289231", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 421, "row": "1289231", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 422, "row": "1185207", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 423, "row": "1185207", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 424, "row": "488927", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 425, "row": "144512", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 426, "row": "1580852", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 427, "row": "78339", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 428, "row": "94643", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 429, "row": "1083975", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 430, "row": "882807", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 431, "row": "843338", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 432, "row": "1471833", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 433, "row": "1471833", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 434, "row": "277772", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 435, "row": "292195", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 436, "row": "292195", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 437, "row": "140449", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 438, "row": "1070677", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 439, "row": "1261413", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 440, "row": "124973", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 441, "row": "804702", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 442, "row": "804702", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 443, "row": "1240148", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 444, "row": "1240148", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 445, "row": "63774", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 446, "row": "43568", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 447, "row": "1772371", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 448, "row": "1406000", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 449, "row": "763905", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 450, "row": "160659", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 451, "row": "771933", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "extract_fail"}
+{"pair": 452, "row": "1152247", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 453, "row": "654500", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 454, "row": "1675456", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 455, "row": "999764", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 456, "row": "154250", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 457, "row": "130853", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 458, "row": "130853", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 459, "row": "804207", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 460, "row": "182007", "group": "target", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 461, "row": "202782", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 462, "row": "77965", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 463, "row": "637510", "group": "retain", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 464, "row": "12515", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 465, "row": "1263728", "group": "retain", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 466, "row": "1282253", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 467, "row": "1282253", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 468, "row": "390085", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 469, "row": "466371", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 470, "row": "466371", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 471, "row": "725340", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 472, "row": "575987", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 473, "row": "724434", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 474, "row": "501762", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 475, "row": "102813", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 476, "row": "102813", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 477, "row": "1795077", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 478, "row": "55908", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 479, "row": "55908", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 480, "row": "129734", "group": "retain", "discipline": "Art & Design", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 481, "row": "926782", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 482, "row": "1656625", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 483, "row": "1656625", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 484, "row": "182742", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 485, "row": "927440", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 486, "row": "134427", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 487, "row": "134427", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 488, "row": "1673810", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 489, "row": "909322", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 490, "row": "909322", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 491, "row": "1406622", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 492, "row": "1406622", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 493, "row": "1463171", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 494, "row": "1031202", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 495, "row": "1031202", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 496, "row": "1520977", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 497, "row": "1520977", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 498, "row": "903989", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 499, "row": "363255", "group": "target", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "extract_fail"}
+{"pair": 500, "row": "1653532", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 501, "row": "109150", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 502, "row": "717968", "group": "retain", "discipline": "Art & Design", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "extract_fail"}
+{"pair": 503, "row": "289434", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 504, "row": "1096733", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 505, "row": "732275", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 506, "row": "840385", "group": "target", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 507, "row": "806250", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 508, "row": "1360825", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 509, "row": "259636", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 510, "row": "259636", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 511, "row": "88363", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 512, "row": "1173769", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 513, "row": "1173769", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 514, "row": "733367", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 515, "row": "733367", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 516, "row": "41157", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 517, "row": "43748", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 518, "row": "76150", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 519, "row": "1026940", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 520, "row": "897202", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 521, "row": "1239659", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 522, "row": "1239659", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 523, "row": "1672796", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 524, "row": "1672796", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 525, "row": "689691", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 526, "row": "689691", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 527, "row": "455003", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 528, "row": "353034", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 529, "row": "1560813", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 530, "row": "293324", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 531, "row": "804233", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 532, "row": "804233", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 533, "row": "985357", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 534, "row": "985357", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 535, "row": "643827", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 536, "row": "75177", "group": "retain", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 537, "row": "1285953", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 538, "row": "848706", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 539, "row": "848706", "group": "retain", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 540, "row": "699015", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 541, "row": "699015", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 542, "row": "96650", "group": "retain", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 543, "row": "96650", "group": "retain", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 544, "row": "793457", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 545, "row": "793457", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 546, "row": "608806", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 547, "row": "992189", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 548, "row": "1308588", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 549, "row": "1308588", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 550, "row": "487999", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 551, "row": "255516", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 552, "row": "722033", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 553, "row": "722033", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 554, "row": "916700", "group": "retain", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 555, "row": "257662", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 556, "row": "1597210", "group": "retain", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 557, "row": "1597210", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 558, "row": "1293328", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 559, "row": "438848", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 560, "row": "1057096", "group": "retain", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 561, "row": "15046", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 562, "row": "887730", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 563, "row": "887730", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 564, "row": "1667385", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 565, "row": "1598319", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 566, "row": "1598319", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 567, "row": "1481081", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 568, "row": "823737", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 569, "row": "823737", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "extract_fail"}
+{"pair": 570, "row": "103507", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 571, "row": "103507", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 572, "row": "1470299", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 573, "row": "1470299", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 574, "row": "113771", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 575, "row": "113771", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 576, "row": "1775294", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 577, "row": "174100", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 578, "row": "797283", "group": "retain", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 579, "row": "797283", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 580, "row": "1050832", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 581, "row": "109383", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 582, "row": "109383", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 583, "row": "1337042", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 584, "row": "626679", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 585, "row": "1040365", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 586, "row": "1040365", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "extract_fail"}
+{"pair": 587, "row": "493017", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 588, "row": "493017", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 589, "row": "426465", "group": "retain", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 590, "row": "1645663", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 591, "row": "1645663", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 592, "row": "1158010", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 593, "row": "167960", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 594, "row": "1652044", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 595, "row": "276309", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 596, "row": "276309", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 597, "row": "901680", "group": "retain", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 598, "row": "1418013", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 599, "row": "1418013", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 600, "row": "922458", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 601, "row": "1146446", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 602, "row": "71333", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 603, "row": "1644327", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 604, "row": "1104156", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 605, "row": "1104156", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 606, "row": "387135", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 607, "row": "387135", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 608, "row": "890414", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 609, "row": "1024094", "group": "retain", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 610, "row": "711455", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 611, "row": "1793047", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 612, "row": "354471", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 613, "row": "354471", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 614, "row": "186664", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 615, "row": "1026648", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 616, "row": "803000", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 617, "row": "808822", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 618, "row": "1213301", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 619, "row": "1213301", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 620, "row": "266364", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 621, "row": "266364", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "extract_fail"}
+{"pair": 622, "row": "990202", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 623, "row": "1058", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 624, "row": "1058", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 625, "row": "716703", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 626, "row": "1767590", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 627, "row": "1237125", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 628, "row": "1237125", "group": "target", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "extract_fail"}
+{"pair": 629, "row": "1104109", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 630, "row": "1104109", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 631, "row": "132195", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "truncated"}
+{"pair": 632, "row": "1251727", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 633, "row": "1251727", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 634, "row": "1164840", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 635, "row": "1164840", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 636, "row": "1677027", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 637, "row": "674221", "group": "retain", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 638, "row": "123227", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 639, "row": "1396042", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 640, "row": "33698", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 641, "row": "1044295", "group": "retain", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 642, "row": "1044295", "group": "retain", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 643, "row": "1426782", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 644, "row": "239220", "group": "retain", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 645, "row": "809405", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 646, "row": "809405", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 647, "row": "1178183", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 648, "row": "324450", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 649, "row": "825829", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "extract_fail"}
+{"pair": 650, "row": "737411", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 651, "row": "737411", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 652, "row": "1328545", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 653, "row": "1328545", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 654, "row": "1036895", "group": "retain", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 655, "row": "1088721", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 656, "row": "1074430", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 657, "row": "1074430", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 658, "row": "1350876", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 659, "row": "1735778", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 660, "row": "37187", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 661, "row": "91419", "group": "target", "discipline": "Tech & Engineering", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 662, "row": "492814", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 663, "row": "391458", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 0, "rejected_reason": "extract_fail"}
+{"pair": 664, "row": "84670", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 665, "row": "84670", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 666, "row": "1694518", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 667, "row": "1694518", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 1, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 668, "row": "758827", "group": "target", "discipline": "Business", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 669, "row": "758827", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 670, "row": "1337683", "group": "retain", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 671, "row": "124810", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 672, "row": "660209", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 673, "row": "740522", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 674, "row": "1788220", "group": "target", "discipline": "Health & Medicine", "chosen_repeat": 3, "rejected_repeat": 0, "rejected_reason": "fallback_wrong"}
+{"pair": 675, "row": "245482", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 676, "row": "132545", "group": "target", "discipline": "Business", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 677, "row": "132545", "group": "target", "discipline": "Business", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 678, "row": "963027", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 679, "row": "1427681", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 680, "row": "1454868", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "truncated"}
+{"pair": 681, "row": "1749649", "group": "retain", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "fallback_wrong"}
+{"pair": 682, "row": "1484173", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 683, "row": "1484173", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "wrong"}
+{"pair": 684, "row": "1291349", "group": "target", "discipline": "Science", "chosen_repeat": 3, "rejected_repeat": 1, "rejected_reason": "truncated"}
+{"pair": 685, "row": "564493", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 686, "row": "564493", "group": "retain", "discipline": "Tech & Engineering", "chosen_repeat": 3, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 687, "row": "1746183", "group": "retain", "discipline": "Business", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "wrong"}
+{"pair": 688, "row": "207602", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 689, "row": "661027", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 3, "rejected_reason": "fallback_wrong"}
+{"pair": 690, "row": "661027", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 691, "row": "727737", "group": "retain", "discipline": "Humanities & Social Science", "chosen_repeat": 2, "rejected_repeat": 1, "rejected_reason": "wrong"}
+{"pair": 692, "row": "1529478", "group": "target", "discipline": "Science", "chosen_repeat": 0, "rejected_repeat": 1, "rejected_reason": "fallback_wrong"}
+{"pair": 693, "row": "683639", "group": "retain", "discipline": "Health & Medicine", "chosen_repeat": 0, "rejected_repeat": 2, "rejected_reason": "wrong"}
+{"pair": 694, "row": "1483469", "group": "target", "discipline": "Science", "chosen_repeat": 1, "rejected_repeat": 0, "rejected_reason": "truncated"}
+{"pair": 695, "row": "1483469", "group": "target", "discipline": "Science", "chosen_repeat": 2, "rejected_repeat": 3, "rejected_reason": "truncated"}
